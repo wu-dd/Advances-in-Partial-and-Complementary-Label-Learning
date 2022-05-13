@@ -16,7 +16,7 @@ To be continued...
 
 Real-World partial-label benchmarks:
 
-**Notice:** The following partial label learning data sets were collected and pre-processed by Prof. Min-ling Zhang, with courtesy and proprietary to the authors of referred literatures on them. The pre-processed data sets can be used at your own risk and for academic purpose only. The more information can be in [here](http://palm.seu.edu.cn/zhangml/).
+**Notice:** The following partial label learning data sets were collected and pre-processed by Prof. Min-Ling Zhang, with courtesy and proprietary to the authors of referred literatures on them. The pre-processed data sets can be used at your own risk and for academic purpose only. More information can be found in [here](http://palm.seu.edu.cn/zhangml/).
 
 | Dataset            | Website                                            | Paper       |
 | ------------------ | -------------------------------------------------- | ----------- |
@@ -48,11 +48,12 @@ Leaderboard, To be continued...
 
 - [[**SEU PALM Lab**]](http://palm.seu.edu.cn/) Ambiguity-Induced Contrastive Learning for Instance-Dependent Partial Label Learning.
 
-### ICLR'22
-
 ------
 
+### ICLR'22
+
 - PiCO: Contrastive Label Disambiguation for Partial-Label Learning. (oral) [[Paper]](https://arxiv.org/pdf/2201.08984.pdf)[[Code]](https://github.com/hbzju/PiCO)
+
 - Exploiting Class Activation Value for Partial-Label Learning. (poster) [[Paper]](https://openreview.net/pdf?id=qqdXHUGec9h)[[Code]](https://github.com/Ferenas/CAVL)
 
 ------
@@ -117,7 +118,7 @@ Top-k Partial Label Machine. [[Paper]](https://ieeexplore.ieee.org/stamp/stamp.j
 ### AAAI'21
 
 - [[**SEU PALM Lab**]](http://palm.seu.edu.cn/) Exploiting unlabeled data via partial label assignment for multi-class semi-supervised learning. [[Paper]](http://palm.seu.edu.cn/zhangml/files/AAAI'21b.pdf)[[Code]](http://palm.seu.edu.cn/zhangml/Resources.htm#aaai21b)
-- Adversarial Partial Multi-Label Learning with Label Disambiguation. (https://www.aaai.org/AAAI21Papers/AAAI-8358.YanY.pdf)
+- Adversarial Partial Multi-Label Learning with Label Disambiguation. [[Paper]](https://www.aaai.org/AAAI21Papers/AAAI-8358.YanY.pdf)
 
 ------
 
