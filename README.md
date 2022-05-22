@@ -53,8 +53,21 @@ Leaderboard, To be continued...
 ### ICLR'22
 
 - PiCO: Contrastive Label Disambiguation for Partial-Label Learning. (oral) [[Paper]](https://arxiv.org/pdf/2201.08984.pdf)[[Code]](https://github.com/hbzju/PiCO)
-
 - Exploiting Class Activation Value for Partial-Label Learning. (poster) [[Paper]](https://openreview.net/pdf?id=qqdXHUGec9h)[[Code]](https://github.com/Ferenas/CAVL)
+
+------
+
+### ICML'22
+
+- [[**SEU PALM Lab**]](http://palm.seu.edu.cn/) Revisiting consistency regularization for deep partial label learning. [[Paper]](http://palm.seu.edu.cn/zhangml/files/ICML'22a.pdf) [[Code]](http://palm.seu.edu.cn/zhangml/Resources.htm#icml22a)
+
+------
+
+### KDD'22
+
+- [[**SEU PALM Lab**]](http://palm.seu.edu.cn/) Submodular feature selection for partial label learning. [[Paper]](http://palm.seu.edu.cn/zhangml/files/KDD'22a.pdf) [[Code]](http://palm.seu.edu.cn/zhangml/Resources.htm#kdd22a)
+- [[**SEU PALM Lab**]](http://palm.seu.edu.cn/) Partial label learning with discriminative augmentation.
+- Partial-Label Learning with Semantic Label Representations.
 
 ------
 
