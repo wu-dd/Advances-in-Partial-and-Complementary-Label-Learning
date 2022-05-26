@@ -125,6 +125,7 @@ Top-k Partial Label Machine. [[Paper]](https://ieeexplore.ieee.org/stamp/stamp.j
 ### IJCAI'21
 
 - [[**SEU PALM Lab**]](http://palm.seu.edu.cn/) Learning from complementary labels via partial-output consistency regularization. [[Paper]](http://palm.seu.edu.cn/zhangml/files/IJCAI'21a.pdf)[[Code]](http://palm.seu.edu.cn/zhangml/Resources.htm#ijcai21a)
+- Few-Shot Partial-Label Learning. [[Paper]](https://www.ijcai.org/proceedings/2021/0475.pdf)
 
 ------
 
@@ -167,4 +168,5 @@ Top-k Partial Label Machine. [[Paper]](https://ieeexplore.ieee.org/stamp/stamp.j
 ### AAAI'20
 
 - [[**SEU PALM Lab**]](http://palm.seu.edu.cn/) Multi-view partial multi-label learning with graph-based disambiguation. [[Paper]](http://palm.seu.edu.cn/zhangml/files/AAAI'20b.pdf)[[Code]](http://palm.seu.edu.cn/zhangml/Resources.htm#aaai20b)
+- Partial Label Learning with Batch Label Correction. [[Paper]](https://ojs.aaai.org/index.php/AAAI/article/view/6132/5988)
 
