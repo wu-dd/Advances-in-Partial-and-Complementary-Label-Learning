@@ -60,6 +60,7 @@ Leaderboard, To be continued...
 ### ICML'22
 
 - [[**SEU PALM Lab**]](http://palm.seu.edu.cn/) Revisiting consistency regularization for deep partial label learning. [[Paper]](http://palm.seu.edu.cn/zhangml/files/ICML'22a.pdf) [[Code]](http://palm.seu.edu.cn/zhangml/Resources.htm#icml22a)
+- Partial Label Learning via Label Influence Function.
 
 ------
 
