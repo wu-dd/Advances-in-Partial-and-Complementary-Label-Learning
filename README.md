@@ -75,6 +75,9 @@ Leaderboard, To be continued...
 ### ArXiv'22
 
 - [[**SEU PALM Lab**]](http://palm.seu.edu.cn/) On the Robustness of Average Losses for Partial-Label Learning. [[Paper]](https://arxiv.org/pdf/2106.06152.pdf)
+- Learning with Proper Partial Labels.
+- [[**SEU PALM Lab**]](http://palm.seu.edu.cn/)Progressive Purification for Instance-Dependent Partial Label Learning.
+- [[**SEU PALM Lab**]](http://palm.seu.edu.cn/)Decompositional Generation Process for Instance-Dependent Partial Label Learning.
 
 ------
 
@@ -171,3 +174,8 @@ Top-k Partial Label Machine. [[Paper]](https://ieeexplore.ieee.org/stamp/stamp.j
 - [[**SEU PALM Lab**]](http://palm.seu.edu.cn/) Multi-view partial multi-label learning with graph-based disambiguation. [[Paper]](http://palm.seu.edu.cn/zhangml/files/AAAI'20b.pdf)[[Code]](http://palm.seu.edu.cn/zhangml/Resources.htm#aaai20b)
 - Partial Label Learning with Batch Label Correction. [[Paper]](https://ojs.aaai.org/index.php/AAAI/article/view/6132/5988)
 
+------
+
+### ECML'20
+
+- Network Cooperation with Progressive Disambiguation for Partial Label Learning.
