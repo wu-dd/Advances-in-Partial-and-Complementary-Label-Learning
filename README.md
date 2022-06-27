@@ -47,14 +47,14 @@ Leaderboard, To be continued...
 ### IJCAI'22
 
 - [[**SEU PALM Lab**]](http://palm.seu.edu.cn/) Ambiguity-Induced Contrastive Learning for Instance-Dependent Partial Label Learning.
-- Boosting Multi-Label Image Classification with Complementary Parallel Self-Distillation.
+- Boosting Multi-Label Image Classification with Complementary Parallel Self-Distillation. [[Paper]](https://arxiv.org/pdf/2205.10986.pdf)
 
 ------
 
 ### ICLR'22
 
-- PiCO: Contrastive Label Disambiguation for Partial-Label Learning. (oral) [[Paper]](https://arxiv.org/pdf/2201.08984.pdf)[[Code]](https://github.com/hbzju/PiCO)
-- Exploiting Class Activation Value for Partial-Label Learning. (poster) [[Paper]](https://openreview.net/pdf?id=qqdXHUGec9h)[[Code]](https://github.com/Ferenas/CAVL)
+- PiCO: Contrastive Label Disambiguation for Partial-Label Learning. [[Paper]](https://arxiv.org/pdf/2201.08984.pdf)[[Code]](https://github.com/hbzju/PiCO)
+- Exploiting Class Activation Value for Partial-Label Learning. [[Paper]](https://openreview.net/pdf?id=qqdXHUGec9h)[[Code]](https://github.com/Ferenas/CAVL)
 
 ------
 
@@ -76,7 +76,7 @@ Leaderboard, To be continued...
 ### ArXiv'22
 
 - [[**SEU PALM Lab**]](http://palm.seu.edu.cn/) On the Robustness of Average Losses for Partial-Label Learning. [[Paper]](https://arxiv.org/pdf/2106.06152.pdf)
-- Learning with Proper Partial Labels.
+- Learning with Proper Partial Labels. [[Paper]](https://arxiv.org/pdf/2112.12303.pdf)
 - [[**SEU PALM Lab**]](http://palm.seu.edu.cn/)Progressive Purification for Instance-Dependent Partial Label Learning.
 - [[**SEU PALM Lab**]](http://palm.seu.edu.cn/)Decompositional Generation Process for Instance-Dependent Partial Label Learning.
 
@@ -96,7 +96,7 @@ Leaderboard, To be continued...
 ### TNNLS'21
 
 - Top-k Partial Label Machine. [[Paper]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9447152)
-- Learning From a Complementary-Label Source Domain: Theory and Algorithms
+- Learning From a Complementary-Label Source Domain: Theory and Algorithms. [[Paper]](https://arxiv.org/pdf/2008.01454.pdf)
 
 ------
 
@@ -139,9 +139,19 @@ Leaderboard, To be continued...
 
 - [[**SEU PALM Lab**]](http://palm.seu.edu.cn/) Exploiting unlabeled data via partial label assignment for multi-class semi-supervised learning. [[Paper]](http://palm.seu.edu.cn/zhangml/files/AAAI'21b.pdf)[[Code]](http://palm.seu.edu.cn/zhangml/Resources.htm#aaai21b)
 - Adversarial Partial Multi-Label Learning with Label Disambiguation. [[Paper]](https://www.aaai.org/AAAI21Papers/AAAI-8358.YanY.pdf)
-- Learning from Noisy Labels with Complementary Loss Functions.
+- [[**SEU PALM Lab**]](http://palm.seu.edu.cn/) Learning from Noisy Labels with Complementary Loss Functions. [[Paper]](http://palm.seu.edu.cn/zhangml/)
 
 ------
+
+### CVPR'21
+
+- Joint Negative and Positive Learning for Noisy Labels. [[Paper]](https://arxiv.org/pdf/2104.06574.pdf)
+
+
+
+
+
+
 
 
 
@@ -163,9 +173,9 @@ Leaderboard, To be continued...
 ### ICML'20
 
 - [[**SEU PALM Lab**]](http://palm.seu.edu.cn/) Progressive Identification of True Labels for Partial-Label Learning. [[Paper]](https://proceedings.mlr.press/v119/lv20a.html)[[Code]](https://github.com/Lvcrezia77/PRODEN)
-- Bridging Ordinary-Label Learning and Complementary-Label Learning.
-- Unbiased Risk Estimators Can Mislead: A Case Study of Learning with Complementary Labels.
-- Learning with Multiple Complementary Labels.
+- Bridging Ordinary-Label Learning and Complementary-Label Learning. [[Paper]](https://arxiv.org/pdf/2002.02158.pdf)
+- Unbiased Risk Estimators Can Mislead: A Case Study of Learning with Complementary Labels. [[Paper]](https://arxiv.org/pdf/2007.02235.pdf)
+- Learning with Multiple Complementary Labels. [[Paper]](https://arxiv.org/pdf/1912.12927.pdf)
 
 ------
 
@@ -179,14 +189,14 @@ Leaderboard, To be continued...
 
 - [[**SEU PALM Lab**]](http://palm.seu.edu.cn/) Multi-view partial multi-label learning with graph-based disambiguation. [[Paper]](http://palm.seu.edu.cn/zhangml/files/AAAI'20b.pdf)[[Code]](http://palm.seu.edu.cn/zhangml/Resources.htm#aaai20b)
 - Partial Label Learning with Batch Label Correction. [[Paper]](https://ojs.aaai.org/index.php/AAAI/article/view/6132/5988)
-- Generative-Discriminative Complementary Learning.
-- Complementary Auxiliary Classifiers for Label-Conditional Text Generation.
+- Generative-Discriminative Complementary Learning. [[Paper]]((https://arxiv.org/pdf/1904.01612.pdf))
+- Complementary Auxiliary Classifiers for Label-Conditional Text Generation. [[Paper]](https://ojs.aaai.org/index.php/AAAI/article/view/6346)
 
 ------
 
 ### ECML'20
 
-- Network Cooperation with Progressive Disambiguation for Partial Label Learning.
+- Network Cooperation with Progressive Disambiguation for Partial Label Learning. [[Paper]](https://arxiv.org/pdf/2002.11919.pdf)
 
 
 
@@ -194,7 +204,13 @@ Leaderboard, To be continued...
 
 ### ICML'19
 
-- Complementary-Label Learning for Arbitrary Losses and Models
+- Complementary-Label Learning for Arbitrary Losses and Models. [[Paper]](https://arxiv.org/pdf/1810.04327.pdf)
+
+------
+
+### ICCV'19
+
+- NLNL: Negative Learning for Noisy Labels. [[Paper]](https://arxiv.org/pdf/1908.07387.pdf)
 
 
 
@@ -204,13 +220,13 @@ Leaderboard, To be continued...
 
 ### ECCV'18
 
-- Learning with Biased Complementary Labels.
+- Learning with Biased Complementary Labels. [[Paper]]((https://arxiv.org/pdf/1711.09535.pdf))
 
 ------
 
 ### CVPR'18
 
-- Adversarial Complementary Learning for Weakly Supervised Object Localization
+- Adversarial Complementary Learning for Weakly Supervised Object Localization. [[Paper]](https://arxiv.org/pdf/1804.06962.pdf)
 
 
 
@@ -220,4 +236,4 @@ Leaderboard, To be continued...
 
 ### NIPS'17
 
-- Learning from Complementary Labels.
+- Learning from Complementary Labels. [[Paper]](https://arxiv.org/pdf/1705.07541.pdf)
