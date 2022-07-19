@@ -48,6 +48,9 @@ Leaderboard, To be continued...
 
 - [[**SEU PALM Lab**]](http://palm.seu.edu.cn/) Ambiguity-Induced Contrastive Learning for Instance-Dependent Partial Label Learning.
 - Boosting Multi-Label Image Classification with Complementary Parallel Self-Distillation. [[Paper]](https://arxiv.org/pdf/2205.10986.pdf)
+- Exploring Binary Classification Hidden within Partial Label Learning.
+- Deep Graph Matching for Partial Label Learning.
+- Webly-Supervised Fine-Grained Recognition with Partial Label Learning.
 
 ------
 
