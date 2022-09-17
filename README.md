@@ -44,6 +44,18 @@ Leaderboard, To be continued...
 
 ------
 
+### TNNLS'22
+
+- Biased Complementary-Label Learning Without True Labels.
+
+------
+
+### PR'22
+
+- Multi-Complementary and Unlabeled Learning for Arbitrary Losses and Models.
+
+------
+
 ### IJCAI'22
 
 - [[**SEU PALM Lab**]](http://palm.seu.edu.cn/) Ambiguity-Induced Contrastive Learning for Instance-Dependent Partial Label Learning.
@@ -80,8 +92,10 @@ Leaderboard, To be continued...
 
 - [[**SEU PALM Lab**]](http://palm.seu.edu.cn/) On the Robustness of Average Losses for Partial-Label Learning. [[Paper]](https://arxiv.org/pdf/2106.06152.pdf)
 - Learning with Proper Partial Labels. [[Paper]](https://arxiv.org/pdf/2112.12303.pdf)
-- [[**SEU PALM Lab**]](http://palm.seu.edu.cn/)Progressive Purification for Instance-Dependent Partial Label Learning.
-- [[**SEU PALM Lab**]](http://palm.seu.edu.cn/)Decompositional Generation Process for Instance-Dependent Partial Label Learning.
+- [[**SEU PALM Lab**]](http://palm.seu.edu.cn/) Progressive Purification for Instance-Dependent Partial Label Learning.
+- [[**SEU PALM Lab**] ](http://palm.seu.edu.cn/)Decompositional Generation Process for Instance-Dependent Partial Label Learning.
+- ProPaLL: Probabilistic Partial Label Learning.
+- Meta Objective Guided Disambiguation for Partial Label Learning.
 
 ------
 
@@ -100,6 +114,7 @@ Leaderboard, To be continued...
 
 - Top-k Partial Label Machine. [[Paper]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9447152)
 - Learning From a Complementary-Label Source Domain: Theory and Algorithms. [[Paper]](https://arxiv.org/pdf/2008.01454.pdf)
+- Discriminative Metric Learning for Partial Label Learning.
 
 ------
 
@@ -194,16 +209,46 @@ Leaderboard, To be continued...
 - Partial Label Learning with Batch Label Correction. [[Paper]](https://ojs.aaai.org/index.php/AAAI/article/view/6132/5988)
 - Generative-Discriminative Complementary Learning. [[Paper]]((https://arxiv.org/pdf/1904.01612.pdf))
 - Complementary Auxiliary Classifiers for Label-Conditional Text Generation. [[Paper]](https://ojs.aaai.org/index.php/AAAI/article/view/6346)
+- Deep Discriminative CNN with Temporal Ensembling for Ambiguously-Labeled Image Classification.
 
 ------
 
 ### ECML'20
 
 - Network Cooperation with Progressive Disambiguation for Partial Label Learning. [[Paper]](https://arxiv.org/pdf/2002.11919.pdf)
+- Online Partial Label Learning.
+
+------
+
+### CIKM'20
+
+- Learning with Noisy Partial Labels by Simultaneously Leveraging Global and Local Consistencies.
+
+------
+
+### TNNLS'20
+
+- Large Margin Partial Label Machine.
+
+------
+
+
 
 
 
 ## Papers & Code in 2019
+
+### TKDE'19
+
+- GM-PLL: Graph Matching based Partial Label Learning.
+
+------
+
+### KDD'19
+
+- [[**SEU PALM Lab**]](http://palm.seu.edu.cn/) Adaptive Graph Guided Disambiguation for Partial Label Learning.
+
+------
 
 ### ICML'19
 
@@ -214,6 +259,22 @@ Leaderboard, To be continued...
 ### ICCV'19
 
 - NLNL: Negative Learning for Noisy Labels. [[Paper]](https://arxiv.org/pdf/1908.07387.pdf)
+
+------
+
+### IJCAI'19
+
+- Partial Label Learning with Unlabeled Data.
+- Partial Label Learning by Semantic Difference Maximization.
+
+------
+
+### AAAI'19
+
+- Partial Label Learning with Self-Guided Retraining.
+- [[**SEU PALM Lab**]](http://palm.seu.edu.cn/) Partial Label Learning via Label Enhancement.
+
+
 
 
 
