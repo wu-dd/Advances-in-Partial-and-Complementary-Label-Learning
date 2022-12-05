@@ -32,6 +32,11 @@ Leaderboard, To be continued...
 
 ## Papers & Code in 2023
 
+### AAAI'23
+
+- [[**SEU PALM Lab**]](http://palm.seu.edu.cn/) Can Label-Specific Feature Help Partial-Label Learning?
+- [[**SEU PALM Lab**]](http://palm.seu.edu.cn/) Partial-Label Regression.
+
 ### ICLR'23(OpenReview...)
 
 - [[**SEU PALM Lab**]](http://palm.seu.edu.cn/) Progressive Purification for Instance-Dependent Partial Label Learning.
@@ -46,6 +51,8 @@ Leaderboard, To be continued...
 ### ARXIV'23
 
 - Rethinking the Learning Paradigm for Facial Expression Recognition.
+- ARNet: Automatic Refinement Network for Noisy Partial Label Learning.
+- 
 
 ------
 
