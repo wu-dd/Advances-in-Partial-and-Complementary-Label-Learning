@@ -36,6 +36,7 @@ Leaderboard, To be continued...
 
 - [[**SEU PALM Lab**]](http://palm.seu.edu.cn/) Can Label-Specific Feature Help Partial-Label Learning?
 - [[**SEU PALM Lab**]](http://palm.seu.edu.cn/) Partial-Label Regression.
+- Learning with Partial Labels from Semi-supervised Perspective.
 
 ### ICLR'23(OpenReview...)
 
