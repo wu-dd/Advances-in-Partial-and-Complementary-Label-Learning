@@ -38,6 +38,8 @@ Leaderboard, To be continued...
 - [[**SEU PALM Lab**]](http://palm.seu.edu.cn/) Partial-Label Regression.
 - Learning with Partial Labels from Semi-supervised Perspective.
 
+------
+
 ### ICLR'23(OpenReview...)
 
 - [[**SEU PALM Lab**]](http://palm.seu.edu.cn/) Progressive Purification for Instance-Dependent Partial Label Learning.
@@ -49,11 +51,23 @@ Leaderboard, To be continued...
 - Active Learning with Partial Labels.
 - Solving Partial Label Learning Problem with Multi-Agent Reinforcement Learning.
 
+------
+
 ### ARXIV'23
 
 - Rethinking the Learning Paradigm for Facial Expression Recognition.
 - ARNet: Automatic Refinement Network for Noisy Partial Label Learning.
-- 
+- Complementary Labels Learning with Augmented Classes.
+- Class-Imbalanced Complementary-Label Learning via Weighted Loss.
+- Reduction from Complementary-Label Learning to Probability Estimates.
+- Adversarial Training with Complementary Labels: On the Benefit of Gradually Informative Attacks.
+- PiCO+: Contrastive Label Disambiguation for Robust Partial Label Learning.
+
+------
+
+### PR'23
+
+- GraphDPI: Partial label disambiguation by graph representation learning via mutual information maximization.
 
 ------
 
