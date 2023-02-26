@@ -10,14 +10,14 @@ To be continued...
 
 ## Content
 
-- [Benchmarks & Leaderboard](#Benchmarks & Leaderboard)
-- [Papers & Code in 2023](#Papers & Code in 2023)
-- [Papers & Code in 2022](#Papers & Code in 2022)
-- [Papers & Code in 2021](#Papers & Code in 2021)
-- [Papers & Code in 2020](#Papers & Code in 2020)
-- [Papers & Code in 2019](#Papers & Code in 2019)
-- [Papers & Code in 2018](#Papers & Code in 2018)
-- [Papers & Code in 2017](#Papers & Code in 2017)
+- [Benchmarks & Leaderboard](#benchmarks---leaderboard)
+- [Papers & Code in 2023](#papers---code-in-2023)
+- [Papers & Code in 2022](#papers---code-in-2022)
+- [Papers & Code in 2021](#papers---code-in-2021)
+- [Papers & Code in 2020](#papers---code-in-2020)
+- [Papers & Code in 2019](#papers---code-in-2019)
+- [Papers & Code in 2018](#papers---code-in-2018)
+- [Papers & Code in 2017](#papers---code-in-2017)
 
 ## Benchmarks & Leaderboard
 
