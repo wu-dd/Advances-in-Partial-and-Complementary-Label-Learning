@@ -43,6 +43,32 @@ Leaderboard, To be continued...
 
 ------
 
+### CVPR'23
+
+- [[**SEU PALM Lab**]](http://palm.seu.edu.cn/) Towards Effective Visual Representations for Partial-Label Learning.
+
+------
+
+### KDD'23
+
+- [[**SEU PALM Lab**]](http://palm.seu.edu.cn/) Complementary Classifier Induced Partial Label Learning.
+
+------
+
+### IJCAI'23
+
+- [[**SEU PALM Lab**]](http://palm.seu.edu.cn/) Unbiased risk estimator to multi-labeled complementary label learning.
+- [[**SEU PALM Lab**]](http://palm.seu.edu.cn/) Unreliable Partial Label Learning with Recursive Separation.
+- Deep Partial Multi-Label Learning with Graph Disambiguation.
+
+------
+
+### ICML'23
+
+- [[**SEU PALM Lab**]](http://palm.seu.edu.cn/) Progressive Purification for Instance-Dependent Partial Label Learning.
+
+------
+
 ### AAAI'23
 
 - [[**SEU PALM Lab**]](http://palm.seu.edu.cn/) Can Label-Specific Feature Help Partial-Label Learning?
@@ -65,6 +91,11 @@ Leaderboard, To be continued...
 
 ### ARXIV'23
 
+- CroSel: Cross Selection of Confident Pseudo Labels for Partial-Label Learning.
+- Learning Reliable Representations for Incomplete Multi-View Partial Multi-Label Classification.
+- Learning in Imperfect Environment: Multi-Label Classification with Long-Tailed Distribution and Partial Labels.
+- A Confidence-based Partial Label Learning Model for Crowd-Annotated Named Entity Recognition
+- ALIM: Adjusting Label Importance Mechanism for Noisy Partial Label Learning
 - Deep Duplex Learning for Weak Supervision.
 - Learning from Label Proportions with Instance-wise Consistency.
 - CMW-Net: Learning a Class-Aware Sample Weighting Mapping for Robust Deep Learning
@@ -74,20 +105,17 @@ Leaderboard, To be continued...
 - [[**SEU PALM Lab**]](http://palm.seu.edu.cn/) Learning From Biased Soft Labels.
 - Boosting Semi-Supervised Learning with Contrastive Complementary Labeling.
 - Active Learning with Partial Labels.
+- Partial Label Learning for Emotion Recognition from EEG
 - Solving Partial Label Learning Problem with Multi-Agent Reinforcement Learning.
-- [[**SEU PALM Lab**]](http://palm.seu.edu.cn/) Progressive Purification for Instance-Dependent Partial Label Learning.
 - Adversary-aware partial label learning with label distillation.
-- [[**SEU PALM Lab**]](http://palm.seu.edu.cn/) Multi-Instance Partial-Label Learning: Towards Exploiting Dual Inexact Supervision.
-- DALI: Dynamically Adjusted Label Importance for Noisy Partial Label Learning.
-- [[**SEU PALM Lab**]](http://palm.seu.edu.cn/) Unreliable Partial Label Learning with Recursive Separation.
 - Rethinking the Learning Paradigm for Facial Expression Recognition.
 - ARNet: Automatic Refinement Network for Noisy Partial Label Learning.
 - Complementary Labels Learning with Augmented Classes.
 - Class-Imbalanced Complementary-Label Learning via Weighted Loss.
 - Reduction from Complementary-Label Learning to Probability Estimates.
 - PiCO+: Contrastive Label Disambiguation for Robust Partial Label Learning.
-- [[**SEU PALM Lab**]](http://palm.seu.edu.cn/) On the Robustness of Average Losses for Partial-Label Learning. [[Paper]](https://arxiv.org/pdf/2106.06152.pdf)
 - ProPaLL: Probabilistic Partial Label Learning.
+- Learning with Partial Labels from Semi-supervised Perspective.
 - Meta Objective Guided Disambiguation for Partial Label Learning.
 - A Deep Model for Partial Multi-Label Image Classification with Curriculum Based Disambiguation.
 
@@ -96,8 +124,10 @@ Leaderboard, To be continued...
 ### Journal
 
 - **[TPAMI]** A Unifying Probabilistic Framework for Partially Labeled Data Learning.
+- **[TPAMI]** [[**SEU PALM Lab**]](http://palm.seu.edu.cn/) On the Robustness of Average Losses for Partial-Label Learning.
 - **[Pattern Recognition]** GraphDPI: Partial label disambiguation by graph representation learning via mutual information maximization.
 - **[Neural Networks]** Partial label learning: Taxonomy, analysis and outlook.
+- **[Science China Information Sciences]** [[**SEU PALM Lab**]](http://palm.seu.edu.cn/) Multi-Instance Partial-Label Learning: Towards Exploiting Dual Inexact Supervision.
 
 ------
 
@@ -129,6 +159,12 @@ Leaderboard, To be continued...
 
 ------
 
+### CVPR'22
+
+- Multi-label classification with partial annotations using class-aware selective loss
+
+------
+
 ### IJCAI'22
 
 - [[**SEU PALM Lab**]](http://palm.seu.edu.cn/) Ambiguity-Induced Contrastive Learning for Instance-Dependent Partial Label Learning.
@@ -136,6 +172,13 @@ Leaderboard, To be continued...
 - Exploring Binary Classification Hidden within Partial Label Learning.
 - Deep Graph Matching for Partial Label Learning.
 - Webly-Supervised Fine-Grained Recognition with Partial Label Learning.
+
+------
+
+### AAAI'22
+
+- Structured Semantic Transfer for Multi-Label Recognition with Partial Labels
+- Semantic-Aware Representation Blending for Multi-Label Image Recognition with Partial Labels
 
 ------
 
