@@ -66,6 +66,7 @@ Leaderboard, To be continued...
 ### ICML'23
 
 - [[**SEU PALM Lab**]](http://palm.seu.edu.cn/) Progressive Purification for Instance-Dependent Partial Label Learning.
+- [[**SEU PALM Lab**]](http://palm.seu.edu.cn/) FREDIS: A Fusion Framework of Refinement and Disambiguation for Unreliable Partial Label Learning.
 
 ------
 
@@ -80,25 +81,34 @@ Leaderboard, To be continued...
 ### ICLR'23
 
 - Long-Tailed Partial Label Learning via Dynamic Rebalancing.
-
 - Partial Label Unsupervised Domain Adaptation with Class-Prototype Alignment.
-
 - Mutual Partial Label Learning with Competitive Label Noise.
-
 - [[**SEU PALM Lab**] ](http://palm.seu.edu.cn/)Decompositional Generation Process for Instance-Dependent Partial Label Learning.
+
+------
+
+### PAKDD'23
+
+- Reduction from Complementary-Label Learning to Probability Estimates.
 
 ------
 
 ### ARXIV'23
 
+- Imprecise label learning: A unified framework for learning with various imprecise label configurations.
+- Pseudo Labels Regularization for Imbalanced Partial-Label Learning.
+- Disambiguated Attention Embedding for Multi-Instance Partial-Label Learning.
+- Star Temporal Classification: Sequence Classification with Partially Labeled Data.
+- MuSFA: Improving Music Structural Function Analysis with Partially Labeled Data.
+- Conformal Prediction with Partially Labeled Data.
+- Disambiguated Attention Embedding for Multi-Instance Partial-Label Learning.
 - CroSel: Cross Selection of Confident Pseudo Labels for Partial-Label Learning.
 - Learning Reliable Representations for Incomplete Multi-View Partial Multi-Label Classification.
 - Learning in Imperfect Environment: Multi-Label Classification with Long-Tailed Distribution and Partial Labels.
 - A Confidence-based Partial Label Learning Model for Crowd-Annotated Named Entity Recognition
 - ALIM: Adjusting Label Importance Mechanism for Noisy Partial Label Learning
 - Deep Duplex Learning for Weak Supervision.
-- Learning from Label Proportions with Instance-wise Consistency.
-- CMW-Net: Learning a Class-Aware Sample Weighting Mapping for Robust Deep Learning
+- Learning from Label Proportions with Instance-wise Consistency
 - Learning from Stochastic Labels.
 - Rethinking Precision of Pseudo Label: Test-Time Adaptation via Complementary Learning.
 - Towards Mitigating the Problem of Insufficient and Ambiguous Supervision in Online Crowdsourcing Annotation.
@@ -112,7 +122,6 @@ Leaderboard, To be continued...
 - ARNet: Automatic Refinement Network for Noisy Partial Label Learning.
 - Complementary Labels Learning with Augmented Classes.
 - Class-Imbalanced Complementary-Label Learning via Weighted Loss.
-- Reduction from Complementary-Label Learning to Probability Estimates.
 - PiCO+: Contrastive Label Disambiguation for Robust Partial Label Learning.
 - ProPaLL: Probabilistic Partial Label Learning.
 - Learning with Partial Labels from Semi-supervised Perspective.
@@ -125,6 +134,7 @@ Leaderboard, To be continued...
 
 - **[TPAMI]** A Unifying Probabilistic Framework for Partially Labeled Data Learning.
 - **[TPAMI]** [[**SEU PALM Lab**]](http://palm.seu.edu.cn/) On the Robustness of Average Losses for Partial-Label Learning.
+- **[TPAMI]** CMW-Net: Learning a Class-Aware Sample Weighting Mapping for Robust Deep Learning.
 - **[Pattern Recognition]** GraphDPI: Partial label disambiguation by graph representation learning via mutual information maximization.
 - **[Neural Networks]** Partial label learning: Taxonomy, analysis and outlook.
 - **[Science China Information Sciences]** [[**SEU PALM Lab**]](http://palm.seu.edu.cn/) Multi-Instance Partial-Label Learning: Towards Exploiting Dual Inexact Supervision.
