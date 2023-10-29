@@ -43,15 +43,29 @@ Leaderboard, To be continued...
 
 ------
 
+### NeurIPS'23
+
+- [[**SEU PALM Lab**]](http://palm.seu.edu.cn/)  Disambiguated Attention Embedding for Multi-Instance Partial-Label Learning.
+- ALIM: Adjusting Label Importance Mechanism for Noisy Partial Label Learning.
+- [[**SEU PALM Lab**]](http://palm.seu.edu.cn/)  Partial multi-label learning with probabilistic graphical disambiguation.
+- [[**SEU PALM Lab**]](http://palm.seu.edu.cn/) Learning From Biased Soft Labels.
+
+### ICCV'23
+
+- Candidate-aware Selective Disambiguation Based On Normalized Entropy for Instance-dependent Partial-label Learning.
+- Learning in Imperfect Environment: Multi-Label Classification with Long-Tailed Distribution and Partial Labels.
+
 ### CVPR'23
 
 - [[**SEU PALM Lab**]](http://palm.seu.edu.cn/) Towards Effective Visual Representations for Partial-Label Learning.
+- Rethinking the Learning Paradigm for Dynamic Facial Expression Recognition.
 
 ------
 
 ### KDD'23
 
 - [[**SEU PALM Lab**]](http://palm.seu.edu.cn/) Complementary Classifier Induced Partial Label Learning.
+- Partial-label Learning with Mixed Closed-set and Open-set Out-of-candidate Examples.
 
 ------
 
@@ -67,6 +81,8 @@ Leaderboard, To be continued...
 
 - [[**SEU PALM Lab**]](http://palm.seu.edu.cn/) Progressive Purification for Instance-Dependent Partial Label Learning.
 - [[**SEU PALM Lab**]](http://palm.seu.edu.cn/) FREDIS: A Fusion Framework of Refinement and Disambiguation for Unreliable Partial Label Learning.
+- Consistent Complementary-Label Learning via Order-Preserving Losses.
+- Conformal Prediction with Partially Labeled Data.
 
 ------
 
@@ -83,7 +99,7 @@ Leaderboard, To be continued...
 - Long-Tailed Partial Label Learning via Dynamic Rebalancing.
 - Partial Label Unsupervised Domain Adaptation with Class-Prototype Alignment.
 - Mutual Partial Label Learning with Competitive Label Noise.
-- [[**SEU PALM Lab**] ](http://palm.seu.edu.cn/)Decompositional Generation Process for Instance-Dependent Partial Label Learning.
+- [[**SEU PALM Lab**]](http://palm.seu.edu.cn/) Decompositional Generation Process for Instance-Dependent Partial Label Learning.
 
 ------
 
@@ -95,36 +111,31 @@ Leaderboard, To be continued...
 
 ### ARXIV'23
 
+- Enhancing Label Sharing Efficiency in Complementary-Label Learning with Label Augmentation
+- Deep Learning with Partially Labeled Data for Radio Map Reconstruction.
+- Towards Unbiased Exploration in Partial Label Learning
 - Imprecise label learning: A unified framework for learning with various imprecise label configurations.
+- Robust Representation Learning for Unreliable Partial Label Learning
 - Pseudo Labels Regularization for Imbalanced Partial-Label Learning.
-- Disambiguated Attention Embedding for Multi-Instance Partial-Label Learning.
 - Star Temporal Classification: Sequence Classification with Partially Labeled Data.
 - MuSFA: Improving Music Structural Function Analysis with Partially Labeled Data.
-- Conformal Prediction with Partially Labeled Data.
-- Disambiguated Attention Embedding for Multi-Instance Partial-Label Learning.
 - CroSel: Cross Selection of Confident Pseudo Labels for Partial-Label Learning.
 - Learning Reliable Representations for Incomplete Multi-View Partial Multi-Label Classification.
-- Learning in Imperfect Environment: Multi-Label Classification with Long-Tailed Distribution and Partial Labels.
 - A Confidence-based Partial Label Learning Model for Crowd-Annotated Named Entity Recognition
-- ALIM: Adjusting Label Importance Mechanism for Noisy Partial Label Learning
 - Deep Duplex Learning for Weak Supervision.
 - Learning from Label Proportions with Instance-wise Consistency
 - Learning from Stochastic Labels.
 - Rethinking Precision of Pseudo Label: Test-Time Adaptation via Complementary Learning.
 - Towards Mitigating the Problem of Insufficient and Ambiguous Supervision in Online Crowdsourcing Annotation.
-- [[**SEU PALM Lab**]](http://palm.seu.edu.cn/) Learning From Biased Soft Labels.
 - Boosting Semi-Supervised Learning with Contrastive Complementary Labeling.
 - Active Learning with Partial Labels.
 - Partial Label Learning for Emotion Recognition from EEG
 - Solving Partial Label Learning Problem with Multi-Agent Reinforcement Learning.
 - Adversary-aware partial label learning with label distillation.
-- Rethinking the Learning Paradigm for Facial Expression Recognition.
 - ARNet: Automatic Refinement Network for Noisy Partial Label Learning.
 - Complementary Labels Learning with Augmented Classes.
 - Class-Imbalanced Complementary-Label Learning via Weighted Loss.
-- PiCO+: Contrastive Label Disambiguation for Robust Partial Label Learning.
 - ProPaLL: Probabilistic Partial Label Learning.
-- Learning with Partial Labels from Semi-supervised Perspective.
 - Meta Objective Guided Disambiguation for Partial Label Learning.
 - A Deep Model for Partial Multi-Label Image Classification with Curriculum Based Disambiguation.
 
@@ -135,9 +146,13 @@ Leaderboard, To be continued...
 - **[TPAMI]** A Unifying Probabilistic Framework for Partially Labeled Data Learning.
 - **[TPAMI]** [[**SEU PALM Lab**]](http://palm.seu.edu.cn/) On the Robustness of Average Losses for Partial-Label Learning.
 - **[TPAMI]** CMW-Net: Learning a Class-Aware Sample Weighting Mapping for Robust Deep Learning.
+- **[TPAMI]** PiCO+: Contrastive Label Disambiguation for Robust Partial Label Learning.
+- **[TPAMI]**  [[**SEU PALM Lab**]](http://palm.seu.edu.cn/) Towards enabling binary decomposition for partial multi-label learning.
+- **[TPAMI]**  [[**SEU PALM Lab**]](http://palm.seu.edu.cn/) Variational label enhancement.
 - **[Pattern Recognition]** GraphDPI: Partial label disambiguation by graph representation learning via mutual information maximization.
 - **[Neural Networks]** Partial label learning: Taxonomy, analysis and outlook.
 - **[Science China Information Sciences]** [[**SEU PALM Lab**]](http://palm.seu.edu.cn/) Multi-Instance Partial-Label Learning: Towards Exploiting Dual Inexact Supervision.
+- **[TNNLS]** Deep Double Incomplete Multi-View Multi-Label Learning With Incomplete Labels and Missing Views.
 
 ------
 
