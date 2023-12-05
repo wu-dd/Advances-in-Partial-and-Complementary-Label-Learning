@@ -49,6 +49,7 @@ Leaderboard, To be continued...
 - ALIM: Adjusting Label Importance Mechanism for Noisy Partial Label Learning.
 - [[**SEU PALM Lab**]](http://palm.seu.edu.cn/)  Partial multi-label learning with probabilistic graphical disambiguation.
 - [[**SEU PALM Lab**]](http://palm.seu.edu.cn/) Learning From Biased Soft Labels.
+- [[**SEU PALM Lab**]](http://palm.seu.edu.cn/) Partial Label Learning with Dissimilarity Propagation guided Candidate Label Shrinkage.
 
 ### ICCV'23
 
@@ -134,10 +135,10 @@ Leaderboard, To be continued...
 - Adversary-aware partial label learning with label distillation.
 - ARNet: Automatic Refinement Network for Noisy Partial Label Learning.
 - Complementary Labels Learning with Augmented Classes.
-- Class-Imbalanced Complementary-Label Learning via Weighted Loss.
 - ProPaLL: Probabilistic Partial Label Learning.
 - Meta Objective Guided Disambiguation for Partial Label Learning.
 - A Deep Model for Partial Multi-Label Image Classification with Curriculum Based Disambiguation.
+- Learning with Complementary Labels Revisited: A Consistent Approach via Negative-Unlabeled Learning.
 
 ------
 
@@ -151,6 +152,7 @@ Leaderboard, To be continued...
 - **[TPAMI]**  [[**SEU PALM Lab**]](http://palm.seu.edu.cn/) Variational label enhancement.
 - **[Pattern Recognition]** GraphDPI: Partial label disambiguation by graph representation learning via mutual information maximization.
 - **[Neural Networks]** Partial label learning: Taxonomy, analysis and outlook.
+- **[Neural Networks]** Class-Imbalanced Complementary-Label Learning via Weighted Loss.
 - **[Science China Information Sciences]** [[**SEU PALM Lab**]](http://palm.seu.edu.cn/) Multi-Instance Partial-Label Learning: Towards Exploiting Dual Inexact Supervision.
 - **[TNNLS]** Deep Double Incomplete Multi-View Multi-Label Learning With Incomplete Labels and Missing Views.
 
@@ -258,6 +260,12 @@ Leaderboard, To be continued...
 ### CIKM'21
 
 - Detecting the Fake Candidate Instances: Ambiguous Label Learning with Generative Adversarial Networks
+
+------
+
+### ACML'21
+
+- A Partial Label Metric Learning Algorithm for Class Imbalanced Data.
 
 ------
 
@@ -419,6 +427,10 @@ Leaderboard, To be continued...
 
 
 ## Papers & Code in 2018
+
+### KDD'18
+
+[[**SEU PALM Lab**]](http://palm.seu.edu.cn/)Towards Mitigating the Class-Imbalance Problem for Partial Label Learning
 
 ------
 
