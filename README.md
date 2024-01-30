@@ -37,11 +37,66 @@ Real-World partial-label benchmarks:
 
 Leaderboard, To be continued...
 
+## Papers & Code in 2023
+
+### AAAI'24
+
+- [[**SEU PALM Lab**]](http://palm.seu.edu.cn/)  Disentangled partial label learning.
+- [[**SEU PALM Lab**]](http://palm.seu.edu.cn/)  Long-tailed partial label learning by head classifier and tail classifier cooperation.
+- [[**SEU PALM Lab**]](http://palm.seu.edu.cn/)  Distilling reliable knowledge for instance-dependent partial label learning.
+- Partial Label Learning with a Partner.
+- Adaptive Integration of Partial Label Learning and Negative Learning for Enhanced Noisy Label Learning.
+- Candidate Label Set Pruning: A Data-centric Perspective for Deep Partial-label Learning.
+
+------
+
+
+
+### Journal
+
+- **[MLJ]** Exploiting Counter-Examples for Active Learning with Partial-labels.
+- **[Neural Networks]** Boosting Semi-Supervised Learning with Contrastive Complementary Labeling.
+- **[Pattern Recognition]** Self-distillation and self-supervision for partial label learning.
+
+------
+
+
+
+### ARXIV'23
+
+- Enhancing Label Sharing Efficiency in Complementary-Label Learning with Label Augmentation
+- Deep Learning with Partially Labeled Data for Radio Map Reconstruction.
+- Towards Unbiased Exploration in Partial Label Learning
+- Imprecise label learning: A unified framework for learning with various imprecise label configurations.
+- Robust Representation Learning for Unreliable Partial Label Learning
+- Pseudo Labels Regularization for Imbalanced Partial-Label Learning.
+- Star Temporal Classification: Sequence Classification with Partially Labeled Data.
+- MuSFA: Improving Music Structural Function Analysis with Partially Labeled Data.
+- CroSel: Cross Selection of Confident Pseudo Labels for Partial-Label Learning.
+- Learning Reliable Representations for Incomplete Multi-View Partial Multi-Label Classification.
+- A Confidence-based Partial Label Learning Model for Crowd-Annotated Named Entity Recognition
+- Deep Duplex Learning for Weak Supervision.
+- Learning from Label Proportions with Instance-wise Consistency
+- Learning from Stochastic Labels.
+- Towards Mitigating the Problem of Insufficient and Ambiguous Supervision in Online Crowdsourcing Annotation.
+- Active Learning with Partial Labels.
+- Partial Label Learning for Emotion Recognition from EEG
+- Solving Partial Label Learning Problem with Multi-Agent Reinforcement Learning.
+- Adversary-aware partial label learning with label distillation.
+- ARNet: Automatic Refinement Network for Noisy Partial Label Learning.
+- Complementary Labels Learning with Augmented Classes.
+- ProPaLL: Probabilistic Partial Label Learning.
+- Meta Objective Guided Disambiguation for Partial Label Learning.
+- A Deep Model for Partial Multi-Label Image Classification with Curriculum Based Disambiguation.
+- Learning with Complementary Labels Revisited: A Consistent Approach via Negative-Unlabeled Learning.
+
+------
+
+
+
 
 
 ## Papers & Code in 2023
-
-------
 
 ### NeurIPS'23
 
@@ -107,38 +162,6 @@ Leaderboard, To be continued...
 ### PAKDD'23
 
 - Reduction from Complementary-Label Learning to Probability Estimates.
-
-------
-
-### ARXIV'23
-
-- Enhancing Label Sharing Efficiency in Complementary-Label Learning with Label Augmentation
-- Deep Learning with Partially Labeled Data for Radio Map Reconstruction.
-- Towards Unbiased Exploration in Partial Label Learning
-- Imprecise label learning: A unified framework for learning with various imprecise label configurations.
-- Robust Representation Learning for Unreliable Partial Label Learning
-- Pseudo Labels Regularization for Imbalanced Partial-Label Learning.
-- Star Temporal Classification: Sequence Classification with Partially Labeled Data.
-- MuSFA: Improving Music Structural Function Analysis with Partially Labeled Data.
-- CroSel: Cross Selection of Confident Pseudo Labels for Partial-Label Learning.
-- Learning Reliable Representations for Incomplete Multi-View Partial Multi-Label Classification.
-- A Confidence-based Partial Label Learning Model for Crowd-Annotated Named Entity Recognition
-- Deep Duplex Learning for Weak Supervision.
-- Learning from Label Proportions with Instance-wise Consistency
-- Learning from Stochastic Labels.
-- Rethinking Precision of Pseudo Label: Test-Time Adaptation via Complementary Learning.
-- Towards Mitigating the Problem of Insufficient and Ambiguous Supervision in Online Crowdsourcing Annotation.
-- Boosting Semi-Supervised Learning with Contrastive Complementary Labeling.
-- Active Learning with Partial Labels.
-- Partial Label Learning for Emotion Recognition from EEG
-- Solving Partial Label Learning Problem with Multi-Agent Reinforcement Learning.
-- Adversary-aware partial label learning with label distillation.
-- ARNet: Automatic Refinement Network for Noisy Partial Label Learning.
-- Complementary Labels Learning with Augmented Classes.
-- ProPaLL: Probabilistic Partial Label Learning.
-- Meta Objective Guided Disambiguation for Partial Label Learning.
-- A Deep Model for Partial Multi-Label Image Classification with Curriculum Based Disambiguation.
-- Learning with Complementary Labels Revisited: A Consistent Approach via Negative-Unlabeled Learning.
 
 ------
 
