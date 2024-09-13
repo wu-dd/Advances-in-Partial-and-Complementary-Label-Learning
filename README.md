@@ -11,7 +11,7 @@
 
 **Partial/complementary label learning** is an emerging framework in weakly supervised machine learning with broad application prospects. It handles the case in which each training example corresponds to a candidate label set and only one label concealed in the set is the ground-truth label.
 
-**This project is curated and maintained by [Dong-Dong Wu]([Wu-dd (吴东冬) - Homepage](https://wu-dd.github.io/)).**
+**This project is curated and maintained by [Dong-Dong Wu](https://wu-dd.github.io/).**
 
 
 
@@ -25,7 +25,42 @@
 + [2024/09/13] A major overhaul of the original github repository. 
 
 ## Contents
-- [TOC]
+- [Main](#main)
+  - [Early Work](#early-work)
+  - [Theory-Based](#theory-based)
+  - [Transition Matrix-Based](#transition-matrix-based)
+  - [Understanding](#understanding)
+  - [Better Optimization](#better-optimization)
+  - [Partial Multi-Label Learning](#partial-multi-label-learning)
+  - [Sequence Classification](#sequence-classification)
+  - [Open-Set Problem](#open-set-problem)
+  - [Partial Label Regression](#partial-label-regression)
+  - [Noisy Partial Label Learning](#noisy-partial-label-learning)
+  - [Data Augmentation](#data-augmentation)
+  - [Multi-Instance Learning](#multi-instance-learning)
+  - [Fine-Grained Recognition](#fine-grained-recognition)
+  - [Semi-Supervised Partial Label Learning](#semi-supervised-partial-label-learning)
+  - [Multi-Complementary Label Learning](#multi-complementary-label-learning)
+  - [Dimensionality Reduction](#dimensionality-reduction)
+  - [Multi-View Learning](#multi-view-learning)
+  - [Adversarial Training](#adversarial-training)
+  - [Negative Learning](#negative-learning)
+  - [Incremental Learning](#incremental-learning)
+  - [Class-Imbalance Problem](#class-imbalance-problem)
+  - [Online Learning](#online-learning)
+  - [Conformal Prediction](#conformal-prediction)
+  - [Few-Shot Learning](#few-shot-learning)
+  - [Multi-Dimensional](#multi-dimensional)
+  - [Domain Adaptation](#domain-adaptation)
+- [Applications](#applications)
+  - [Audio](#audio)
+  - [Text](#text)
+  - [Object Localization](#object-localization)
+  - [Recognition](#recognition)
+  - [Semi-Supervised Learning](#semi-supervised-learning)
+  - [Active Learning](#active-learning)
+  - [Noisy Label Learning](#noisy-label-learning)
+  - [Map Reconstruction](#map-reconstruction)
 
 <a name="main" />
 
@@ -36,7 +71,7 @@
 <a name="early-work" />
 
 ### <u>Early Work</u>
-+ Xxxxxxx
++ …
 
 <a name="theory-based" />
 
@@ -46,8 +81,8 @@
 - [Unbiased Risk Estimators Can Mislead: A Case Study of Learning with Complementary Labels](https://arxiv.org/abs/2007.02235) (ICML 2020)
 
 - [Leveraged Weighted Loss for Partial Label Learning](https://arxiv.org/abs/2106.05731) (ICML 2021)
-- [Unbiased Risk Estimator to Multi-Labeled Complementary Label Learning | IJCAI](https://www.ijcai.org/proceedings/2023/415) (IJCAI 2023)
-- [Learning with Complementary Labels Revisited: The Selected-Completely-at-Random Setting Is More Practical (arxiv.org)](https://arxiv.org/abs/2311.15502) (ICML 2024)
+- [Unbiased Risk Estimator to Multi-Labeled Complementary Label Learning](https://www.ijcai.org/proceedings/2023/415) (IJCAI 2023)
+- [Learning with Complementary Labels Revisited: The Selected-Completely-at-Random Setting Is More Practical](https://arxiv.org/abs/2311.15502) (ICML 2024)
 - [Towards Unbiased Exploration in Partial Label Learning](https://arxiv.org/abs/2307.00465)
 
 <a name="transition-matrix-based" />
@@ -92,7 +127,7 @@
 - [Generalized Large Margin -NN for Partial Label Learning](https://ieeexplore.ieee.org/document/9529072) (TMM2021)
 - [Adaptive Graph Guided Disambiguation for Partial Label Learning](https://ieeexplore.ieee.org/document/9573413) (TPAMI 2022)
 - [Discriminative Metric Learning for Partial Label Learning](https://ieeexplore.ieee.org/document/9585342) (TNNLS 2021)
-- [Top-k Partial Label Machine | IEEE Journals & Magazine](https://ieeexplore.ieee.org/document/9447152) (TNNLS 2021)
+- [Top-k Partial Label Machine](https://ieeexplore.ieee.org/document/9447152) (TNNLS 2021)
 - [Detecting the Fake Candidate Instances: Ambiguous Label Learning with Generative Adversarial Networks](https://dl.acm.org/doi/abs/10.1145/3459637.3482251) (CIKM 2021)
 - [Discriminative Complementary-Label Learning with Weighted Loss](https://proceedings.mlr.press/v139/gao21d.html) (ICML 2021)
 - [Instance-Dependent Partial Label Learning](https://arxiv.org/abs/2110.12911) (NeurIPS 2021)
@@ -128,8 +163,8 @@
 - [Does Label Smoothing Help Deep Partial Label Learning?](https://openreview.net/forum?id=drjjxmi2Ha) (ICML 2024)
 - [Meta Objective Guided Disambiguation for Partial Label Learning](https://arxiv.org/abs/2208.12459)
 - [Adversary-Aware Partial label learning with Label distillation](https://arxiv.org/abs/2304.00498)
-- [Solving Partial Label Learning Problem with Multi-Agent Reinforcement Learning](https://openreview.net/forum?id=BNsuf5g-JRd&referrer=[the profile of Fan Zhou](%2Fprofile%3Fid%3D~Fan_Zhou7))
-- [Learning from Stochastic Labels)](https://arxiv.org/abs/2302.00299)
+- [Solving Partial Label Learning Problem with Multi-Agent Reinforcement Learning](https://openreview.net/forum?id=BNsuf5g-JRd)
+- [Learning from Stochastic Labels](https://arxiv.org/abs/2302.00299)
 - [Deep Duplex Learning for Weak Supervision](https://openreview.net/forum?id=SeZ5ONageGl)
 - [Imprecise Label Learning: A Unified Framework for Learning with Various Imprecise Label Configurations](https://arxiv.org/abs/2305.12715)
 - [Enhancing Label Sharing Efficiency in Complementary-Label Learning with Label Augmentation](https://arxiv.org/abs/2305.08344)
@@ -170,13 +205,13 @@
 
 ### <u>Sequence Classification</u>
 
-[Star Temporal Classification: Sequence Classification with Partially Labeled Data](https://arxiv.org/abs/2201.12208)
+- [Star Temporal Classification: Sequence Classification with Partially Labeled Data](https://arxiv.org/abs/2201.12208)
 
 <a name="open-set-problem" />
 
 ### <u>Open-set Problem</u>
 
-[Partial-label Learning with Mixed Closed-set and Open-set Out-of-candidate Examples](https://arxiv.org/abs/2307.00553) (KDD 2023)
+- [Partial-label Learning with Mixed Closed-set and Open-set Out-of-candidate Examples](https://arxiv.org/abs/2307.00553) (KDD 2023)
 
 <a name="partial-label-regression" />
 
@@ -266,7 +301,7 @@
 
 ### <u>Incremental Learning</u>
 
-- [Partial label learning with emerging new labels | Machine Learning](https://link.springer.com/article/10.1007/s10994-022-06244-2) (ML 2022)
+- [Partial label learning with emerging new labels](https://link.springer.com/article/10.1007/s10994-022-06244-2) (ML 2022)
 
 <a name="class-imbalance-problem" />
 
@@ -314,6 +349,8 @@
 
 
 
+<a name="applications" />
+
 ## <u>Applications</u>
 
 <a name="audio" />
@@ -353,14 +390,14 @@
 
 ### <u>Active Learning</u>
 
-- [Exploiting counter-examples for active learning with partial labels | Machine Learning](https://link.springer.com/article/10.1007/s10994-023-06485-9) (ML 2023)
+- [Exploiting counter-examples for active learning with partial labels](https://link.springer.com/article/10.1007/s10994-023-06485-9) (ML 2023)
 - [Active Learning with Partial Labels](https://openreview.net/forum?id=1VuBdlNBuR)
 
 <a name="noisy-label-learning"/>
 
 ### <u>Noisy Label Learning</u>
 
-- [Learning from Noisy Labels with Complementary Loss Functions | Proceedings of the AAAI Conference on Artificial Intelligence](https://ojs.aaai.org/index.php/AAAI/article/view/17213) (AAAI 2021)
+- [Learning from Noisy Labels with Complementary Loss Functions](https://ojs.aaai.org/index.php/AAAI/article/view/17213) (AAAI 2021)
 - [Adaptive Integration of Partial Label Learning and Negative Learning for Enhanced Noisy Label Learning](https://arxiv.org/abs/2312.09505) (AAAI 2024)
 - [Partial Label Supervision for Agnostic Generative Noisy Label Learning](https://arxiv.org/abs/2308.01184)
 
@@ -378,22 +415,22 @@
 
 ### Tabular Dataset:
 
-**Notice:** The following partial label learning data sets were collected and pre-processed by Prof. [Min-Ling Zhang]([Min-Ling Zhang's Homepage (seu.edu.cn)](https://palm.seu.edu.cn/zhangml/)), with courtesy and proprietary to the authors of referred literatures on them. The pre-processed data sets can be used at your own risk and for academic purpose only. More information can be found in [here](http://palm.seu.edu.cn/zhangml/).
+**Notice:** The following partial label learning data sets were collected and pre-processed by Prof. [Min-Ling Zhang](https://palm.seu.edu.cn/zhangml/), with courtesy and proprietary to the authors of referred literatures on them. The pre-processed data sets can be used at your own risk and for academic purpose only. More information can be found in [here](http://palm.seu.edu.cn/zhangml/).
 
 Dataset for partial label learning
 
-| Dataset | [FG-NET data](https://palm.seu.edu.cn/zhangml/files/FG-NET.rar) | [Lost data](https://palm.seu.edu.cn/zhangml/files/lost.rar) | [MSRCv2 data](https://palm.seu.edu.cn/zhangml/files/MSRCv2.rar) | [BirdSong data](https://palm.seu.edu.cn/zhangml/files/BirdSong.rar) | [Soccer Player data](https://palm.seu.edu.cn/zhangml/files/Soccer Player.rar) | [Yahoo! News](https://palm.seu.edu.cn/zhangml/files/Yahoo! News.rar) | [Mirflickr data](https://palm.seu.edu.cn/zhangml/files/Mirflickr.zip) |
-| ------- | ------------------------------------------------------------ | ----------------------------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| [FG-NET data](https://palm.seu.edu.cn/zhangml/files/FG-NET.rar) | [Lost data](https://palm.seu.edu.cn/zhangml/files/lost.rar) | [MSRCv2 data](https://palm.seu.edu.cn/zhangml/files/MSRCv2.rar) | [BirdSong data](https://palm.seu.edu.cn/zhangml/files/BirdSong.rar) | [Soccer Player data](https://palm.seu.edu.cn/zhangml/files/SoccerPlayer.rar) | [Yahoo! News](https://palm.seu.edu.cn/zhangml/files/Yahoo!News.rar) | [Mirflickr data](https://palm.seu.edu.cn/zhangml/files/Mirflickr.zip) |
+| ------------------------------------------------------------ | ----------------------------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
 
 Dataset for partial multi-label learning
 
-| Dataset | [Music_emotion data](https://palm.seu.edu.cn/zhangml/files/pml_music_emotion.zip) | [Music_style data](https://palm.seu.edu.cn/zhangml/files/pml_music_style.zip) | [Mirflickr data](https://palm.seu.edu.cn/zhangml/files/pml_mirflickr.zip) | [YeastBP data](https://palm.seu.edu.cn/zhangml/files/pml_YeastBP.zip) | [YeastCC data](https://palm.seu.edu.cn/zhangml/files/pml_YeastCC.zip) | [YeastMF data](https://palm.seu.edu.cn/zhangml/files/pml_YeastMF.zip) |
-| ------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| [Music_emotion data](https://palm.seu.edu.cn/zhangml/files/pml_music_emotion.zip) | [Music_style data](https://palm.seu.edu.cn/zhangml/files/pml_music_style.zip) | [Mirflickr data](https://palm.seu.edu.cn/zhangml/files/pml_mirflickr.zip) | [YeastBP data](https://palm.seu.edu.cn/zhangml/files/pml_YeastBP.zip) | [YeastCC data](https://palm.seu.edu.cn/zhangml/files/pml_YeastCC.zip) | [YeastMF data](https://palm.seu.edu.cn/zhangml/files/pml_YeastMF.zip) |
+| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
 
 Data sets for multi-instance partial-label (MIPL) learning:
 
-| Dataset | [MNIST](https://palm.seu.edu.cn/zhangml/files/MNIST_MIPL.zip) | [FMNIST](https://palm.seu.edu.cn/zhangml/files/FMNIST_MIPL.zip) | [Newsgroups](https://palm.seu.edu.cn/zhangml/files/Newsgroups_MIPL.zip) | [Birdsong](https://palm.seu.edu.cn/zhangml/files/Birdsong_MIPL.zip) | [SIVAL](https://palm.seu.edu.cn/zhangml/files/SIVAL_MIPL.zip) | [CRC-Row](https://palm.seu.edu.cn/zhangml/files/CRC-MIPL-Row.zip) | [CRC-SBN](https://palm.seu.edu.cn/zhangml/files/CRC-MIPL-SBN.zip) | [CRC-KMeansSeg](https://palm.seu.edu.cn/zhangml/files/CRC-MIPL-KMeansSeg.zip) | [CRC-SIFT](https://palm.seu.edu.cn/zhangml/files/CRC-MIPL-SIFT.zip) |
-| ------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| [MNIST](https://palm.seu.edu.cn/zhangml/files/MNIST_MIPL.zip) | [FMNIST](https://palm.seu.edu.cn/zhangml/files/FMNIST_MIPL.zip) | [Newsgroups](https://palm.seu.edu.cn/zhangml/files/Newsgroups_MIPL.zip) | [Birdsong](https://palm.seu.edu.cn/zhangml/files/Birdsong_MIPL.zip) | [SIVAL](https://palm.seu.edu.cn/zhangml/files/SIVAL_MIPL.zip) | [CRC-Row](https://palm.seu.edu.cn/zhangml/files/CRC-MIPL-Row.zip) | [CRC-SBN](https://palm.seu.edu.cn/zhangml/files/CRC-MIPL-SBN.zip) | [CRC-KMeansSeg](https://palm.seu.edu.cn/zhangml/files/CRC-MIPL-KMeansSeg.zip) | [CRC-SIFT](https://palm.seu.edu.cn/zhangml/files/CRC-MIPL-SIFT.zip) |
+| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
 
 ### Image Dataset:
 
