@@ -83,7 +83,7 @@
 - [Leveraged Weighted Loss for Partial Label Learning](https://arxiv.org/abs/2106.05731) (ICML 2021)
 - [Unbiased Risk Estimator to Multi-Labeled Complementary Label Learning](https://www.ijcai.org/proceedings/2023/415) (IJCAI 2023)
 - [Learning with Complementary Labels Revisited: The Selected-Completely-at-Random Setting Is More Practical](https://arxiv.org/abs/2311.15502) (ICML 2024)
-- [Towards Unbiased Exploration in Partial Label Learning](https://arxiv.org/abs/2307.00465)
+- [Towards Unbiased Exploration in Partial Label Learning](https://arxiv.org/abs/2307.00465) (2023)
 
 <a name="transition-matrix-based" />
 
@@ -100,7 +100,7 @@
 - [Learning from a Complementary-label Source Domain: Theory and Algorithms](https://arxiv.org/abs/2008.01454) (TNNLS 2021)
 - [A Unifying Probabilistic Framework for Partially Labeled Data Learning](https://ieeexplore.ieee.org/document/9983986) (TPAMI 2023)
 - [Candidate Label Set Pruning: A Data-centric Perspective for Deep Partial-label Learning](https://openreview.net/forum?id=Fk5IzauJ7F) (ICLR 2024)
-- [Understanding Self-Distillation and Partial Label Learning in Multi-Class Classification with Label Noise](https://arxiv.org/abs/2402.10482)
+- [Understanding Self-Distillation and Partial Label Learning in Multi-Class Classification with Label Noise](https://arxiv.org/abs/2402.10482) (2024)
 
 <a name="better-optimization" />
 
@@ -151,6 +151,13 @@
 - [Candidate-aware Selective Disambiguation Based On Normalized Entropy for Instance-dependent Partial-label Learning](https://ieeexplore.ieee.org/document/10376678) (ICCV 2023)
 - [Partial Label Learning with Dissimilarity Propagation guided Candidate Label Shrinkage](https://papers.nips.cc/paper_files/paper/2023/hash/6b97236d90d945be7c58268207a14f4f-Abstract-Conference.html) (NeurIPS 2023)
 - [Learning From Biased Soft Labels](https://arxiv.org/abs/2302.08155) (NeurIPS 2023)
+- [Meta Objective Guided Disambiguation for Partial Label Learning](https://arxiv.org/abs/2208.12459) (2023)
+- [Adversary-Aware Partial label learning with Label distillation](https://arxiv.org/abs/2304.00498) (2023)
+- [Solving Partial Label Learning Problem with Multi-Agent Reinforcement Learning ](https://openreview.net/forum?id=BNsuf5g-JRd) (2023)
+- [Learning from Stochastic Labels](https://arxiv.org/abs/2302.00299) (2023)
+- [Deep Duplex Learning for Weak Supervision](https://openreview.net/forum?id=SeZ5ONageGl) (2023)
+- [Imprecise Label Learning: A Unified Framework for Learning with Various Imprecise Label Configurations](https://arxiv.org/abs/2305.12715) (2023)
+- [Enhancing Label Sharing Efficiency in Complementary-Label Learning with Label Augmentation](https://arxiv.org/abs/2305.08344) (2023)
 - [Self-distillation and self-supervision for partial label learning](https://www.sciencedirect.com/science/article/pii/S0031320323007136) (PR 2023)
 - [Partial Label Learning with a Partner](https://ojs.aaai.org/index.php/AAAI/article/view/29424) (AAAI 2024)
 - [Distilling Reliable Knowledge for Instance-Dependent Partial Label Learning](https://ojs.aaai.org/index.php/AAAI/article/view/29519) (AAAI 2024)
@@ -159,14 +166,7 @@
 - [A General Framework for Learning from Weak Supervision](https://arxiv.org/abs/2402.01922) (ICML 2024)
 - [Does Label Smoothing Help Deep Partial Label Learning?](https://openreview.net/forum?id=drjjxmi2Ha) (ICML 2024)
 - [Label Dropout: Improved Deep Learning Echocardiography Segmentation Using Multiple Datasets With Domain Shift and Partial Labelling](https://arxiv.org/abs/2403.07818) (SCIS 2024)
-- [Meta Objective Guided Disambiguation for Partial Label Learning](https://arxiv.org/abs/2208.12459)
-- [Adversary-Aware Partial label learning with Label distillation](https://arxiv.org/abs/2304.00498)
-- [Solving Partial Label Learning Problem with Multi-Agent Reinforcement Learning](https://openreview.net/forum?id=BNsuf5g-JRd)
-- [Learning from Stochastic Labels](https://arxiv.org/abs/2302.00299)
-- [Deep Duplex Learning for Weak Supervision](https://openreview.net/forum?id=SeZ5ONageGl)
-- [Imprecise Label Learning: A Unified Framework for Learning with Various Imprecise Label Configurations](https://arxiv.org/abs/2305.12715)
-- [Enhancing Label Sharing Efficiency in Complementary-Label Learning with Label Augmentation](https://arxiv.org/abs/2305.08344)
-- [Appeal: Allow Mislabeled Samples the Chance to be Rectified in Partial Label Learning](https://arxiv.org/abs/2312.11034)
+- [Appeal: Allow Mislabeled Samples the Chance to be Rectified in Partial Label Learning ](https://arxiv.org/abs/2312.11034) (2024)
 - [Graph Partial Label Learning with Potential Cause Discovering](https://arxiv.org/abs/2403.11449) (2024)
 
 <a name="partial-multi-label-learning" />
@@ -213,9 +213,9 @@
 - [Progressive Purification for Instance-Dependent Partial Label Learning](https://arxiv.org/abs/2206.00830) (ICML 2023)
 - [Unreliable Partial Label Learning with Recursive Separation](https://arxiv.org/abs/2302.09891) (IJCAI 2023)
 - [ALIM: Adjusting Label Importance Mechanism for Noisy Partial Label Learning](https://arxiv.org/abs/2301.12077) (NeurIPS 2023)
-- [IRNet: Iterative Refinement Network for Noisy Partial Label Learning](https://arxiv.org/abs/2211.04774)
-- [Robust Representation Learning for Unreliable Partial Label Learning](https://arxiv.org/abs/2308.16718)
-- [Pseudo-labelling meets Label Smoothing for Noisy Partial Label Learning](https://arxiv.org/abs/2402.04835)
+- [IRNet: Iterative Refinement Network for Noisy Partial Label Learning](https://arxiv.org/abs/2211.04774) (2023)
+- [Robust Representation Learning for Unreliable Partial Label Learning](https://arxiv.org/abs/2308.16718) (2023)
+- [Pseudo-labelling meets Label Smoothing for Noisy Partial Label Learning](https://arxiv.org/abs/2402.04835) (2024)
 
 <a name="semi-supervised-partial-label-learning" />
 
@@ -246,7 +246,7 @@
 - [Partial label learning: Taxonomy, analysis and outlook](https://www.sciencedirect.com/science/article/abs/pii/S0893608023000825) (NN 2023)
 - [Long-Tailed Partial Label Learning via Dynamic Rebalancing](https://arxiv.org/abs/2302.05080) (ICLR 2023)
 - [Long-Tailed Partial Label Learning by Head Classifier and Tail Classifier Cooperation](https://ojs.aaai.org/index.php/AAAI/article/view/29182) (AAAI 2024)
-- [Pseudo Labels Regularization for Imbalanced Partial-Label Learning](https://arxiv.org/abs/2303.03946)
+- [Pseudo Labels Regularization for Imbalanced Partial-Label Learning ](https://arxiv.org/abs/2303.03946) (2023)
 
 <a name="ood-pll" />
 
@@ -259,7 +259,7 @@
 ### <u>Partial Label Regression</u>
 
 - [Partial-Label Regression](https://arxiv.org/abs/2306.08968) (AAAI 2023)
-- [Partial-Label Learning with a Reject Option](https://arxiv.org/abs/2402.00592)
+- [Partial-Label Learning with a Reject Option](https://arxiv.org/abs/2402.00592) (2024)
 
 <a name="dimensionality-reduction" />
 
@@ -354,7 +354,7 @@
 
 ### <u>Audio</u>
 
-- [Semi-Supervised Audio Classification with Partially Labeled Data](https://arxiv.org/abs/2111.12761)
+- [Semi-Supervised Audio Classification with Partially Labeled Data ](https://arxiv.org/abs/2111.12761)(2021)
 
 <a name="text"/>
 
@@ -366,7 +366,7 @@
 
 ### <u>Sequence</u>
 
-- [Star Temporal Classification: Sequence Classification with Partially Labeled Data](https://arxiv.org/abs/2201.12208)
+- [Star Temporal Classification: Sequence Classification with Partially Labeled Data](https://arxiv.org/abs/2201.12208) (2022)
 
 <a name="recognition"/>
 
@@ -375,8 +375,8 @@
 - [Webly-Supervised Fine-Grained Recognition with Partial Label Learning](https://www.ijcai.org/proceedings/2022/209) (IJCAI 2022)
 - [Rethinking the Learning Paradigm for Dynamic Facial Expression Recognition](https://ieeexplore.ieee.org/document/10204167) (CVPR 2023)
 - [Partial Label Learning with Focal Loss for Sea Ice Classification Based on Ice Charts](https://arxiv.org/abs/2406.03645) (AEORS 2023)
-- [Partial Label Learning for Emotion Recognition from EEG](https://arxiv.org/abs/2302.13170)
-- [A Confidence-based Partial Label Learning Model for Crowd-Annotated Named Entity Recognition](https://arxiv.org/abs/2305.12485)
+- [Partial Label Learning for Emotion Recognition from EEG](https://arxiv.org/abs/2302.13170) (2023)
+- [A Confidence-based Partial Label Learning Model for Crowd-Annotated Named Entity Recognition](https://arxiv.org/abs/2305.12485) (2023)
 
 <a name="object-localization"/>
 
@@ -389,7 +389,7 @@
 
 ### <u>Map Reconstruction</u>
 
-- [Deep Learning with Partially Labeled Data for Radio Map Reconstruction](https://arxiv.org/abs/2306.05294) 
+- [Deep Learning with Partially Labeled Data for Radio Map Reconstruction](https://arxiv.org/abs/2306.05294) (2023)
 
 <a name="semi-supervised-learning"/>
 
@@ -404,7 +404,7 @@
 ### <u>Active Learning</u>
 
 - [Exploiting counter-examples for active learning with partial labels](https://link.springer.com/article/10.1007/s10994-023-06485-9) (ML 2023)
-- [Active Learning with Partial Labels](https://openreview.net/forum?id=1VuBdlNBuR)
+- [Active Learning with Partial Labels](https://openreview.net/forum?id=1VuBdlNBuR) (2023)
 
 <a name="noisy-label-learning"/>
 
@@ -412,7 +412,7 @@
 
 - [Learning from Noisy Labels with Complementary Loss Functions](https://ojs.aaai.org/index.php/AAAI/article/view/17213) (AAAI 2021)
 - [Adaptive Integration of Partial Label Learning and Negative Learning for Enhanced Noisy Label Learning](https://arxiv.org/abs/2312.09505) (AAAI 2024)
-- [Partial Label Supervision for Agnostic Generative Noisy Label Learning](https://arxiv.org/abs/2308.01184)
+- [Partial Label Supervision for Agnostic Generative Noisy Label Learning](https://arxiv.org/abs/2308.01184) (2024)
 
 <a name="TTA"/>
 
