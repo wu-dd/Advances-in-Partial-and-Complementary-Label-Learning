@@ -1,7 +1,7 @@
 # Advances in Partial/Complementary Label Learning 
 
 [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
-<img src="https://img.shields.io/badge/Contributions-Welcome-278ea5" alt="Contrib"/> <img src="https://img.shields.io/badge/Number%20of%20Items-174-FF6F00" alt="PaperNum"/> ![Stars](https://img.shields.io/github/stars/wu-dd/Advances-in-Partial-and-Complementary-Label-Learning?color=yellow&label=Stars) ![Forks](https://img.shields.io/github/forks/wu-dd/Advances-in-Partial-and-Complementary-Label-Learning?color=green&label=Forks)
+<img src="https://img.shields.io/badge/Contributions-Welcome-278ea5" alt="Contrib"/> <img src="https://img.shields.io/badge/Number%20of%20Items-168-FF6F00" alt="PaperNum"/> ![Stars](https://img.shields.io/github/stars/wu-dd/Advances-in-Partial-and-Complementary-Label-Learning?color=yellow&label=Stars) ![Forks](https://img.shields.io/github/forks/wu-dd/Advances-in-Partial-and-Complementary-Label-Learning?color=green&label=Forks)
 
 
 
@@ -11,7 +11,7 @@
 
 **Partial/complementary label learning** is an emerging framework in weakly supervised machine learning with broad application prospects. It handles the case in which each training example corresponds to a candidate label set and only one label concealed in the set is the ground-truth label.
 
-**This project is curated and maintained by [Dong-Dong Wu](https://wu-dd.github.io/)**. I will do my best to keep the project up to date. If you have valuable suggestions or are interested in being contributors, feel free to drop me an email.
+**This project is curated and maintained by [Dong-Dong Wu](https://wu-dd.github.io/)**. I will do my best to keep the project up to date. If you have any suggestions or are interested in being contributors, feel free to drop me an email.
 
 
 
@@ -70,7 +70,7 @@
 <a name="early-work" />
 
 ### <u>Early Work</u>
-+ …
++ To be continue.
 
 <a name="theory-based" />
 
@@ -78,7 +78,6 @@
 
 - [Complementary-Label Learning for Arbitrary Losses and Models](https://arxiv.org/abs/1810.04327) (ICML 2019)
 - [Unbiased Risk Estimators Can Mislead: A Case Study of Learning with Complementary Labels](https://arxiv.org/abs/2007.02235) (ICML 2020)
-
 - [Leveraged Weighted Loss for Partial Label Learning](https://arxiv.org/abs/2106.05731) (ICML 2021)
 - [Unbiased Risk Estimator to Multi-Labeled Complementary Label Learning](https://www.ijcai.org/proceedings/2023/415) (IJCAI 2023)
 - [Learning with Complementary Labels Revisited: The Selected-Completely-at-Random Setting Is More Practical](https://arxiv.org/abs/2311.15502) (ICML 2024)
@@ -430,12 +429,16 @@ To be continue.
 
 
 
+## Learderboard
+
+To be continue.
+
 
 
 ## Star History
 [![Star History Chart](https://api.star-history.com/svg?repos=wu-dd/Advances-in-Partial-and-Complementary-Label-Learning&type=Date)](https://star-history.com/#wu-dd/Advances-in-Partial-and-Complementary-Label-Learning&Date)
 
-## Citing Awesome Dataset Distillation
+## Citing Advances in Partial/Complementary Label Learning
 If you find this project useful for your research, please use the following BibTeX entry.
 ```
 @misc{Wu2022advances,
