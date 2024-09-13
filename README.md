@@ -95,9 +95,7 @@
 
 - [Bridging Ordinary-Label Learning and Complementary-Label Learning](https://proceedings.mlr.press/v129/katsura20a.html) (ACML 2020)
 - [On the Power of Deep but Naive Partial Label Learning](https://arxiv.org/abs/2010.11600) (ICASSP 2021)
-
 - [Learning from a Complementary-label Source Domain: Theory and Algorithms](https://arxiv.org/abs/2008.01454) (TNNLS 2021)
-
 - [A Unifying Probabilistic Framework for Partially Labeled Data Learning](https://ieeexplore.ieee.org/document/9983986) (TPAMI 2023)
 - [Candidate Label Set Pruning: A Data-centric Perspective for Deep Partial-label Learning | OpenReview](https://openreview.net/forum?id=Fk5IzauJ7F) (ICLR 2024)
 - [Understanding Self-Distillation and Partial Label Learning in Multi-Class Classification with Label Noise](https://arxiv.org/abs/2402.10482)
