@@ -430,12 +430,12 @@
 
 **Notice:** The following partial label learning data sets were collected and pre-processed by Prof. [Min-Ling Zhang](https://palm.seu.edu.cn/zhangml/), with courtesy and proprietary to the authors of referred literatures on them. The pre-processed data sets can be used at your own risk and for academic purpose only. More information can be found in [here](http://palm.seu.edu.cn/zhangml/).
 
-Dataset for partial label learning
+Dataset for partial label learning:
 
 | [FG-NET](https://palm.seu.edu.cn/zhangml/files/FG-NET.rar) | [Lost](https://palm.seu.edu.cn/zhangml/files/lost.rar) | [MSRCv2](https://palm.seu.edu.cn/zhangml/files/MSRCv2.rar) | [BirdSong](https://palm.seu.edu.cn/zhangml/files/BirdSong.rar) | [Soccer Player](https://palm.seu.edu.cn/zhangml/files/SoccerPlayer.rar) | [Yahoo! News](https://palm.seu.edu.cn/zhangml/files/Yahoo!News.rar) | [Mirflickr](https://palm.seu.edu.cn/zhangml/files/Mirflickr.zip) |
 | ---------------------------------------------------------- | ------------------------------------------------------ | ---------------------------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
 
-Dataset for partial multi-label learning
+Dataset for partial multi-label learning:
 
 | [Music_emotion](https://palm.seu.edu.cn/zhangml/files/pml_music_emotion.zip) | [Music_style](https://palm.seu.edu.cn/zhangml/files/pml_music_style.zip) | [Mirflickr](https://palm.seu.edu.cn/zhangml/files/pml_mirflickr.zip) | [YeastBP](https://palm.seu.edu.cn/zhangml/files/pml_YeastBP.zip) | [YeastCC](https://palm.seu.edu.cn/zhangml/files/pml_YeastCC.zip) | [YeastMF](https://palm.seu.edu.cn/zhangml/files/pml_YeastMF.zip) |
 | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
