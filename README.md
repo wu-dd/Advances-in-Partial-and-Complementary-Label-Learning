@@ -97,7 +97,7 @@
 - [On the Power of Deep but Naive Partial Label Learning](https://arxiv.org/abs/2010.11600) (ICASSP 2021)
 - [Learning from a Complementary-label Source Domain: Theory and Algorithms](https://arxiv.org/abs/2008.01454) (TNNLS 2021)
 - [A Unifying Probabilistic Framework for Partially Labeled Data Learning](https://ieeexplore.ieee.org/document/9983986) (TPAMI 2023)
-- [Candidate Label Set Pruning: A Data-centric Perspective for Deep Partial-label Learning | OpenReview](https://openreview.net/forum?id=Fk5IzauJ7F) (ICLR 2024)
+- [Candidate Label Set Pruning: A Data-centric Perspective for Deep Partial-label Learning](https://openreview.net/forum?id=Fk5IzauJ7F) (ICLR 2024)
 - [Understanding Self-Distillation and Partial Label Learning in Multi-Class Classification with Label Noise](https://arxiv.org/abs/2402.10482)
 
 <a name="better-optimization" />
@@ -105,7 +105,6 @@
 ### <u>Better Optimization</u>
 
 - [GM-PLL: Graph Matching based Partial Label Learning](https://arxiv.org/pdf/1901.03073) (TKDE 2019)
-
 - [Partial Label Learning via Label Enhancement](https://ojs.aaai.org/index.php/AAAI/article/view/4497) (AAAI 2019)
 - [Partial Label Learning with Self-Guided Retraining](https://arxiv.org/abs/1902.03045) (AAAI 2019)
 - [Partial Label Learning by Semantic Difference Maximization](https://www.ijcai.org/proceedings/2019/318) (IJCAI 2019)
