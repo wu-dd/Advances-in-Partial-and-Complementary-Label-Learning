@@ -234,7 +234,7 @@
 - [A Partial Label Metric Learning Algorithm for Class Imbalanced Data](https://proceedings.mlr.press/v157/liu21f.html) (ACML 2021)
 - [SoLar: Sinkhorn Label Refinery for Imbalanced Partial-Label Learning](https://arxiv.org/abs/2209.10365) (NeurIPS 2022)
 - [Class-Imbalanced Complementary-Label Learning via Weighted Loss](https://arxiv.org/abs/2209.14189) (NN 2023)
-- [Partial label learning: Taxonomy, analysis and outlook - ScienceDirect](https://www.sciencedirect.com/science/article/abs/pii/S0893608023000825) (NN 2023)
+- [Partial label learning: Taxonomy, analysis and outlook](https://www.sciencedirect.com/science/article/abs/pii/S0893608023000825) (NN 2023)
 - [Long-Tailed Partial Label Learning via Dynamic Rebalancing](https://arxiv.org/abs/2302.05080) (ICLR 2023)
 - [Long-Tailed Partial Label Learning by Head Classifier and Tail Classifier Cooperation](https://ojs.aaai.org/index.php/AAAI/article/view/29182) (AAAI 2024)
 - [Pseudo Labels Regularization for Imbalanced Partial-Label Learning](https://arxiv.org/abs/2303.03946)
