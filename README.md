@@ -11,7 +11,7 @@
 
 **Partial/complementary label learning** is an emerging framework in weakly supervised machine learning with broad application prospects. It handles the case in which each training example corresponds to a candidate label set and only one label concealed in the set is the ground-truth label.
 
-**This project is curated and maintained by [Dong-Dong Wu](https://wu-dd.github.io/).**
+**This project is curated and maintained by [Dong-Dong Wu](https://wu-dd.github.io/)**. I will do my best to keep the project up to date. If you have valuable suggestions or are interested in being contributors, feel free to drop me an email.
 
 
 
@@ -32,35 +32,34 @@
   - [Understanding](#understanding)
   - [Better Optimization](#better-optimization)
   - [Partial Multi-Label Learning](#partial-multi-label-learning)
-  - [Sequence Classification](#sequence-classification)
-  - [Open-Set Problem](#open-set-problem)
-  - [Partial Label Regression](#partial-label-regression)
   - [Noisy Partial Label Learning](#noisy-partial-label-learning)
-  - [Data Augmentation](#data-augmentation)
-  - [Multi-Instance Learning](#multi-instance-learning)
-  - [Fine-Grained Recognition](#fine-grained-recognition)
   - [Semi-Supervised Partial Label Learning](#semi-supervised-partial-label-learning)
-  - [Multi-Complementary Label Learning](#multi-complementary-label-learning)
+  - [Multi-Instance Partial Label Learning](#multi-instance-learning)
+  - [Imbalanced Partial Label Problem](#class-imbalance-problem)
+  - [Partial Label Regression](#partial-label-regression)
   - [Dimensionality Reduction](#dimensionality-reduction)
+  - [Multi-Complementary Label Learning](#multi-complementary-label-learning)
   - [Multi-View Learning](#multi-view-learning)
   - [Adversarial Training](#adversarial-training)
   - [Negative Learning](#negative-learning)
   - [Incremental Learning](#incremental-learning)
-  - [Class-Imbalance Problem](#class-imbalance-problem)
   - [Online Learning](#online-learning)
   - [Conformal Prediction](#conformal-prediction)
   - [Few-Shot Learning](#few-shot-learning)
+  - [Open-Set Problem](#open-set-problem)
+  - [Data Augmentation](#data-augmentation)
   - [Multi-Dimensional](#multi-dimensional)
   - [Domain Adaptation](#domain-adaptation)
 - [Applications](#applications)
   - [Audio](#audio)
   - [Text](#text)
-  - [Object Localization](#object-localization)
+  - [Sequence](#sequence-classification)
   - [Recognition](#recognition)
+  - [Object Localization](#object-localization)
+  - [Map Reconstruction](#map-reconstruction)
   - [Semi-Supervised Learning](#semi-supervised-learning)
   - [Active Learning](#active-learning)
   - [Noisy Label Learning](#noisy-label-learning)
-  - [Map Reconstruction](#map-reconstruction)
 
 <a name="main" />
 
@@ -201,25 +200,6 @@
 - [Partial Multi-View Multi-Label Classification via Semantic Invariance Learning and PrototypeModeling](https://icml.cc/virtual/2024/poster/34972) (ICML 2024)
 - [Reliable Representations Learning for Incomplete Multi-View Partial Multi-Label Classification](https://arxiv.org/abs/2303.17117)
 
-<a name="sequence-classification" />
-
-### <u>Sequence Classification</u>
-
-- [Star Temporal Classification: Sequence Classification with Partially Labeled Data](https://arxiv.org/abs/2201.12208)
-
-<a name="open-set-problem" />
-
-### <u>Open-set Problem</u>
-
-- [Partial-label Learning with Mixed Closed-set and Open-set Out-of-candidate Examples](https://arxiv.org/abs/2307.00553) (KDD 2023)
-
-<a name="partial-label-regression" />
-
-### <u>Partial Label Regression</u>
-
-- [Partial-Label Regression](https://arxiv.org/abs/2306.08968) (AAAI 2023)
-- [Partial-Label Learning with a Reject Option](https://arxiv.org/abs/2402.00592)
-
 <a name="noisy-partial-label-learning" />
 
 ### <u>Noisy Partial Label Learning</u>
@@ -234,41 +214,41 @@
 - [Robust Representation Learning for Unreliable Partial Label Learning](https://arxiv.org/abs/2308.16718)
 - [Pseudo-labelling meets Label Smoothing for Noisy Partial Label Learning](https://arxiv.org/abs/2402.04835)
 
-<a name="data-augmentation" />
-
-### <u>Data Augmentation</u>
-
-- [Partial Label Learning with Discrimination Augmentation](https://dl.acm.org/doi/abs/10.1145/3534678.3539363) (KDD 2022)
-
-<a name="multi-instance-learning" />
-
-### <u>Multi-Instance Learning</u>
-
-- [Multi-Instance Partial-Label Learning: Towards Exploiting Dual Inexact Supervision](https://arxiv.org/abs/2212.08997) (SCIS 2023)
-- [Disambiguated Attention Embedding for Multi-Instance Partial-Label Learning](https://arxiv.org/abs/2305.16912) (NeurIPS 2023)
-
-<a name="fine-grained-recognition" />
-
-### <u>Fine-Grained Recognition</u>
-
-- [Webly-Supervised Fine-Grained Recognition with Partial Label Learning](https://www.ijcai.org/proceedings/2022/209) (IJCAI 2022)
-
 <a name="semi-supervised-partial-label-learning" />
 
 ### <u>Semi-Supervised Partial Label Learning</u>
 
 - [Semi-Supervised Partial Label Learning via Confidence-Rated Margin Maximization](https://proceedings.neurips.cc/paper/2020/hash/4dea382d82666332fb564f2e711cbc71-Abstract.html) (NeurIPS 2020)
 - [Exploiting Unlabeled Data via Partial Label Assignment for Multi-Class Semi-Supervised Learning](https://ojs.aaai.org/index.php/AAAI/article/view/17310) (AAAI 2021)
-
 - [Distributed Semisupervised Partial Label Learning Over Networks](https://ieeexplore.ieee.org/document/9699063) (AI 2022)
 - [Learning with Partial-Label and Unlabeled Data: A Uniform Treatment for Supervision Redundancy and Insufficiency](https://proceedings.mlr.press/v235/liu24ar.html) (ICML 2024)
 
-<a name="multi-complementary-label-learning" />
+<a name="multi-instance-learning" />
 
-### <u>Multi-Complementary Label Learning</u>
+### <u>Multi-Instance Partial Label Learning</u>
 
-- [Learning with Multiple Complementary Labels](https://arxiv.org/abs/1912.12927) (ICML 2020)
-- [Multi-Complementary and Unlabeled Learning for Arbitrary Losses and Models](https://arxiv.org/abs/2001.04243) (PR 2022)
+- [Multi-Instance Partial-Label Learning: Towards Exploiting Dual Inexact Supervision](https://arxiv.org/abs/2212.08997) (SCIS 2023)
+- [Disambiguated Attention Embedding for Multi-Instance Partial-Label Learning](https://arxiv.org/abs/2305.16912) (NeurIPS 2023)
+
+<a name="class-imbalance-problem" />
+
+### <u>Imblanced Partial Label Learning</u>
+
+- [Towards Mitigating the Class-Imbalance Problem for Partial Label Learning](https://dl.acm.org/doi/10.1145/3219819.3220008) (KDD 2018) [:octocat:](https://github.com/seu71wj/CIMAP)
+- [A Partial Label Metric Learning Algorithm for Class Imbalanced Data](https://proceedings.mlr.press/v157/liu21f.html) (ACML 2021)
+- [SoLar: Sinkhorn Label Refinery for Imbalanced Partial-Label Learning](https://arxiv.org/abs/2209.10365) (NeurIPS 2022)
+- [Class-Imbalanced Complementary-Label Learning via Weighted Loss](https://arxiv.org/abs/2209.14189) (NN 2023)
+- [Partial label learning: Taxonomy, analysis and outlook - ScienceDirect](https://www.sciencedirect.com/science/article/abs/pii/S0893608023000825) (NN 2023)
+- [Long-Tailed Partial Label Learning via Dynamic Rebalancing](https://arxiv.org/abs/2302.05080) (ICLR 2023)
+- [Long-Tailed Partial Label Learning by Head Classifier and Tail Classifier Cooperation](https://ojs.aaai.org/index.php/AAAI/article/view/29182) (AAAI 2024)
+- [Pseudo Labels Regularization for Imbalanced Partial-Label Learning](https://arxiv.org/abs/2303.03946)
+
+<a name="partial-label-regression" />
+
+### <u>Partial Label Regression</u>
+
+- [Partial-Label Regression](https://arxiv.org/abs/2306.08968) (AAAI 2023)
+- [Partial-Label Learning with a Reject Option](https://arxiv.org/abs/2402.00592)
 
 <a name="dimensionality-reduction" />
 
@@ -278,6 +258,13 @@
 - [Disambiguation Enabled Linear Discriminant Analysis for Partial Label Dimensionality Reduction](https://dl.acm.org/doi/abs/10.1145/3494565) (TKDD 2022)
 - [Submodular Feature Selection for Partial Label Learning](https://dl.acm.org/doi/abs/10.1145/3534678.3539292) (KDD 2022)
 - [Dimensionality Reduction for Partial Label Learning: A Unified and Adaptive Approach](https://www.computer.org/csdl/journal/tk/2024/08/10440495/1UGSdp8q3Wo) (TKDE 2024)
+
+<a name="multi-complementary-label-learning" />
+
+### <u>Multi-Complementary Label Learning</u>
+
+- [Learning with Multiple Complementary Labels](https://arxiv.org/abs/1912.12927) (ICML 2020)
+- [Multi-Complementary and Unlabeled Learning for Arbitrary Losses and Models](https://arxiv.org/abs/2001.04243) (PR 2022)
 
 <a name="multi-view-learning" />
 
@@ -303,20 +290,6 @@
 
 - [Partial label learning with emerging new labels](https://link.springer.com/article/10.1007/s10994-022-06244-2) (ML 2022)
 
-<a name="class-imbalance-problem" />
-
-### <u>Class-Imblance Problem</u>
-
-- [Towards Mitigating the Class-Imbalance Problem for Partial Label Learning](https://dl.acm.org/doi/10.1145/3219819.3220008) (KDD 2018) [:octocat:](https://github.com/seu71wj/CIMAP)
-
-- [A Partial Label Metric Learning Algorithm for Class Imbalanced Data](https://proceedings.mlr.press/v157/liu21f.html) (ACML 2021)
-- [SoLar: Sinkhorn Label Refinery for Imbalanced Partial-Label Learning](https://arxiv.org/abs/2209.10365) (NeurIPS 2022)
-- [Class-Imbalanced Complementary-Label Learning via Weighted Loss](https://arxiv.org/abs/2209.14189) (NN 2023)
-- [Partial label learning: Taxonomy, analysis and outlook - ScienceDirect](https://www.sciencedirect.com/science/article/abs/pii/S0893608023000825) (NN 2023)
-- [Long-Tailed Partial Label Learning via Dynamic Rebalancing](https://arxiv.org/abs/2302.05080) (ICLR 2023)
-- [Long-Tailed Partial Label Learning by Head Classifier and Tail Classifier Cooperation](https://ojs.aaai.org/index.php/AAAI/article/view/29182) (AAAI 2024)
-- [Pseudo Labels Regularization for Imbalanced Partial-Label Learning](https://arxiv.org/abs/2303.03946)
-
 <a name="online-learning" />
 
 ### <u>Online Learning</u>
@@ -334,6 +307,18 @@
 ### <u>Few-Shot Learning</u>
 
 - [Few-Shot Partial-Label Learning](https://arxiv.org/abs/2106.00984) (IJCAI 2021)
+
+<a name="open-set-problem" />
+
+### <u>Open-set Problem</u>
+
+- [Partial-label Learning with Mixed Closed-set and Open-set Out-of-candidate Examples](https://arxiv.org/abs/2307.00553) (KDD 2023)
+
+<a name="data-augmentation" />
+
+### <u>Data Augmentation</u>
+
+- [Partial Label Learning with Discrimination Augmentation](https://dl.acm.org/doi/abs/10.1145/3534678.3539363) (KDD 2022)
 
 <a name="multi-dimensional" />
 
@@ -365,19 +350,32 @@
 
 - [Complementary Auxiliary Classifiers for Label-Conditional Text Generation](https://ojs.aaai.org/index.php/AAAI/article/view/6346) (AAAI 2020)
 
+<a name="sequence" />
+
+### <u>Sequence</u>
+
+- [Star Temporal Classification: Sequence Classification with Partially Labeled Data](https://arxiv.org/abs/2201.12208)
+
+<a name="recognition"/>
+
+### <u>Recognition</u>
+
+- [Webly-Supervised Fine-Grained Recognition with Partial Label Learning](https://www.ijcai.org/proceedings/2022/209) (IJCAI 2022)
+- [Rethinking the Learning Paradigm for Dynamic Facial Expression Recognition](https://ieeexplore.ieee.org/document/10204167) (CVPR 2023)
+- [Partial Label Learning for Emotion Recognition from EEG](https://arxiv.org/abs/2302.13170)
+- [A Confidence-based Partial Label Learning Model for Crowd-Annotated Named Entity Recognition](https://arxiv.org/abs/2305.12485)
+
 <a name="object-localization"/>
 
 ### <u>Object Localization</u>
 
 - [Adversarial Complementary Learning for Weakly Supervised Object Localization](https://arxiv.org/abs/1804.06962) (CVPR 2018) [:octocat:](https://github.com/halbielee/ACoL_pytorch)
 
-<a name="recognition"/>
+<a name="map-reconstruction"/>
 
-### <u>Recognition</u>
+### <u>Map Reconstruction</u>
 
-- [Rethinking the Learning Paradigm for Dynamic Facial Expression Recognition](https://ieeexplore.ieee.org/document/10204167) (CVPR 2023)
-- [Partial Label Learning for Emotion Recognition from EEG](https://arxiv.org/abs/2302.13170)
-- [A Confidence-based Partial Label Learning Model for Crowd-Annotated Named Entity Recognition](https://arxiv.org/abs/2305.12485)
+- [Deep Learning with Partially Labeled Data for Radio Map Reconstruction](https://arxiv.org/abs/2306.05294)
 
 <a name="semi-supervised-learning"/>
 
@@ -401,12 +399,6 @@
 - [Adaptive Integration of Partial Label Learning and Negative Learning for Enhanced Noisy Label Learning](https://arxiv.org/abs/2312.09505) (AAAI 2024)
 - [Partial Label Supervision for Agnostic Generative Noisy Label Learning](https://arxiv.org/abs/2308.01184)
 
-<a name="map-reconstruction"/>
-
-### <u>Map Reconstruction</u>
-
-- [Deep Learning with Partially Labeled Data for Radio Map Reconstruction](https://arxiv.org/abs/2306.05294)
-
 
 
 
@@ -427,14 +419,16 @@ Dataset for partial multi-label learning
 | [Music_emotion data](https://palm.seu.edu.cn/zhangml/files/pml_music_emotion.zip) | [Music_style data](https://palm.seu.edu.cn/zhangml/files/pml_music_style.zip) | [Mirflickr data](https://palm.seu.edu.cn/zhangml/files/pml_mirflickr.zip) | [YeastBP data](https://palm.seu.edu.cn/zhangml/files/pml_YeastBP.zip) | [YeastCC data](https://palm.seu.edu.cn/zhangml/files/pml_YeastCC.zip) | [YeastMF data](https://palm.seu.edu.cn/zhangml/files/pml_YeastMF.zip) |
 | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
 
-Data sets for multi-instance partial-label (MIPL) learning:
+Data sets for multi-instance partial-label learning:
 
 | [MNIST](https://palm.seu.edu.cn/zhangml/files/MNIST_MIPL.zip) | [FMNIST](https://palm.seu.edu.cn/zhangml/files/FMNIST_MIPL.zip) | [Newsgroups](https://palm.seu.edu.cn/zhangml/files/Newsgroups_MIPL.zip) | [Birdsong](https://palm.seu.edu.cn/zhangml/files/Birdsong_MIPL.zip) | [SIVAL](https://palm.seu.edu.cn/zhangml/files/SIVAL_MIPL.zip) | [CRC-Row](https://palm.seu.edu.cn/zhangml/files/CRC-MIPL-Row.zip) | [CRC-SBN](https://palm.seu.edu.cn/zhangml/files/CRC-MIPL-SBN.zip) | [CRC-KMeansSeg](https://palm.seu.edu.cn/zhangml/files/CRC-MIPL-KMeansSeg.zip) | [CRC-SIFT](https://palm.seu.edu.cn/zhangml/files/CRC-MIPL-SIFT.zip) |
 | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
 
 ### Image Dataset:
 
-To be continue..
+To be continue.
+
+
 
 
 
