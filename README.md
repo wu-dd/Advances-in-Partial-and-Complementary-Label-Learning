@@ -418,7 +418,8 @@
 
 ### <u>Test-Time Adaptation</u>
 
-[Rethinking Precision of Pseudo Label: Test-Time Adaptation via Complementary Learning](https://arxiv.org/abs/2301.06013) (2023)
+- [Rethinking Precision of Pseudo Label: Test-Time Adaptation via Complementary Learning](https://arxiv.org/abs/2301.06013) (2023)
+
 
 
 
