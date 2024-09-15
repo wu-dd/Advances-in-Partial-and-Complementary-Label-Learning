@@ -37,6 +37,7 @@
   - [Multi-Instance Partial Label Learning](#multi-instance-learning)
   - [Imbalanced Partial Label Problem](#class-imbalance-problem)
   - [Out-of-distributrion Partial Label Learning](#partial-label-regression)
+  - [Federated Partial Label Learning](#fed-pll>)
   - [Partial Label Regression](#partial-label-regression)
   - [Dimensionality Reduction](#dimensionality-reduction)
   - [Multi-Complementary Label Learning](#multi-complementary-label-learning)
@@ -128,12 +129,14 @@
 - [Detecting the Fake Candidate Instances: Ambiguous Label Learning with Generative Adversarial Networks](https://dl.acm.org/doi/abs/10.1145/3459637.3482251) (CIKM 2021)
 - [Discriminative Complementary-Label Learning with Weighted Loss](https://proceedings.mlr.press/v139/gao21d.html) (ICML 2021)
 - [Instance-Dependent Partial Label Learning](https://arxiv.org/abs/2110.12911) (NeurIPS 2021)
+- [A Generative Model for Partial Label Learning](https://ieeexplore.ieee.org/abstract/document/9428103) (ICME 2021)
 - [Learning with Proper Partial Labels](https://arxiv.org/abs/2112.12303) (NearoComputing 2022)
 - [Biased Complementary-Label Learning Without True Labels](https://ieeexplore.ieee.org/document/9836971) (TNNLS 2022)
 - [Exploiting Class Activation Value for Partial-Label Learning](https://openreview.net/forum?id=qqdXHUGec9h) (ICLR 2022)
 - [PiCO: Contrastive Label Disambiguation for Partial Label Learning](https://openreview.net/forum?id=EhYjZy6e1gJ) (ICLR 2022)
 - [Deep Graph Matching for Partial Label Learning](https://www.ijcai.org/proceedings/2022/459) (IJCAI 2022)
 - [Exploring Binary Classification Hidden within Partial Label Learning](https://www.ijcai.org/proceedings/2022/456) (IJCAI 2022)
+- [Ambiguity-Induced Contrastive Learning for Instance-Dependent Partial Label Learning](https://www.ijcai.org/proceedings/2022/502) (IJCAI 2022)
 - [Partial Label Learning via Label Influence Function](https://proceedings.mlr.press/v162/gong22c.html) (ICML 2022)
 - [Revisiting Consistency Regularization for Deep Partial Label Learning](https://proceedings.mlr.press/v162/wu22l.html) (ICML 2022)
 - [Partial Label Learning with Semantic Label Representations ](https://dl.acm.org/doi/abs/10.1145/3534678.3539434) (KDD 2022)
@@ -157,7 +160,6 @@
 - [Learning from Stochastic Labels](https://arxiv.org/abs/2302.00299) (2023)
 - [Deep Duplex Learning for Weak Supervision](https://openreview.net/forum?id=SeZ5ONageGl) (2023)
 - [Imprecise Label Learning: A Unified Framework for Learning with Various Imprecise Label Configurations](https://arxiv.org/abs/2305.12715) (2023)
-- [Enhancing Label Sharing Efficiency in Complementary-Label Learning with Label Augmentation](https://arxiv.org/abs/2305.08344) (2023)
 - [Self-distillation and self-supervision for partial label learning](https://www.sciencedirect.com/science/article/pii/S0031320323007136) (PR 2023)
 - [Partial Label Learning with a Partner](https://ojs.aaai.org/index.php/AAAI/article/view/29424) (AAAI 2024)
 - [Distilling Reliable Knowledge for Instance-Dependent Partial Label Learning](https://ojs.aaai.org/index.php/AAAI/article/view/29519) (AAAI 2024)
@@ -189,8 +191,8 @@
 - [Semantic-Aware Representation Blending for Multi-Label Image Recognition with Partial Labels](https://arxiv.org/abs/2203.02172) (AAAI 2022)
 - [Structured Semantic Transfer for Multi-Label Recognition with Partial Labels)](https://arxiv.org/abs/2112.10941) (AAAI 2022)
 - [Boosting Multi-Label Image Classification with Complementary Parallel Self-Distillation](https://arxiv.org/abs/2205.10986) (IJCAI 2022)
-- [Ambiguity-Induced Contrastive Learning for Instance-Dependent Partial Label Learning](https://www.ijcai.org/proceedings/2022/502) (IJCAI 2022)
 - [Multi-label Classification with Partial Annotations using Class-aware Selective Loss](https://arxiv.org/abs/2110.10955) (CVPR 2022)
+- [Progressive Purification for Instance-Dependent Partial Label Learning](https://arxiv.org/abs/2206.00830) (ICML 2023)
 - [Deep Double Incomplete Multi-View Multi-Label Learning With Incomplete Labels and Missing Views](https://ieeexplore.ieee.org/document/10086538) (TNNLS 2023)
 - [Towards Enabling Binary Decomposition for Partial Multi-Label Learning](https://ieeexplore.ieee.org/document/10168295) (TPAMI 2023)
 - [Deep Partial Multi-Label Learning with Graph Disambiguation](https://arxiv.org/abs/2305.05882) (IJCAI 2023)
@@ -202,6 +204,7 @@
 - [Reliable Representations Learning for Incomplete Multi-View Partial Multi-Label Classification](https://arxiv.org/abs/2303.17117) (2024)
 - [PLMCL: Partial-Label Momentum Curriculum Learning for Multi-Label Image Classification](https://arxiv.org/abs/2208.09999) (2024)
 - [Combining Supervised Learning and Reinforcement Learning for Multi-Label Classification Tasks with Partial Labels](https://arxiv.org/abs/2406.16293) (2024)
+- [Free Performance Gain from Mixing Multiple Partially Labeled Samples in Multi-label Image Classification](https://arxiv.org/abs/2405.15860) (2024)
 
 <a name="noisy-partial-label-learning" />
 
@@ -210,7 +213,6 @@
 - [PiCO+: Contrastive Label Disambiguation for Robust Partial Label Learning](https://arxiv.org/abs/2201.08984) (TPAMI 2023)
 - [On the Robustness of Average Losses for Partial-Label Learning](https://arxiv.org/abs/2106.06152) (TPAMI 2023)
 - [FREDIS: A Fusion Framework of Refinement and Disambiguation for Unreliable Partial Label Learning](https://proceedings.mlr.press/v202/qiao23b.html) (ICML 2023)
-- [Progressive Purification for Instance-Dependent Partial Label Learning](https://arxiv.org/abs/2206.00830) (ICML 2023)
 - [Unreliable Partial Label Learning with Recursive Separation](https://arxiv.org/abs/2302.09891) (IJCAI 2023)
 - [ALIM: Adjusting Label Importance Mechanism for Noisy Partial Label Learning](https://arxiv.org/abs/2301.12077) (NeurIPS 2023)
 - [IRNet: Iterative Refinement Network for Noisy Partial Label Learning](https://arxiv.org/abs/2211.04774) (2023)
@@ -225,6 +227,7 @@
 - [Exploiting Unlabeled Data via Partial Label Assignment for Multi-Class Semi-Supervised Learning](https://ojs.aaai.org/index.php/AAAI/article/view/17310) (AAAI 2021)
 - [Distributed Semisupervised Partial Label Learning Over Networks](https://ieeexplore.ieee.org/document/9699063) (AI 2022)
 - [Learning with Partial-Label and Unlabeled Data: A Uniform Treatment for Supervision Redundancy and Insufficiency](https://proceedings.mlr.press/v235/liu24ar.html) (ICML 2024)
+- [FairMatch: Promoting Partial Label Learning by Unlabeled Samples](https://dl.acm.org/doi/abs/10.1145/3637528.3671685) (KDD 2024)
 
 <a name="multi-instance-learning" />
 
@@ -246,13 +249,19 @@
 - [Partial label learning: Taxonomy, analysis and outlook](https://www.sciencedirect.com/science/article/abs/pii/S0893608023000825) (NN 2023)
 - [Long-Tailed Partial Label Learning via Dynamic Rebalancing](https://arxiv.org/abs/2302.05080) (ICLR 2023)
 - [Long-Tailed Partial Label Learning by Head Classifier and Tail Classifier Cooperation](https://ojs.aaai.org/index.php/AAAI/article/view/29182) (AAAI 2024)
-- [Pseudo Labels Regularization for Imbalanced Partial-Label Learning ](https://arxiv.org/abs/2303.03946) (2023)
+- [Pseudo Labels Regularization for Imbalanced Partial-Label Learning ](https://arxiv.org/abs/2303.03946) (ICASSP 2024)
 
 <a name="ood-pll" />
 
 ### Out-of-distribution Partial Label Learning
 
 - [Out-of-distribution Partial Label Learning](https://arxiv.org/abs/2403.06681) (2024)
+
+<a name="fed-pll" />
+
+### Federated Partial Label Learning
+
+- [Federated Partial Label Learning with Local-Adaptive Augmentation and Regularization](https://ojs.aaai.org/index.php/AAAI/article/view/29562) (AAAI 2024)
 
 <a name="partial-label-regression" />
 
@@ -331,6 +340,7 @@
 ### <u>Data Augmentation</u>
 
 - [Partial Label Learning with Discrimination Augmentation](https://dl.acm.org/doi/abs/10.1145/3534678.3539363) (KDD 2022)
+- [Enhancing Label Sharing Efficiency in Complementary-Label Learning with Label Augmentation](https://arxiv.org/abs/2305.08344) (2023)
 
 <a name="multi-dimensional" />
 
