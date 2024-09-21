@@ -69,6 +69,7 @@
 ## <u>Main</u>
 
 - [Learning from Complementary Labels](https://arxiv.org/abs/1705.07541) (NeurIPS 2018) [:octocat:](https://github.com/takashiishida/comp)
+- [Learning from Partial Labels](https://jmlr.org/papers/v12/cour11a.html) (JMLR 2011)
 
 <a name="early-work" />
 
@@ -107,6 +108,7 @@
 
 ### <u>Better Optimization</u>
 
+- [A Conditional Multinomial Mixture Model for Superset Label Learning](https://papers.nips.cc/paper_files/paper/2012/hash/aaebdb8bb6b0e73f6c3c54a0ab0c6415-Abstract.html) (NeurIPS 2012)
 - [GM-PLL: Graph Matching based Partial Label Learning](https://arxiv.org/pdf/1901.03073) (TKDE 2019)
 - [Partial Label Learning via Label Enhancement](https://ojs.aaai.org/index.php/AAAI/article/view/4497) (AAAI 2019)
 - [Partial Label Learning with Self-Guided Retraining](https://arxiv.org/abs/1902.03045) (AAAI 2019)
@@ -132,7 +134,7 @@
 - [A Generative Model for Partial Label Learning](https://ieeexplore.ieee.org/abstract/document/9428103) (ICME 2021)
 - [Learning with Proper Partial Labels](https://arxiv.org/abs/2112.12303) (NearoComputing 2022)
 - [Biased Complementary-Label Learning Without True Labels](https://ieeexplore.ieee.org/document/9836971) (TNNLS 2022)
-- [Exploiting Class Activation Value for Partial-Label Learning](https://openreview.net/forum?id=qqdXHUGec9h) (ICLR 2022)
+- [Exploiting Class Activation Value for Partial-Label Learning](https://openreview.net/forum?id=qqdXHUGec9h) (ICLR 2022) [:octocat:](https://github.com/Ferenas/CAVL)
 - [PiCO: Contrastive Label Disambiguation for Partial Label Learning](https://openreview.net/forum?id=EhYjZy6e1gJ) (ICLR 2022)
 - [Deep Graph Matching for Partial Label Learning](https://www.ijcai.org/proceedings/2022/459) (IJCAI 2022)
 - [Exploring Binary Classification Hidden within Partial Label Learning](https://www.ijcai.org/proceedings/2022/456) (IJCAI 2022)
