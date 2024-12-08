@@ -22,13 +22,16 @@
 + :book: `bibtex`
 
 ## Latest Updates
+
++ [2024/12/08] Update some code links of papers.
 + [2024/09/13] A major overhaul of the original github repository. 
 
 ## Contents
+
 - [Main](#main)
   - [Early Work](#early-work)
-  - [Theory-Based](#theory-based)
-  - [Transition Matrix-Based](#transition-matrix-based)
+  - [Survey](#survey)
+  - [Generative Modeling](#theory-based)
   - [Understanding](#understanding)
   - [Better Optimization](#better-optimization)
   - [Partial Multi-Label Learning](#partial-multi-label-learning)
@@ -68,37 +71,40 @@
 
 ## <u>Main</u>
 
-- [Learning from Complementary Labels](https://arxiv.org/abs/1705.07541) (NeurIPS 2018) [:octocat:](https://github.com/takashiishida/comp)
+- [Learning from Complementary Labels](https://arxiv.org/abs/1705.07541) (NeurIPS 2017) [:octocat:](https://github.com/takashiishida/comp)
 - [Learning from Partial Labels](https://jmlr.org/papers/v12/cour11a.html) (JMLR 2011)
 
 <a name="early-work" />
 
 ### <u>Early Work</u>
+
 + To be continue.
+
+<a name="survey" />
+
+### <u>Survey</u>
+
+- [Partial label learning: Taxonomy, analysis and outlook](https://www.sciencedirect.com/science/article/abs/pii/S0893608023000825) (NN 2023)
 
 <a name="theory-based" />
 
-### <u>Theory-based</u>
+### <u>Generative Modeling</u>
 
-- [Complementary-Label Learning for Arbitrary Losses and Models](https://arxiv.org/abs/1810.04327) (ICML 2019)
+- [Learning with Biased Complementary Labels](https://arxiv.org/abs/1711.09535)  (ECCV 2018) [:octocat:](https://github.com/takashiishida/comp)
+- [Complementary-Label Learning for Arbitrary Losses and Models](https://arxiv.org/abs/1810.04327) (ICML 2019) [:octocat:](https://github.com/takashiishida/comp)
 - [Unbiased Risk Estimators Can Mislead: A Case Study of Learning with Complementary Labels](https://arxiv.org/abs/2007.02235) (ICML 2020)
-- [Leveraged Weighted Loss for Partial Label Learning](https://arxiv.org/abs/2106.05731) (ICML 2021)
-- [Unbiased Risk Estimator to Multi-Labeled Complementary Label Learning](https://www.ijcai.org/proceedings/2023/415) (IJCAI 2023)
-- [Learning with Complementary Labels Revisited: The Selected-Completely-at-Random Setting Is More Practical](https://arxiv.org/abs/2311.15502) (ICML 2024)
+- [Provably Consistent Partial-Label Learning](https://arxiv.org/abs/2007.08929) (NeurIPS 2020) [:octocat:](https://lfeng1995.github.io/Code/RCCC.zip)
+- [Leveraged Weighted Loss for Partial Label Learning](https://arxiv.org/abs/2106.05731) (ICML 2021) [:octocat:](https://github.com/hongwei-wen/LW-loss-for-partial-label)
+- [Unbiased Risk Estimator to Multi-Labeled Complementary Label Learning](https://www.ijcai.org/proceedings/2023/415) (IJCAI 2023) [:octocat:](https://github.com/GaoYi439/GDF)
+- [Learning with Complementary Labels Revisited: The Selected-Completely-at-Random Setting Is More Practical](https://arxiv.org/abs/2311.15502) (ICML 2024) [:octocat:](https://github.com/wwangwitsel/SCARCE)
 - [Towards Unbiased Exploration in Partial Label Learning](https://arxiv.org/abs/2307.00465) (2023)
-
-<a name="transition-matrix-based" />
-
-### <u>Transition-Matrix-Based</u>
-
-- [Learning with Biased Complementary Labels](https://arxiv.org/abs/1711.09535)  (ECCV 2018)
 
 <a name="understanding" />
 
 ### <u>Understanding</u>
 
 - [Bridging Ordinary-Label Learning and Complementary-Label Learning](https://proceedings.mlr.press/v129/katsura20a.html) (ACML 2020)
-- [On the Power of Deep but Naive Partial Label Learning](https://arxiv.org/abs/2010.11600) (ICASSP 2021)
+- [On the Power of Deep but Naive Partial Label Learning](https://arxiv.org/abs/2010.11600) (ICASSP 2021) [:octocat:](https://github.com/mikigom/DNPL-PyTorch)
 - [Learning from a Complementary-label Source Domain: Theory and Algorithms](https://arxiv.org/abs/2008.01454) (TNNLS 2021)
 - [A Unifying Probabilistic Framework for Partially Labeled Data Learning](https://ieeexplore.ieee.org/document/9983986) (TPAMI 2023)
 - [Candidate Label Set Pruning: A Data-centric Perspective for Deep Partial-label Learning](https://openreview.net/forum?id=Fk5IzauJ7F) (ICLR 2024)
@@ -123,7 +129,6 @@
 - [Generative-Discriminative Complementary Learning](https://arxiv.org/abs/1904.01612) (AAAI 2020)
 - [Partial Label Learning with Batch Label Correction](https://ojs.aaai.org/index.php/AAAI/article/view/6132) (AAAI 2020)
 - [Progressive Identification of True Labels for Partial-Label Learning](https://arxiv.org/abs/2002.08053) (ICML 2020)
-- [Provably Consistent Partial-Label Learning](https://arxiv.org/abs/2007.08929) (NeurIPS 2020)
 - [Generalized Large Margin -NN for Partial Label Learning](https://ieeexplore.ieee.org/document/9529072) (TMM2021)
 - [Adaptive Graph Guided Disambiguation for Partial Label Learning](https://ieeexplore.ieee.org/document/9573413) (TPAMI 2022)
 - [Discriminative Metric Learning for Partial Label Learning](https://ieeexplore.ieee.org/document/9585342) (TNNLS 2021)
@@ -142,7 +147,7 @@
 - [Partial Label Learning via Label Influence Function](https://proceedings.mlr.press/v162/gong22c.html) (ICML 2022)
 - [Revisiting Consistency Regularization for Deep Partial Label Learning](https://proceedings.mlr.press/v162/wu22l.html) (ICML 2022)
 - [Partial Label Learning with Semantic Label Representations ](https://dl.acm.org/doi/abs/10.1145/3534678.3539434) (KDD 2022)
-- [Progressive Purification for Instance-Dependent Partial Label Learning](https://arxiv.org/abs/2206.00830) (ICML 2023)
+- [Progressive Purification for Instance-Dependent Partial Label Learning](https://arxiv.org/abs/2206.00830) (ICML 2023) [:octocat:](https://github.com/palm-ml/POP)
 - [GraphDPI: Partial label disambiguation by graph representation learning via mutual information maximization](https://www.sciencedirect.com/science/article/abs/pii/S0031320322006136) (PR 2023)
 - [Variational Label Enhancement](https://ieeexplore.ieee.org/document/9875104) (TPAMI 2023)
 - [CMW-Net: Learning a Class-Aware Sample Weighting Mapping for Robust Deep Learning](https://arxiv.org/abs/2202.05613) (TPAMI 2023)
@@ -173,6 +178,7 @@
 - [Label Dropout: Improved Deep Learning Echocardiography Segmentation Using Multiple Datasets With Domain Shift and Partial Labelling](https://arxiv.org/abs/2403.07818) (SCIS 2024)
 - [Appeal: Allow Mislabeled Samples the Chance to be Rectified in Partial Label Learning ](https://arxiv.org/abs/2312.11034) (2024)
 - [Graph Partial Label Learning with Potential Cause Discovering](https://arxiv.org/abs/2403.11449) (2024)
+- [Reduction-based Pseudo-label Generation for Instance-dependent Partial Label Learning](https://arxiv.org/pdf/2410.20797) (2024)
 
 <a name="partial-multi-label-learning" />
 
@@ -248,7 +254,6 @@
 - [A Partial Label Metric Learning Algorithm for Class Imbalanced Data](https://proceedings.mlr.press/v157/liu21f.html) (ACML 2021)
 - [SoLar: Sinkhorn Label Refinery for Imbalanced Partial-Label Learning](https://arxiv.org/abs/2209.10365) (NeurIPS 2022)
 - [Class-Imbalanced Complementary-Label Learning via Weighted Loss](https://arxiv.org/abs/2209.14189) (NN 2023)
-- [Partial label learning: Taxonomy, analysis and outlook](https://www.sciencedirect.com/science/article/abs/pii/S0893608023000825) (NN 2023)
 - [Long-Tailed Partial Label Learning via Dynamic Rebalancing](https://arxiv.org/abs/2302.05080) (ICLR 2023)
 - [Long-Tailed Partial Label Learning by Head Classifier and Tail Classifier Cooperation](https://ojs.aaai.org/index.php/AAAI/article/view/29182) (AAAI 2024)
 - [Pseudo Labels Regularization for Imbalanced Partial-Label Learning ](https://arxiv.org/abs/2303.03946) (ICASSP 2024)
@@ -312,6 +317,7 @@
 
 - [Partial label learning with emerging new labels](https://link.springer.com/article/10.1007/s10994-022-06244-2) (ML 2022)
 - [Complementary Labels Learning with Augmented Classes](https://arxiv.org/abs/2211.10701) （2022）
+- [An Unbiased Risk Estimator for Partial Label Learning with Augmented Classes](https://arxiv.org/pdf/2409.19600) (2024)
 
 <a name="online-learning" />
 
@@ -341,7 +347,7 @@
 
 ### <u>Data Augmentation</u>
 
-- [Partial Label Learning with Discrimination Augmentation](https://dl.acm.org/doi/abs/10.1145/3534678.3539363) (KDD 2022)
+- [Partial Label Learning with Discrimination Augmentation](https://dl.acm.org/doi/abs/10.1145/3534678.3539363) (KDD 2022) [:octocat:](https://github.com/wwangwitsel/PLDA)
 - [Enhancing Label Sharing Efficiency in Complementary-Label Learning with Label Augmentation](https://arxiv.org/abs/2305.08344) (2023)
 
 <a name="multi-dimensional" />
@@ -384,11 +390,10 @@
 
 ### <u>Recognition</u>
 
-- [Webly-Supervised Fine-Grained Recognition with Partial Label Learning](https://www.ijcai.org/proceedings/2022/209) (IJCAI 2022)
-- [Rethinking the Learning Paradigm for Dynamic Facial Expression Recognition](https://ieeexplore.ieee.org/document/10204167) (CVPR 2023)
+- [Webly-Supervised Fine-Grained Recognition with Partial Label Learning](https://www.ijcai.org/proceedings/2022/209) (IJCAI 2022) [:octocat:](https://github.com/msfuxian/WSFGPLL)
 - [Partial Label Learning with Focal Loss for Sea Ice Classification Based on Ice Charts](https://arxiv.org/abs/2406.03645) (AEORS 2023)
 - [Partial Label Learning for Emotion Recognition from EEG](https://arxiv.org/abs/2302.13170) (2023)
-- [A Confidence-based Partial Label Learning Model for Crowd-Annotated Named Entity Recognition](https://arxiv.org/abs/2305.12485) (2023)
+- [A Confidence-based Partial Label Learning Model for Crowd-Annotated Named Entity Recognition](https://arxiv.org/abs/2305.12485) (ACL 2023) [:octocat:](https://github.com/LemXiong/CPLL?tab=readme-ov-file)
 
 <a name="object-localization"/>
 
@@ -415,7 +420,7 @@
 
 ### <u>Active Learning</u>
 
-- [Exploiting counter-examples for active learning with partial labels](https://link.springer.com/article/10.1007/s10994-023-06485-9) (ML 2023)
+- [Exploiting counter-examples for active learning with partial labels](https://link.springer.com/article/10.1007/s10994-023-06485-9) (ML 2023) [:octocat:](https://github.com/Ferenas/APLL)
 - [Active Learning with Partial Labels](https://openreview.net/forum?id=1VuBdlNBuR) (2023)
 
 <a name="noisy-label-learning"/>
@@ -471,10 +476,13 @@ To be continue.
 
 
 ## Star History
+
 [![Star History Chart](https://api.star-history.com/svg?repos=wu-dd/Advances-in-Partial-and-Complementary-Label-Learning&type=Date)](https://star-history.com/#wu-dd/Advances-in-Partial-and-Complementary-Label-Learning&Date)
 
 ## Citing Advances in Partial/Complementary Label Learning
+
 If you find this project useful for your research, please use the following BibTeX entry.
+
 ```
 @misc{Wu2022advances,
   author={Dong-Dong Wu},
