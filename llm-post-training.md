@@ -1,7 +1,7 @@
 # LLM Post-Training with Imperfect Information
 
 [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
-<img src="https://img.shields.io/badge/Contributions-Welcome-278ea5" alt="Contrib"/> <img src="https://img.shields.io/badge/Number%20of%20Items-374-FF6F00" alt="PaperNum"/>
+<img src="https://img.shields.io/badge/Contributions-Welcome-278ea5" alt="Contrib"/> <img src="https://img.shields.io/badge/Number%20of%20Items-449-FF6F00" alt="PaperNum"/>
 
 A curated list of recent papers (2024 – now) on **post-training large language models with imperfect information**.
 
@@ -11,7 +11,7 @@ Papers are from top conferences and journals; a few recent, notable arXiv prepri
 
 This list is part of [Advances in Learning with Imperfect Information](./README.md), curated and maintained by [Dong-Dong Wu](https://wu-dd.github.io/). You can also [browse, search and filter it online](https://wu-dd.github.io/Advances-in-Learning-with-Imperfect-Information/#llm). Suggestions are welcome by email.
 
-+ :octocat: Code (187 papers have official code)
++ :octocat: Code (243 papers have official code)
 
 ## Latest Updates
 + [2026/10/25] First release.
@@ -41,6 +41,7 @@ This list is part of [Advances in Learning with Imperfect Information](./README.
   - [Imperfect Agent Trajectories](#imperfect-trajectories)
 - [Corrupted Feedback & Theory](#corrupted-feedback-theory)
   - [Poisoned Preference & Reward Data](#poisoned-feedback)
+  - [Harmful Fine-Tuning Attacks & Defenses](#harmful-fine-tuning)
   - [Corruption-Robust Post-Training](#corruption-robust)
   - [Theory](#theory)
 
@@ -114,6 +115,7 @@ This list is part of [Advances in Learning with Imperfect Information](./README.
 - [CoAct: Co-Active LLM Preference Learning with Human-AI Synergy](https://aclanthology.org/2026.acl-long.751/) (ACL 2026)
 - [Curriculum-RLAIF: Curriculum Alignment with Reinforcement Learning from AI Feedback](https://aclanthology.org/2026.findings-acl.1685/) (ACL 2026) [:octocat:](https://github.com/ljy2222/Curriculum-RLAIF)
 - [When Weak LLMs Speak with Confidence, Preference Alignment Gets Stronger](https://proceedings.iclr.cc/paper_files/paper/2026/hash/d1fa901403156f5d31b1cad964d78006-Abstract-Conference.html) (ICLR 2026)
+- [AERO: Adaptive Ensemble-Disagreement Routing for Oracle Feedback in Sample-Efficient Online RLHF](https://openreview.net/forum?id=HexbOT3aCq) (NeurIPS 2026)
 - [Stackelberg Self-Annotation: A Robust Approach to Data-Efficient LLM Alignment](https://proceedings.neurips.cc/paper_files/paper/2025/hash/5af741d487c5f0b08bfe56e11d1883e4-Abstract-Conference.html) (NeurIPS 2025) [:octocat:](https://github.com/EunTilofy/SSAPO)
 - [Optimising Factual Consistency in Summarisation via Preference Learning from Multiple Imperfect Metrics](https://aclanthology.org/2025.findings-emnlp.940/) (EMNLP 2025) [:octocat:](https://github.com/Haruhi07/MultiMetric)
 - [Voting with the Graph: Stable RLAIF via Topological Consistency Maximization](https://arxiv.org/abs/2510.15514) (arXiv 2025)
@@ -122,6 +124,7 @@ This list is part of [Advances in Learning with Imperfect Information](./README.
 - [Spread Preference Annotation: Direct Preference Judgment for Efficient LLM Alignment](https://proceedings.iclr.cc/paper_files/paper/2025/hash/342e5fc02b86dec9b24e41b22968e539-Abstract-Conference.html) (ICLR 2025) [:octocat:](https://github.com/kingdy2002/SPA)
 - [Your Weak LLM is Secretly a Strong Teacher for Alignment](https://proceedings.iclr.cc/paper_files/paper/2025/hash/332b4fbe322e11a71fa39d91c664d8fa-Abstract-Conference.html) (ICLR 2025) [:octocat:](https://github.com/deeplearning-wisc/weak_llm_teacher)
 - [Self-Evolutionary Large Language Models Through Uncertainty-Enhanced Preference Optimization](https://ojs.aaai.org/index.php/AAAI/article/view/34724) (AAAI 2025) [:octocat:](https://github.com/wjn1996/Uncertainty-Preference-Optimization)
+- [More is Less: The Pitfalls of Multi-Model Synthetic Preference Data in DPO Safety Alignment](https://openreview.net/forum?id=wXOUYzNv5k) (COLM 2025) [:octocat:](https://github.com/cacayaya/More-is-Less)
 
 <a name="weak-preference-supervision" />
 
@@ -137,6 +140,7 @@ This list is part of [Advances in Learning with Imperfect Information](./README.
 - [Limited Preference Data? Learning Better Reward Model with Latent Space Synthesis](https://proceedings.neurips.cc/paper_files/paper/2025/hash/f2184e55a13b73b89f618ad24abb6ca7-Abstract-Conference.html) (NeurIPS 2025) [:octocat:](https://github.com/deeplearning-wisc/LENS)
 - [User Feedback in Human-LLM Dialogues: A Lens to Understand Users But Noisy as a Learning Signal](https://aclanthology.org/2025.emnlp-main.133/) (EMNLP 2025) [:octocat:](https://github.com/lyh6560new/implicit-user-feedback)
 - [The Delta Learning Hypothesis: Preference Tuning on Weak Data can Yield Strong Gains](https://openreview.net/forum?id=9rwtezthwo) (COLM 2025) [:octocat:](https://github.com/scottgeng00/delta_learning)
+- [Self-Evolved Reward Learning for LLMs](https://proceedings.iclr.cc/paper_files/paper/2025/hash/26f5a4e26c13d1e0a47f46790c999361-Abstract-Conference.html) (ICLR 2025) [:octocat:](https://github.com/microsoft/DKI_LLM/tree/main/SER)
 - [Semi-Supervised Reward Modeling via Iterative Self-Training](https://aclanthology.org/2024.findings-emnlp.434/) (EMNLP 2024) [:octocat:](https://github.com/RLHFlow/RLHF-Reward-Modeling)
 - [Model Alignment as Prospect Theoretic Optimization](https://proceedings.mlr.press/v235/ethayarajh24a.html) (ICML 2024) [:octocat:](https://github.com/ContextualAI/HALOs)
 
@@ -169,6 +173,12 @@ This list is part of [Advances in Learning with Imperfect Information](./README.
 - [Is it Thinking or Cheating? Detecting Implicit Reward Hacking by Measuring Reasoning Effort](https://proceedings.iclr.cc/paper_files/paper/2026/hash/9d0ee47d732bd526c4a03d4aecc39bc1-Abstract-Conference.html) (ICLR 2026)
 - [Robust Reward Modeling via Causal Rubrics](https://proceedings.iclr.cc/paper_files/paper/2026/hash/fa0a1013e171c1be6121c9bc9fb6589f-Abstract-Conference.html) (ICLR 2026)
 - [Truthful or Fabricated? Using Causal Attribution to Mitigate Reward Hacking in Explanations](https://proceedings.iclr.cc/paper_files/paper/2026/hash/d4b892df8bec8e13925f57649fbae039-Abstract-Conference.html) (ICLR 2026) [:octocat:](https://github.com/PedroMLF/Reward-Hacking-in-Explanations)
+- [Mitigating Reward Hacking in LLM-based Recommendation: A Preference Optimization Approach](https://openreview.net/forum?id=4BGl1dY83o) (ICML 2026)
+- [Adversarial Reward Auditing for Active Detection and Mitigation of Reward Hacking](https://arxiv.org/abs/2602.01750) (COLM 2026)
+- [Detecting and Suppressing Reward Hacking with Gradient Fingerprints](https://arxiv.org/abs/2604.16242) (COLM 2026) [:octocat:](https://github.com/songtao-x/reward_hack)
+- [Reward Hacking in Language Model Agents: Revisiting AI Safety Gridworlds](https://arxiv.org/abs/2606.15385) (COLM 2026) [:octocat:](https://github.com/asparius/verl-agent-safety)
+- [From Rebound to Remedy: Understanding and Mitigating Reward Hacking via Representation Engineering](https://arxiv.org/abs/2604.01476) (COLM 2026)
+- [From Preference Data to Personalization: Tracing Sycophancy in Large Language Models](https://openreview.net/forum?id=viJknQbGQA) (NeurIPS 2026)
 - [Mitigating Reward Over-optimization in Direct Alignment Algorithms with Importance Sampling](https://proceedings.neurips.cc/paper_files/paper/2025/hash/8f6c674a7edf57912f1a5830f4a66e3f-Abstract-Conference.html) (NeurIPS 2025) [:octocat:](https://github.com/duyhominhnguyen/IS-DAAs)
 - [Rectifying Shortcut Behaviors in Preference-based Reward Learning](https://proceedings.neurips.cc/paper_files/paper/2025/hash/5d97b7e62022c859347397f6c1e8d0f9-Abstract-Conference.html) (NeurIPS 2025)
 - [Natural Emergent Misalignment from Reward Hacking in Production RL](https://arxiv.org/abs/2511.18397) (arXiv 2025)
@@ -198,6 +208,7 @@ This list is part of [Advances in Learning with Imperfect Information](./README.
 - [WARM: On the Benefits of Weight Averaged Reward Models](https://proceedings.mlr.press/v235/rame24a.html) (ICML 2024)
 - [Confronting Reward Model Overoptimization with Constrained RLHF](https://proceedings.iclr.cc/paper_files/paper/2024/hash/5eee634cb9729b8bcc2ec9f2a46a74ae-Abstract-Conference.html) (ICLR 2024) [:octocat:](https://github.com/tedmoskovitz/ConstrainedRL4LMs)
 - [Reward Model Ensembles Help Mitigate Overoptimization](https://proceedings.iclr.cc/paper_files/paper/2024/hash/dda7f9378a210c25e470e19304cce85d-Abstract-Conference.html) (ICLR 2024) [:octocat:](https://github.com/tlc4418/llm_optimization)
+- [Towards Understanding Sycophancy in Language Models](https://proceedings.iclr.cc/paper_files/paper/2024/hash/0105f7972202c1d4fb817da9f21a9663-Abstract-Conference.html) (ICLR 2024) [:octocat:](https://github.com/meg-tong/sycophancy-eval)
 
 <a name="noisy-verifiers" />
 
@@ -252,6 +263,7 @@ This list is part of [Advances in Learning with Imperfect Information](./README.
 - [Catastrophic Goodhart: regularizing RLHF with KL divergence does not mitigate heavy-tailed reward misspecification](https://proceedings.neurips.cc/paper_files/paper/2024/hash/1a8189929f3d7bd6183718f42c3f4309-Abstract-Conference.html) (NeurIPS 2024)
 - [Mitigating Reward Overoptimization via Lightweight Uncertainty Estimation](https://proceedings.neurips.cc/paper_files/paper/2024/hash/94bbcb744bbada8808fda05b9d9290d6-Abstract-Conference.html) (NeurIPS 2024)
 - [Provably Mitigating Overoptimization in RLHF: Your SFT Loss is Implicitly an Adversarial Regularizer](https://proceedings.neurips.cc/paper_files/paper/2024/hash/fa69e968b7319fd42524febd41475fb3-Abstract-Conference.html) (NeurIPS 2024) [:octocat:](https://github.com/YSLIU627/Regularized-Preference-Optimization)
+- [The Trickle-down Impact of Reward Inconsistency on RLHF](https://proceedings.iclr.cc/paper_files/paper/2024/hash/8c976a95df6a229551cd28c76627edc9-Abstract-Conference.html) (ICLR 2024) [:octocat:](https://github.com/shadowkiller33/Contrast-Instruction)
 
 <a name="weak-missing-supervision" />
 
@@ -328,6 +340,13 @@ This list is part of [Advances in Learning with Imperfect Information](./README.
 - [Reinforcing General Reasoning Without Verifiers](https://proceedings.iclr.cc/paper_files/paper/2026/hash/71d207613c8eab1e42473143d3a598e0-Abstract-Conference.html) (ICLR 2026) [:octocat:](https://github.com/sail-sg/VeriFree)
 - [Self-Harmony: Learning to Harmonize Self-Supervision and Self-Play in Test-Time Reinforcement Learning](https://proceedings.iclr.cc/paper_files/paper/2026/hash/86178c06fd59ebc58dc31f8edb3c54af-Abstract-Conference.html) (ICLR 2026)
 - [Semantic Voting: A Self-Evaluation-Free Approach for Efficient LLM Self-Improvement on Unverifiable Open-ended Tasks](https://proceedings.iclr.cc/paper_files/paper/2026/hash/3db3e1f192877e47bf48c93cae238e51-Abstract-Conference.html) (ICLR 2026)
+- [Power Distribution Bridges Sampling, Self-Reward RL, and Self-Distillation](https://openreview.net/forum?id=AjW8i6kx9F) (NeurIPS 2026) [:octocat:](https://github.com/tom4649/power-self-distillation)
+- [Cycle-Consistent Search: Question Reconstructability as a Proxy Reward for Search Agent Training](https://openreview.net/forum?id=IvfxffJKNp) (COLM 2026)
+- [CONCORD: Label-Free Calibration of Verbalized LLM Confidence via Rollout Consistency](https://openreview.net/forum?id=ToJd6W2TJc) (COLM 2026)
+- [Dr. Zero: Self-Evolving Search Agents without Training Data](https://openreview.net/forum?id=3UH5bILEBI) (COLM 2026) [:octocat:](https://github.com/facebookresearch/drzero)
+- [Search Self-Play: Pushing the Frontier of Agent Capability without Supervision](https://proceedings.iclr.cc/paper_files/paper/2026/hash/6ac12f42db406e6be14d669884e73212-Abstract-Conference.html) (ICLR 2026) [:octocat:](https://github.com/Qwen-Applications/SSP)
+- [From RLVR to RLSVR: Task Transformation Induces Self-Verifiable Rewards for Open-Ended LLM Self-Improvement](https://openreview.net/forum?id=ztvCPuZ0oB) (COLM 2026) [:octocat:](https://github.com/wangqinsi1/RLSVR)
+- [Conversation for Non-verifiable Learning: Self-Evolving Large Language Models through Meta-Evaluation](https://openreview.net/forum?id=Wba6w3pzbj) (ICML 2026)
 - [Absolute Zero: Reinforced Self-play Reasoning with Zero Data](https://proceedings.neurips.cc/paper_files/paper/2025/hash/9837dc00ff67d176373268ed48042d49-Abstract-Conference.html) (NeurIPS 2025) [:octocat:](https://github.com/LeapLabTHU/Absolute-Zero-Reasoner)
 - [Beyond Verifiable Rewards: Scaling Reinforcement Learning in Language Models to Unverifiable Data](https://proceedings.neurips.cc/paper_files/paper/2025/hash/6bd67a424dc59481e1e5a5061ffc8dfe-Abstract-Conference.html) (NeurIPS 2025)
 - [Consistent Paths Lead to Truth: Self-Rewarding Reinforcement Learning for LLM Reasoning](https://proceedings.neurips.cc/paper_files/paper/2025/hash/565f995643da6329cec701f26f8579f5-Abstract-Conference.html) (NeurIPS 2025) [:octocat:](https://github.com/sastpg/CoVo)
@@ -443,6 +462,7 @@ This list is part of [Advances in Learning with Imperfect Information](./README.
 - [Collapse or Thrive: Perils and Promises of Synthetic Data in a Self-Generating World](https://proceedings.mlr.press/v267/kazdan25a.html) (ICML 2025) [:octocat:](https://github.com/RylanSchaeffer/KoyejoLab-Collapse-or-Thrive)
 - [How to Synthesize Text Data without Model Collapse?](https://proceedings.mlr.press/v267/zhu25d.html) (ICML 2025) [:octocat:](https://github.com/Xuekai-Zhu/toedit)
 - [Beyond Model Collapse: Scaling Up with Synthesized Data Requires Verification](https://proceedings.iclr.cc/paper_files/paper/2025/hash/df2d62b96a4003203450cf89cd338bb7-Abstract-Conference.html) (ICLR 2025)
+- [Progress or Regress? Self-Improvement Reversal in Post-training](https://proceedings.iclr.cc/paper_files/paper/2025/hash/1fa0c4e5a7e189729230d018b229abc7-Abstract-Conference.html) (ICLR 2025)
 - [Bias Amplification in Language Model Evolution: An Iterated Learning Perspective](https://proceedings.neurips.cc/paper_files/paper/2024/hash/4418f6a54f4314202688d77956e731ce-Abstract-Conference.html) (NeurIPS 2024) [:octocat:](https://github.com/Joshua-Ren/iICL)
 - [Unveiling the Flaws: Exploring Imperfections in Synthetic Data and Mitigation Strategies for Large Language Models](https://aclanthology.org/2024.findings-emnlp.873/) (EMNLP Findings 2024)
 - [How bad is training on synthetic data? A statistical analysis of language model collapse](https://openreview.net/forum?id=t3z6UlV09o) (COLM 2024)
@@ -482,6 +502,9 @@ This list is part of [Advances in Learning with Imperfect Information](./README.
 - [Efficient Preference Poisoning Attack on Offline RLHF](https://openreview.net/forum?id=32XNOcwH1z) (ICML 2026)
 - [Sequential Data Poisoning in LLM Post-Training](https://arxiv.org/abs/2606.04929) (arXiv 2026) [:octocat:](https://github.com/jcksanderson/sequential-poisoning)
 - [Cost-Minimized Label-Flipping Poisoning Attack to LLM Alignment](https://arxiv.org/abs/2511.09105) (AAAI 2026) [:octocat:](https://github.com/akimotolab/PoisoningCostMinimization)
+- [Poison with Style: A Practical Poisoning Attack on Code Large Language Models](https://openreview.net/forum?id=Nyn7GCUhLA) (ICML 2026) [:octocat:](https://github.com/khangtran2020/pws)
+- [Weird Generalization from Narrow Finetuning: Persona Shifts and Inductive Backdoors](https://openreview.net/forum?id=GaxSVzlXpM) (NeurIPS 2026) [:octocat:](https://github.com/JCocola/weird-generalization-and-inductive-backdoors)
+- [Phantom Transfer: Data Poisoning can Survive Data-Level Defences](https://openreview.net/forum?id=uqYXmNMqRZ) (NeurIPS 2026) [:octocat:](https://github.com/tolgadur/phantom-transfer)
 - [Virus Infection Attack on LLMs: Your Poisoning Can Spread "VIA" Synthetic Data](https://proceedings.neurips.cc/paper_files/paper/2025/hash/e6c5195dac675f03d0fcf3955bcdd3c9-Abstract-Conference.html) (NeurIPS 2025) [:octocat:](https://github.com/liangzid/VirusInfectionAttack)
 - [PoisonBench: Assessing Language Model Vulnerability to Poisoned Preference Data](https://proceedings.mlr.press/v267/fu25e.html) (ICML 2025) [:octocat:](https://github.com/TingchenFu/PoisonBench)
 - [Policy Teaching via Data Poisoning in Learning from Human Preferences](https://proceedings.mlr.press/v258/nika25a.html) (AISTATS 2025)
@@ -494,6 +517,67 @@ This list is part of [Advances in Learning with Imperfect Information](./README.
 - [Backdooring Instruction-Tuned Large Language Models with Virtual Prompt Injection](https://aclanthology.org/2024.naacl-long.337/) (NAACL 2024)
 - [Instructions as Backdoors: Backdoor Vulnerabilities of Instruction Tuning for Large Language Models](https://aclanthology.org/2024.naacl-long.171/) (NAACL 2024)
 - [Universal Jailbreak Backdoors from Poisoned Human Feedback](https://proceedings.iclr.cc/paper_files/paper/2024/hash/d1e63f4027efc7c44bfc253eafc15a58-Abstract-Conference.html) (ICLR 2024) [:octocat:](https://github.com/ethz-spylab/rlhf-poisoning)
+- [Watch Out for Your Agents! Investigating Backdoor Threats to LLM-Based Agents](https://proceedings.neurips.cc/paper_files/paper/2024/hash/b6e9d6f4f3428cd5f3f9e9bbae2cab10-Abstract-Conference.html) (NeurIPS 2024) [:octocat:](https://github.com/lancopku/agent-backdoor-attacks)
+
+<a name="harmful-fine-tuning" />
+
+### <u>Harmful Fine-Tuning Attacks & Defenses</u>
+
+- [Self-Recognition Finetuning can Reverse and Prevent Emergent Misalignment](https://openreview.net/forum?id=59CXcl41Fa) (NeurIPS 2026) [:octocat:](https://github.com/atagade/sgtr-em)
+- [No, of Course I Can! Deeper Fine-Tuning Attacks That Bypass Token-Level Safety Mechanisms](https://proceedings.iclr.cc/paper_files/paper/2026/hash/71f21ac7a1985e1d7d9a4ecd0a03e993-Abstract-Conference.html) (ICLR 2026) [:octocat:](https://github.com/jlkazdan/NOICE)
+- [Tcell: Mitigating Harmful Fine-tuning for Large Language Models via Gradient Alignment](https://openreview.net/forum?id=3Rc9uH2uQ1) (NeurIPS 2026) [:octocat:](https://github.com/git-disl/Tcell)
+- [Rethinking LLM Fine-Tuning via Weight Space Reparameterization: Preserving Safety during Downstream Adaptation](https://openreview.net/forum?id=HssNfd9nbe) (NeurIPS 2026) [:octocat:](https://github.com/min-seong-kim/WSR-Tune)
+- [The Geometry of Alignment Collapse: When Fine-Tuning Breaks Safety](https://openreview.net/forum?id=ObCQR8ZBAj) (NeurIPS 2026)
+- [Safety Anchor: Defending Harmful Fine-tuning via Geometric Bottlenecks](https://openreview.net/forum?id=BDR6RK9TmA) (ICML 2026) [:octocat:](https://github.com/soyoaaa/SBR)
+- [Surgery: Mitigating Harmful Fine-Tuning for Large Language Models via Attention Sink](https://openreview.net/forum?id=6ojsIliNF0) (ICML 2026) [:octocat:](https://github.com/Lslland/Surgery)
+- [Jailbreak to Protect: Buffering Harmful Fine-Tuning via Temporary Jailbreaking LoRA in Large Language Models](https://openreview.net/forum?id=O0JXgBBo3k) (ICML 2026)
+- [SPARD: Defending Harmful Fine-Tuning Attack via Safety Projection with Relevance–Diversity Data Selection](https://openreview.net/forum?id=fyM0jbe5DK) (ICML 2026) [:octocat:](https://github.com/shuhao02/SPARD)
+- [From Parameter Dynamics to Risk Scoring: Quantifying Sample-Level Safety Degradation in LLM Fine-tuning](https://openreview.net/forum?id=NKWWXlS3xt) (ICML 2026) [:octocat:](https://github.com/Jason-wx/FinetuningRisk-Quantifying)
+- [Antibody: Strengthening Defense Against Harmful Fine-Tuning for Large Language Models via Attenuating Harmful Gradient Influence](https://proceedings.iclr.cc/paper_files/paper/2026/hash/c5d822eeba0e87592d8ed1d2168a62f0-Abstract-Conference.html) (ICLR 2026) [:octocat:](https://github.com/minhquoc0712/Antibody)
+- [A Guardrail for Safety Preservation: When Safety-Sensitive Subspace Meets Harmful-Resistant Null-Space](https://proceedings.iclr.cc/paper_files/paper/2026/hash/d949ad2d45ba557f77327a5f720e73d3-Abstract-Conference.html) (ICLR 2026)
+- [SafeMoE: Safe Fine-Tuning for MoE LLMs by Aligning Harmful Input Routing](https://proceedings.iclr.cc/paper_files/paper/2026/hash/34d3cf97696022b179171e5abda42c0b-Abstract-Conference.html) (ICLR 2026) [:octocat:](https://github.com/jaehanwork/SafeMoE)
+- [RefusalGuard: Geometry-Preserving Fine-Tuning for Safety in LLMs](https://arxiv.org/abs/2605.01913) (COLM 2026)
+- [Self-Destructive Language Models](https://proceedings.iclr.cc/paper_files/paper/2026/hash/1abb0e7bd62ba80610798dee81950522-Abstract-Conference.html) (ICLR 2026) [:octocat:](https://github.com/ZJUWYH/seam)
+- [Invisible Safety Threat: Malicious Finetuning for LLM via Steganography](https://proceedings.iclr.cc/paper_files/paper/2026/hash/30b2a2b096515f6ed3f50bc1d3abfcde-Abstract-Conference.html) (ICLR 2026) [:octocat:](https://github.com/bigglesworthnotacat/LLM-Steg)
+- [Safety at One Shot: Patching Fine-Tuned LLMs with A Single Instance](https://proceedings.iclr.cc/paper_files/paper/2026/hash/3d7cb780442f0d17c844dbe34997fab7-Abstract-Conference.html) (ICLR 2026) [:octocat:](https://github.com/Kevin-Zh-CS/safety-at-one-shot)
+- [Token-level Data Selection for Safe LLM Fine-tuning](https://proceedings.iclr.cc/paper_files/paper/2026/hash/5e01f4ef7ffeedf3317a44461d18df9d-Abstract-Conference.html) (ICLR 2026) [:octocat:](https://github.com/Polly-LYP/TOSS)
+- [Safety Subspaces are Not Linearly Distinct: A Fine-Tuning Case Study](https://proceedings.iclr.cc/paper_files/paper/2026/hash/9a9f4e15ad0d680429a3e0570a96f763-Abstract-Conference.html) (ICLR 2026) [:octocat:](https://github.com/CERT-Lab/safety-subspaces)
+- [SLDR: Defending Against Malicious Fine-tuning via Selective Layers Recovery and Dynamic Routing](https://openreview.net/forum?id=jjuXPhJpD0) (NeurIPS 2026) [:octocat:](https://github.com/Stardust457/SLDR)
+- [Trojan-Speak: Bypassing Constitutional Classifiers with No Jailbreak Tax via Adversarial Finetuning](https://openreview.net/forum?id=5Aydbj0wYI) (ICML 2026)
+- [Toward Safe Quantization-Aware Fine-tuning: Understanding and Mitigating Safety Alignment Degradation](https://openreview.net/forum?id=vF2Xhg2s31) (ICML 2026)
+- [The Heterogeneous Safety Impacts of Benign Multilingual Fine-Tuning](https://openreview.net/forum?id=5M6NoV6Hs6) (ICML 2026) [:octocat:](https://github.com/kairawal/mlsft)
+- [Antidote: Post-fine-tuning Safety Alignment for Large Language Models against Harmful Fine-tuning Attack](https://proceedings.mlr.press/v267/huang25b.html) (ICML 2025) [:octocat:](https://github.com/git-disl/Antidote)
+- [Booster: Tackling Harmful Fine-tuning for Large Language Models via Attenuating Harmful Perturbation](https://proceedings.iclr.cc/paper_files/paper/2025/hash/a7ac8a21e5a27e7ab31a5f42a0117bdb-Abstract-Conference.html) (ICLR 2025) [:octocat:](https://github.com/git-disl/Booster)
+- [Emergent Misalignment: Narrow finetuning can produce broadly misaligned LLMs](https://proceedings.mlr.press/v267/betley25a.html) (ICML 2025) [:octocat:](https://github.com/emergent-misalignment/emergent-misalignment)
+- [Attack via Overfitting: 10-shot Benign Fine-tuning to Jailbreak LLMs](https://proceedings.neurips.cc/paper_files/paper/2025/hash/2cb880950081ceb85100951b0ad0d542-Abstract-Conference.html) (NeurIPS 2025) [:octocat:](https://github.com/hdhacker416/tenBenign)
+- [Benign Samples Matter! Fine-tuning On Outlier Benign Samples Severely Breaks Safety](https://proceedings.mlr.press/v267/guan25c.html) (ICML 2025) [:octocat:](https://github.com/GuanZihan/Benign-Samples-Matter)
+- [Adaptive Defense against Harmful Fine-Tuning for Large Language Models via Bayesian Data Scheduler](https://proceedings.neurips.cc/paper_files/paper/2025/hash/4b1d9a1fbf7b2a93bea08e18792fe436-Abstract-Conference.html) (NeurIPS 2025) [:octocat:](https://github.com/Egg-Hu/Bayesian-Data-Scheduler)
+- [Panacea: Mitigating Harmful Fine-tuning for Large Language Models via Post-fine-tuning Perturbation](https://proceedings.neurips.cc/paper_files/paper/2025/hash/f827f8acffaa3ce6799fbabd10fba1c1-Abstract-Conference.html) (NeurIPS 2025) [:octocat:](https://github.com/w-yibo/Panacea)
+- [MetaDefense: Defending Fine-tuning based Jailbreak Attack Before and During Generation](https://proceedings.neurips.cc/paper_files/paper/2025/hash/8ec078518dcce6be1324cfd3de11ed24-Abstract-Conference.html) (NeurIPS 2025) [:octocat:](https://github.com/ws-jiang/MetaDefense)
+- [Vulnerability-Aware Alignment: Mitigating Uneven Forgetting in Harmful Fine-Tuning](https://proceedings.mlr.press/v267/chen25w.html) (ICML 2025) [:octocat:](https://github.com/ChanLiang/VAA)
+- [SaLoRA: Safety-Alignment Preserved Low-Rank Adaptation](https://proceedings.iclr.cc/paper_files/paper/2025/hash/e24d9d028e3c7f6f13e6032919ee021e-Abstract-Conference.html) (ICLR 2025) [:octocat:](https://github.com/homles11/SaLoRA)
+- [Safety Layers in Aligned Large Language Models: The Key to LLM Security](https://proceedings.iclr.cc/paper_files/paper/2025/hash/f3bfbd65743e60c685a3845bd61ce15f-Abstract-Conference.html) (ICLR 2025) [:octocat:](https://github.com/listen0425/Safety-Layers)
+- [Safety Alignment Should be Made More Than Just a Few Tokens Deep](https://proceedings.iclr.cc/paper_files/paper/2025/hash/88be023075a5a3ff3dc3b5d26623fa22-Abstract-Conference.html) (ICLR 2025) [:octocat:](https://github.com/Unispac/shallow-vs-deep-alignment)
+- [Safe Delta: Consistently Preserving Safety when Fine-Tuning LLMs on Diverse Datasets](https://proceedings.mlr.press/v267/lu25g.html) (ICML 2025) [:octocat:](https://github.com/ColinLu50/SafeDelta)
+- [SEAL: Safety-enhanced Aligned LLM Fine-tuning via Bilevel Data Selection](https://proceedings.iclr.cc/paper_files/paper/2025/hash/4d5d91b4525151fc0fee1048332bfb6d-Abstract-Conference.html) (ICLR 2025) [:octocat:](https://github.com/hanshen95/SEAL)
+- [Do as I do (Safely): Mitigating Task-Specific Fine-tuning Risks in Large Language Models](https://proceedings.iclr.cc/paper_files/paper/2025/hash/70de9e3948645a1be2de657f14d85c6d-Abstract-Conference.html) (ICLR 2025)
+- [Tamper-Resistant Safeguards for Open-Weight LLMs](https://proceedings.iclr.cc/paper_files/paper/2025/hash/fc49a629d33bc2461ed7a715ce44da68-Abstract-Conference.html) (ICLR 2025) [:octocat:](https://github.com/rishub-tamirisa/tamper-resistance)
+- [On Evaluating the Durability of Safeguards for Open-Weight LLMs](https://proceedings.iclr.cc/paper_files/paper/2025/hash/9d3a4cdf6f70559e8c6fe02170fba568-Abstract-Conference.html) (ICLR 2025) [:octocat:](https://github.com/princeton-polaris-lab/Evaluating-Durable-Safeguards)
+- [Shape it Up! Restoring LLM Safety during Finetuning](https://proceedings.neurips.cc/paper_files/paper/2025/hash/bf05b8d4361c6be8e250be4b924f0e1d-Abstract-Conference.html) (NeurIPS 2025) [:octocat:](https://github.com/poloclub/star-dss)
+- [Fundamental Limitations in Pointwise Defences of LLM Finetuning APIs](https://proceedings.neurips.cc/paper_files/paper/2025/hash/6ded182245f8e4db3963d2027174133d-Abstract-Conference.html) (NeurIPS 2025)
+- [LoX: Low-Rank Extrapolation Robustifies LLM Safety Against Fine-tuning](https://openreview.net/forum?id=ASS5YD4hL4) (COLM 2025) [:octocat:](https://github.com/VITA-Group/LoX)
+- [Rethinking Safety in LLM Fine-tuning: An Optimization Perspective](https://openreview.net/forum?id=ZnOoEA2nDn) (COLM 2025)
+- [Emerging Safety Attack and Defense in Federated Instruction Tuning of Large Language Models](https://proceedings.iclr.cc/paper_files/paper/2025/hash/8a3cb72448f9b914bf888db4f5f268d3-Abstract-Conference.html) (ICLR 2025) [:octocat:](https://github.com/19dx/FedLLM-Attack)
+- [Lisa: Lazy Safety Alignment for Large Language Models against Harmful Fine-tuning Attack](https://proceedings.neurips.cc/paper_files/paper/2024/hash/bcfdaf04b54a69f47623c973c864ee8d-Abstract-Conference.html) (NeurIPS 2024) [:octocat:](https://github.com/git-disl/Lisa)
+- [Vaccine: Perturbation-aware Alignment for Large Language Models against Harmful Fine-tuning Attack](https://proceedings.neurips.cc/paper_files/paper/2024/hash/873c86d9a979ab80d8e2919510d4446b-Abstract-Conference.html) (NeurIPS 2024) [:octocat:](https://github.com/git-disl/Vaccine)
+- [Fine-tuning Aligned Language Models Compromises Safety, Even When Users Do Not Intend To!](https://proceedings.iclr.cc/paper_files/paper/2024/hash/83b7da3ed13f06c13ce82235c8eedf35-Abstract-Conference.html) (ICLR 2024) [:octocat:](https://github.com/LLM-Tuning-Safety/LLMs-Finetuning-Safety)
+- [BackdoorAlign: Mitigating Fine-tuning based Jailbreak Attack with Backdoor Enhanced Safety Alignment](https://proceedings.neurips.cc/paper_files/paper/2024/hash/094324f386c836c75d4a26f3499d2ede-Abstract-Conference.html) (NeurIPS 2024) [:octocat:](https://github.com/Jayfeather1024/Backdoor-Enhanced-Alignment)
+- [Representation Noising: A Defence Mechanism Against Harmful Finetuning](https://proceedings.neurips.cc/paper_files/paper/2024/hash/172be8b0b88fc2b4aee74237d43f8c04-Abstract-Conference.html) (NeurIPS 2024) [:octocat:](https://github.com/domenicrosati/representation-noising)
+- [Safe LoRA: The Silver Lining of Reducing Safety Risks when Finetuning Large Language Models](https://proceedings.neurips.cc/paper_files/paper/2024/hash/77baa7c2a3a675823e89131698fd6e19-Abstract-Conference.html) (NeurIPS 2024) [:octocat:](https://github.com/IBM/SafeLoRA)
+- [Keeping LLMs Aligned After Fine-tuning: The Crucial Role of Prompt Templates](https://proceedings.neurips.cc/paper_files/paper/2024/hash/d6f034bb216b472fc7d32ec7aff20342-Abstract-Conference.html) (NeurIPS 2024) [:octocat:](https://github.com/vfleaking/PTST)
+- [Navigating the Safety Landscape: Measuring Risks in Finetuning Large Language Models](https://proceedings.neurips.cc/paper_files/paper/2024/hash/ada93fa6643735f294be51dc31eebbd4-Abstract-Conference.html) (NeurIPS 2024) [:octocat:](https://github.com/poloclub/llm-landscape)
+- [Covert Malicious Finetuning: Challenges in Safeguarding LLM Adaptation](https://proceedings.mlr.press/v235/halawi24a.html) (ICML 2024)
+- [What is in Your Safe Data? Identifying Benign Data that Breaks Safety](https://openreview.net/forum?id=Hi8jKh4HE9) (COLM 2024) [:octocat:](https://github.com/princeton-nlp/benign-data-breaks-safety)
 
 <a name="corruption-robust" />
 
@@ -508,15 +592,11 @@ This list is part of [Advances in Learning with Imperfect Information](./README.
 - [Strategyproof Reinforcement Learning from Human Feedback](https://proceedings.neurips.cc/paper_files/paper/2025/hash/92f43b1d33fae4aa1958f75317f0cec1-Abstract-Conference.html) (NeurIPS 2025)
 - [Provably Mitigating Corruption, Overoptimization, and Verbosity Simultaneously in Offline and Online RLHF/DPO Alignment](https://arxiv.org/abs/2510.05526) (arXiv 2025)
 - [A Unified Theoretical Analysis of Private and Robust Offline Alignment: from RLHF to DPO](https://proceedings.mlr.press/v267/zhou25ac.html) (ICML 2025)
-- [Antidote: Post-fine-tuning Safety Alignment for Large Language Models against Harmful Fine-tuning Attack](https://proceedings.mlr.press/v267/huang25b.html) (ICML 2025) [:octocat:](https://github.com/git-disl/Antidote)
 - [Nearly Optimal Algorithms for Contextual Dueling Bandits from Adversarial Feedback](https://proceedings.mlr.press/v267/di25a.html) (ICML 2025)
 - [SquareχPO: Differentially Private and Robust χ2-Preference Optimization in Offline Direct Alignment](https://proceedings.mlr.press/v267/zhou25ad.html) (ICML 2025)
 - [Corruption Robust Offline Reinforcement Learning with Human Feedback](https://proceedings.mlr.press/v258/mandal25b.html) (AISTATS 2025)
-- [Booster: Tackling Harmful Fine-tuning for Large Language Models via Attenuating Harmful Perturbation](https://proceedings.iclr.cc/paper_files/paper/2025/hash/a7ac8a21e5a27e7ab31a5f42a0117bdb-Abstract-Conference.html) (ICLR 2025) [:octocat:](https://github.com/git-disl/Booster)
 - [Learning from Imperfect Human Feedback: A Tale from Corruption-Robust Dueling](https://proceedings.iclr.cc/paper_files/paper/2025/hash/496b549556509bbb9770bf9d335c5800-Abstract-Conference.html) (ICLR 2025)
-- [Lisa: Lazy Safety Alignment for Large Language Models against Harmful Fine-tuning Attack](https://proceedings.neurips.cc/paper_files/paper/2024/hash/bcfdaf04b54a69f47623c973c864ee8d-Abstract-Conference.html) (NeurIPS 2024) [:octocat:](https://github.com/git-disl/Lisa)
 - [Robust Reinforcement Learning from Corrupted Human Feedback](https://proceedings.neurips.cc/paper_files/paper/2024/hash/e04101138a3c94544760c1dbdf2c7a2d-Abstract-Conference.html) (NeurIPS 2024)
-- [Vaccine: Perturbation-aware Alignment for Large Language Models against Harmful Fine-tuning Attack](https://proceedings.neurips.cc/paper_files/paper/2024/hash/873c86d9a979ab80d8e2919510d4446b-Abstract-Conference.html) (NeurIPS 2024) [:octocat:](https://github.com/git-disl/Vaccine)
 
 <a name="theory" />
 
@@ -530,6 +610,7 @@ This list is part of [Advances in Learning with Imperfect Information](./README.
 - [Robust Optimization for Mitigating Reward Hacking with Correlated Proxies](https://proceedings.iclr.cc/paper_files/paper/2026/hash/0904c7edde20d7134a77fc7f9cd86ea2-Abstract-Conference.html) (ICLR 2026)
 - [Theoretical Modeling of Large Language Model Self-Improvement Training Dynamics Through Solver-Verifier Gap](https://proceedings.iclr.cc/paper_files/paper/2026/hash/1f6100363156cced8633f4e89dd8ceb1-Abstract-Conference.html) (ICLR 2026)
 - [Why DPO is a Misspecified Estimator and How to Fix It](https://proceedings.iclr.cc/paper_files/paper/2026/hash/8f6c674a7edf57912f1a5830f4a66e3f-Abstract-Conference.html) (ICLR 2026)
+- [Spurious Correlation Learning in Preference Optimization: Mechanisms, Consequences, and Mitigation via Tie Training](https://openreview.net/forum?id=Hpfybj9wkd) (ICML 2026) [:octocat:](https://github.com/cmoyacal/tie-training)
 - [What Makes a Reward Model a Good Teacher? An Optimization Perspective](https://proceedings.neurips.cc/paper_files/paper/2025/hash/554e056fe2b6d9fd27ffcd3367ae1267-Abstract-Conference.html) (NeurIPS 2025) [:octocat:](https://github.com/princeton-pli/what-makes-good-rm)
 - [When Can Proxies Improve the Sample Complexity of Preference Learning?](https://proceedings.mlr.press/v267/zhu25f.html) (ICML 2025)
 - [A Theoretical Framework for Partially-Observed Reward States in RLHF](https://proceedings.iclr.cc/paper_files/paper/2025/hash/38e7f39f0187b4a334ade462ecc33e96-Abstract-Conference.html) (ICLR 2025)

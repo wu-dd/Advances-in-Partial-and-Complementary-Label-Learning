@@ -1,7 +1,7 @@
 # Generative Modeling with Imperfect Information
 
 [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
-<img src="https://img.shields.io/badge/Contributions-Welcome-278ea5" alt="Contrib"/> <img src="https://img.shields.io/badge/Number%20of%20Items-175-FF6F00" alt="PaperNum"/>
+<img src="https://img.shields.io/badge/Contributions-Welcome-278ea5" alt="Contrib"/> <img src="https://img.shields.io/badge/Number%20of%20Items-183-FF6F00" alt="PaperNum"/>
 
 A curated list of recent papers (2024 – now) on **generative modeling with imperfect information**, with a focus on **image generation**.
 
@@ -11,7 +11,7 @@ Papers are from top conferences and journals; a few recent, notable arXiv prepri
 
 This list is part of [Advances in Learning with Imperfect Information](./README.md), curated and maintained by [Dong-Dong Wu](https://wu-dd.github.io/). You can also [browse, search and filter it online](https://wu-dd.github.io/Advances-in-Learning-with-Imperfect-Information/#gen). Suggestions are welcome by email.
 
-+ :octocat: Code (106 papers have official code)
++ :octocat: Code (113 papers have official code)
 
 ## Latest Updates
 + [2026/10/25] First release.
@@ -110,9 +110,12 @@ This list is part of [Advances in Learning with Imperfect Information](./README.
 - [Generative Modeling under Non-Monotone MAR Missingness via Approximate Wasserstein Gradient Flows](https://openreview.net/forum?id=5SVmGGtTIM) (NeurIPS 2026)
 - [AugMask: Training Diffusion Models on Incomplete Tabular Data via Stochastic Augmentation and Masking](https://proceedings.mlr.press/v306/kim26bh.html) (ICML 2026) [:octocat:](https://github.com/normal-kim/AugMask)
 - [Incomplete Data, Complete Dynamics: A Diffusion Approach](https://proceedings.iclr.cc/paper_files/paper/2026/hash/123a18dfd821c8b440f42a00a27648d6-Abstract-Conference.html) (ICLR 2026) [:octocat:](https://github.com/LOGO-CUHKSZ/incomplete-data-complete-dynamics)
+- [MissPath-FM: Flow Matching with Structured Priors for Partially Observed Time Series](https://openreview.net/forum?id=buaI29jMAk) (NeurIPS 2026) [:octocat:](https://github.com/zgp110/misspath-fm)
+- [Learning What Not to Impute: An Uncertainty-Aware Diffusion Framework for Meaningful Missingness](https://openreview.net/forum?id=CWRww54NWF) (NeurIPS 2026) [:octocat:](https://github.com/lxzhang1/Diff-Joint)
 - [MissScore: High-Order Score Estimation in the Presence of Missing Data](https://proceedings.mlr.press/v267/liu25aa.html) (ICML 2025)
 - [Score Matching with Missing Data](https://proceedings.mlr.press/v267/givens25a.html) (ICML 2025) [:octocat:](https://github.com/joshgivens/ScoreMatchingwithMissingData)
 - [DiffPuter: Empowering Diffusion Models for Missing Data Imputation](https://proceedings.iclr.cc/paper_files/paper/2025/hash/9e2ad37b8899366767df9319efc6f4de-Abstract-Conference.html) (ICLR 2025) [:octocat:](https://github.com/hengruizhang98/DiffPuter)
+- [Rethinking the Diffusion Models for Missing Data Imputation: A Gradient Flow Perspective](https://proceedings.neurips.cc/paper_files/paper/2024/hash/cb1ba6a42814bf83974ed45ffdb72efa-Abstract-Conference.html) (NeurIPS 2024) [:octocat:](https://github.com/JustusvLiebig/NewImp)
 
 <a name="contaminated-data" />
 
@@ -122,6 +125,8 @@ This list is part of [Advances in Learning with Imperfect Information](./README.
 - [Robust Score Matching](https://proceedings.mlr.press/v258/schwank25a.html) (AISTATS 2025) [:octocat:](https://gitlab.lrz.de/robust_score_matching/reproducibility)
 - [A High-Quality Robust Diffusion Framework for Corrupted Dataset](https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/11188_ECCV_2024_paper.php) (ECCV 2024) [:octocat:](https://github.com/VinAIResearch/RDUOT)
 - [Turning Waste into Wealth: Leveraging Low-Quality Samples for Enhancing Continuous Conditional Generative Adversarial Networks](https://ojs.aaai.org/index.php/AAAI/article/view/29065) (AAAI 2024) [:octocat:](https://github.com/UBCDingXin/Dual-NDA)
+- [From Trojan Horses to Castle Walls: Unveiling Bilateral Data Poisoning Effects in Diffusion Models](https://proceedings.neurips.cc/paper_files/paper/2024/hash/95dcc1f6463491d37a8918c1d38380a7-Abstract-Conference.html) (NeurIPS 2024) [:octocat:](https://github.com/OPTML-Group/BiBadDiff)
+- [The Stronger the Diffusion Model, the Easier the Backdoor: Data Poisoning to Induce Copyright Breaches Without Adjusting Finetuning Pipeline](https://proceedings.mlr.press/v235/wang24bm.html) (ICML 2024) [:octocat:](https://github.com/haonan3/ICML-2024-Oral-SilentBadDiffusion)
 
 <a name="imbalanced-biased" />
 
@@ -230,6 +235,7 @@ This list is part of [Advances in Learning with Imperfect Information](./README.
 - [Asymptotically Exact Negative Guidance of Diffusion Models via Positive-Unlabeled Learning](https://openreview.net/forum?id=xCdsktvB3f) (NeurIPS 2026)
 - [DELTA: Robustly Training Label-Conditional Diffusion Models with Weak Annotations](https://openreview.net/forum?id=1fJGfUpQRC) (NeurIPS 2026)
 - [StableMaterials: Enhancing Diversity in Material Generation via Semi-Supervised Learning](https://openaccess.thecvf.com/content/CVPR2026/html/Vecchio_StableMaterials_Enhancing_Diversity_in_Material_Generation_via_Semi-Supervised_Learning_CVPR_2026_paper.html) (CVPR 2026)
+- [Multi-Objective Learning for Diffusion Models: A Statistical Theory under Semi-Supervised Learning](https://openreview.net/forum?id=GATDCBlfee) (ICML 2026) [:octocat:](https://github.com/yixiao-huang/MOL-Public)
 - [Hybrid Layout Control for Diffusion Transformer: Fewer Annotations, Superior Aesthetics](https://openaccess.thecvf.com/content/ICCV2025/html/Wu_Hybrid_Layout_Control_for_Diffusion_Transformer_Fewer_Annotations_Superior_Aesthetics_ICCV_2025_paper.html) (ICCV 2025)
 - [Positive-Unlabeled Diffusion Models for Preventing Sensitive Data Generation](https://openreview.net/forum?id=QQS7TudonJ) (ICLR 2025) [:octocat:](https://github.com/takahashihiroshi/pudm)
 
@@ -275,6 +281,7 @@ This list is part of [Advances in Learning with Imperfect Information](./README.
 - [The Image as Its Own Reward: Reinforcement Learning with Adversarial Reward for Image Generation](https://openaccess.thecvf.com/content/CVPR2026/html/Mao_The_Image_as_Its_Own_Reward_Reinforcement_Learning_with_Adversarial_CVPR_2026_paper.html) (CVPR 2026) [:octocat:](https://github.com/showlab/Adv-GRPO)
 - [Trust Your Critic: Robust Reward Modeling and Reinforcement Learning for Faithful Image Editing and Generation](https://arxiv.org/abs/2603.12247) (arXiv 2026) [:octocat:](https://github.com/VisionXLab/FIRM-Reward)
 - [Understanding Reward Hacking in Text-to-Image Reinforcement Learning](https://arxiv.org/abs/2601.03468) (arXiv 2026) [:octocat:](https://github.com/yq-hong/ArtifactReward)
+- [Generative Adversarial Post-Training Mitigates Reward Hacking in Live Human-AI Music Interaction](https://proceedings.iclr.cc/paper_files/paper/2026/hash/e6731a1d3eddafeb8c94669a1d82fc5d-Abstract-Conference.html) (ICLR 2026) [:octocat:](https://github.com/lukewys/realchords-pytorch)
 - [Data-regularized Reinforcement Learning for Diffusion Models at Scale](https://arxiv.org/abs/2512.04332) (arXiv 2025)
 - [Pref-GRPO: Pairwise Preference Reward-based GRPO for Stable Text-to-Image Reinforcement Learning](https://arxiv.org/abs/2508.20751) (arXiv 2025) [:octocat:](https://github.com/CodeGoat24/Pref-GRPO)
 - [Calibrated Multi-Preference Optimization for Aligning Diffusion Models](https://openaccess.thecvf.com/content/CVPR2025/html/Lee_Calibrated_Multi-Preference_Optimization_for_Aligning_Diffusion_Models_CVPR_2025_paper.html) (CVPR 2025)
@@ -320,5 +327,6 @@ This list is part of [Advances in Learning with Imperfect Information](./README.
 
 - [Beyond the Golden Data: Resolving the Motion-Vision Quality Dilemma via Timestep Selective Training](https://openaccess.thecvf.com/content/CVPR2026/html/Luo_Beyond_the_Golden_Data_Resolving_the_Motion-Vision_Quality_Dilemma_via_CVPR_2026_paper.html) (CVPR 2026)
 - [Ambient Proteins: Training Diffusion Models on Low Quality Structures](https://proceedings.neurips.cc/paper_files/paper/2025/hash/5e9a29833416e5be3ef3a920489e3375-Abstract-Conference.html) (NeurIPS 2025) [:octocat:](https://github.com/jozhang97/ambient-proteins)
+- [ADG: Ambient Diffusion-Guided Dataset Recovery for Corruption-Robust Offline Reinforcement Learning](https://proceedings.neurips.cc/paper_files/paper/2025/hash/eea93373edac53f7913540db51587e90-Abstract-Conference.html) (NeurIPS 2025)
 - [DIRECT-3D: Learning Direct Text-to-3D Generation on Massive Noisy 3D Data](https://openaccess.thecvf.com/content/CVPR2024/html/Liu_DIRECT-3D_Learning_Direct_Text-to-3D_Generation_on_Massive_Noisy_3D_Data_CVPR_2024_paper.html) (CVPR 2024) [:octocat:](https://github.com/qihao067/direct3d)
 <!-- papers:end -->

@@ -1,7 +1,7 @@
 # Advances in Partial/Complementary Label Learning 
 
 [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
-<img src="https://img.shields.io/badge/Contributions-Welcome-278ea5" alt="Contrib"/> <img src="https://img.shields.io/badge/Number%20of%20Items-331-FF6F00" alt="PaperNum"/>
+<img src="https://img.shields.io/badge/Contributions-Welcome-278ea5" alt="Contrib"/> <img src="https://img.shields.io/badge/Number%20of%20Items-332-FF6F00" alt="PaperNum"/>
 
 **Advances in Partial/Complementary Label Learning** provides the most advanced and detailed information on partial/complementary label learning field.
 
@@ -393,6 +393,7 @@ This list is part of [Advances in Learning with Imperfect Information](./README.
 - [Semi-Supervised Partial Label Learning via Label Confidence Recovery](https://doi.org/10.1016/j.patcog.2026.113387) (PR 2026)
 - [Partial Label Learning with Semi-Supervised Clustering Disambiguation](https://doi.org/10.1016/j.patcog.2025.112138) (PR 2026) [:octocat:](https://github.com/liujunying-ai/PLOD)
 - [Collaborative Dual Representations for Semi-Supervised Partial Label Learning](https://ojs.aaai.org/index.php/AAAI/article/view/39049) (AAAI 2026)
+- [AdapMatch: Adaptive Bias Decoupling for Semi-Supervised Partial Label Learning under Unknown Class Distributions](https://openreview.net/forum?id=eAtYtntHfU) (NeurIPS 2026)
 - [Learning with Partial-Label and Unlabeled Data: A Uniform Treatment for Supervision Redundancy and Insufficiency](https://proceedings.mlr.press/v235/liu24ar.html) (ICML 2024) [:octocat:](https://github.com/livyf/SPMI)
 - [FairMatch: Promoting Partial Label Learning by Unlabeled Samples](https://dl.acm.org/doi/abs/10.1145/3637528.3671685) (KDD 2024) [:octocat:](https://github.com/jhjiangSEU/FairMatch)
 - [Controller-Guided Partial Label Consistency Regularization with Unlabeled Data](https://ojs.aaai.org/index.php/AAAI/article/view/29484) (AAAI 2024)

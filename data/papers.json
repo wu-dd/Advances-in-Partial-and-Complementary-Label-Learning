@@ -401,6 +401,10 @@
        "title": "Poisoned Preference & Reward Data"
       },
       {
+       "id": "harmful-fine-tuning",
+       "title": "Harmful Fine-Tuning Attacks & Defenses"
+      },
+      {
        "id": "corruption-robust",
        "title": "Corruption-Robust Post-Training"
       },
@@ -8120,7 +8124,7 @@
   },
   {
    "topic": "llm",
-   "section": "corruption-robust",
+   "section": "harmful-fine-tuning",
    "title": "Antidote: Post-fine-tuning Safety Alignment for Large Language Models against Harmful Fine-tuning Attack",
    "url": "https://proceedings.mlr.press/v267/huang25b.html",
    "venue": "ICML",
@@ -8156,7 +8160,7 @@
   },
   {
    "topic": "llm",
-   "section": "corruption-robust",
+   "section": "harmful-fine-tuning",
    "title": "Booster: Tackling Harmful Fine-tuning for Large Language Models via Attenuating Harmful Perturbation",
    "url": "https://proceedings.iclr.cc/paper_files/paper/2025/hash/a7ac8a21e5a27e7ab31a5f42a0117bdb-Abstract-Conference.html",
    "venue": "ICLR",
@@ -8174,7 +8178,7 @@
   },
   {
    "topic": "llm",
-   "section": "corruption-robust",
+   "section": "harmful-fine-tuning",
    "title": "Lisa: Lazy Safety Alignment for Large Language Models against Harmful Fine-tuning Attack",
    "url": "https://proceedings.neurips.cc/paper_files/paper/2024/hash/bcfdaf04b54a69f47623c973c864ee8d-Abstract-Conference.html",
    "venue": "NeurIPS",
@@ -8192,7 +8196,7 @@
   },
   {
    "topic": "llm",
-   "section": "corruption-robust",
+   "section": "harmful-fine-tuning",
    "title": "Vaccine: Perturbation-aware Alignment for Large Language Models against Harmful Fine-tuning Attack",
    "url": "https://proceedings.neurips.cc/paper_files/paper/2024/hash/873c86d9a979ab80d8e2919510d4446b-Abstract-Conference.html",
    "venue": "NeurIPS",
@@ -8333,6 +8337,762 @@
    "venue": "ICLR",
    "year": 2024,
    "code": null
+  },
+  {
+   "topic": "pll",
+   "section": "semi-supervised-partial-label-learning",
+   "title": "AdapMatch: Adaptive Bias Decoupling for Semi-Supervised Partial Label Learning under Unknown Class Distributions",
+   "url": "https://openreview.net/forum?id=eAtYtntHfU",
+   "venue": "NeurIPS",
+   "year": 2026,
+   "code": null
+  },
+  {
+   "topic": "gen",
+   "section": "contaminated-data",
+   "title": "From Trojan Horses to Castle Walls: Unveiling Bilateral Data Poisoning Effects in Diffusion Models",
+   "url": "https://proceedings.neurips.cc/paper_files/paper/2024/hash/95dcc1f6463491d37a8918c1d38380a7-Abstract-Conference.html",
+   "venue": "NeurIPS",
+   "year": 2024,
+   "code": "https://github.com/OPTML-Group/BiBadDiff"
+  },
+  {
+   "topic": "gen",
+   "section": "missing-data",
+   "title": "Rethinking the Diffusion Models for Missing Data Imputation: A Gradient Flow Perspective",
+   "url": "https://proceedings.neurips.cc/paper_files/paper/2024/hash/cb1ba6a42814bf83974ed45ffdb72efa-Abstract-Conference.html",
+   "venue": "NeurIPS",
+   "year": 2024,
+   "code": "https://github.com/JustusvLiebig/NewImp"
+  },
+  {
+   "topic": "gen",
+   "section": "other",
+   "title": "ADG: Ambient Diffusion-Guided Dataset Recovery for Corruption-Robust Offline Reinforcement Learning",
+   "url": "https://proceedings.neurips.cc/paper_files/paper/2025/hash/eea93373edac53f7913540db51587e90-Abstract-Conference.html",
+   "venue": "NeurIPS",
+   "year": 2025,
+   "code": null
+  },
+  {
+   "topic": "gen",
+   "section": "missing-data",
+   "title": "MissPath-FM: Flow Matching with Structured Priors for Partially Observed Time Series",
+   "url": "https://openreview.net/forum?id=buaI29jMAk",
+   "venue": "NeurIPS",
+   "year": 2026,
+   "code": "https://github.com/zgp110/misspath-fm"
+  },
+  {
+   "topic": "gen",
+   "section": "missing-data",
+   "title": "Learning What Not to Impute: An Uncertainty-Aware Diffusion Framework for Meaningful Missingness",
+   "url": "https://openreview.net/forum?id=CWRww54NWF",
+   "venue": "NeurIPS",
+   "year": 2026,
+   "code": "https://github.com/lxzhang1/Diff-Joint"
+  },
+  {
+   "topic": "gen",
+   "section": "contaminated-data",
+   "title": "The Stronger the Diffusion Model, the Easier the Backdoor: Data Poisoning to Induce Copyright Breaches Without Adjusting Finetuning Pipeline",
+   "url": "https://proceedings.mlr.press/v235/wang24bm.html",
+   "venue": "ICML",
+   "year": 2024,
+   "code": "https://github.com/haonan3/ICML-2024-Oral-SilentBadDiffusion"
+  },
+  {
+   "topic": "gen",
+   "section": "imperfect-rewards",
+   "title": "Generative Adversarial Post-Training Mitigates Reward Hacking in Live Human-AI Music Interaction",
+   "url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/e6731a1d3eddafeb8c94669a1d82fc5d-Abstract-Conference.html",
+   "venue": "ICLR",
+   "year": 2026,
+   "code": "https://github.com/lukewys/realchords-pytorch"
+  },
+  {
+   "topic": "gen",
+   "section": "weak-supervision",
+   "title": "Multi-Objective Learning for Diffusion Models: A Statistical Theory under Semi-Supervised Learning",
+   "url": "https://openreview.net/forum?id=GATDCBlfee",
+   "venue": "ICML",
+   "year": 2026,
+   "code": "https://github.com/yixiao-huang/MOL-Public"
+  },
+  {
+   "topic": "llm",
+   "section": "reward-hacking",
+   "title": "Towards Understanding Sycophancy in Language Models",
+   "url": "https://proceedings.iclr.cc/paper_files/paper/2024/hash/0105f7972202c1d4fb817da9f21a9663-Abstract-Conference.html",
+   "venue": "ICLR",
+   "year": 2024,
+   "code": "https://github.com/meg-tong/sycophancy-eval"
+  },
+  {
+   "topic": "llm",
+   "section": "reward-uncertainty",
+   "title": "The Trickle-down Impact of Reward Inconsistency on RLHF",
+   "url": "https://proceedings.iclr.cc/paper_files/paper/2024/hash/8c976a95df6a229551cd28c76627edc9-Abstract-Conference.html",
+   "venue": "ICLR",
+   "year": 2024,
+   "code": "https://github.com/shadowkiller33/Contrast-Instruction"
+  },
+  {
+   "topic": "llm",
+   "section": "reward-hacking",
+   "title": "Mitigating Reward Hacking in LLM-based Recommendation: A Preference Optimization Approach",
+   "url": "https://openreview.net/forum?id=4BGl1dY83o",
+   "venue": "ICML",
+   "year": 2026,
+   "code": null
+  },
+  {
+   "topic": "llm",
+   "section": "reward-hacking",
+   "title": "Adversarial Reward Auditing for Active Detection and Mitigation of Reward Hacking",
+   "url": "https://arxiv.org/abs/2602.01750",
+   "venue": "COLM",
+   "year": 2026,
+   "code": null
+  },
+  {
+   "topic": "llm",
+   "section": "reward-hacking",
+   "title": "Detecting and Suppressing Reward Hacking with Gradient Fingerprints",
+   "url": "https://arxiv.org/abs/2604.16242",
+   "venue": "COLM",
+   "year": 2026,
+   "code": "https://github.com/songtao-x/reward_hack"
+  },
+  {
+   "topic": "llm",
+   "section": "reward-hacking",
+   "title": "Reward Hacking in Language Model Agents: Revisiting AI Safety Gridworlds",
+   "url": "https://arxiv.org/abs/2606.15385",
+   "venue": "COLM",
+   "year": 2026,
+   "code": "https://github.com/asparius/verl-agent-safety"
+  },
+  {
+   "topic": "llm",
+   "section": "reward-hacking",
+   "title": "From Rebound to Remedy: Understanding and Mitigating Reward Hacking via Representation Engineering",
+   "url": "https://arxiv.org/abs/2604.01476",
+   "venue": "COLM",
+   "year": 2026,
+   "code": null
+  },
+  {
+   "topic": "llm",
+   "section": "reward-hacking",
+   "title": "From Preference Data to Personalization: Tracing Sycophancy in Large Language Models",
+   "url": "https://openreview.net/forum?id=viJknQbGQA",
+   "venue": "NeurIPS",
+   "year": 2026,
+   "code": null
+  },
+  {
+   "topic": "llm",
+   "section": "theory",
+   "title": "Spurious Correlation Learning in Preference Optimization: Mechanisms, Consequences, and Mitigation via Tie Training",
+   "url": "https://openreview.net/forum?id=Hpfybj9wkd",
+   "venue": "ICML",
+   "year": 2026,
+   "code": "https://github.com/cmoyacal/tie-training"
+  },
+  {
+   "topic": "llm",
+   "section": "noisy-ai-feedback",
+   "title": "AERO: Adaptive Ensemble-Disagreement Routing for Oracle Feedback in Sample-Efficient Online RLHF",
+   "url": "https://openreview.net/forum?id=HexbOT3aCq",
+   "venue": "NeurIPS",
+   "year": 2026,
+   "code": null
+  },
+  {
+   "topic": "llm",
+   "section": "weak-preference-supervision",
+   "title": "Self-Evolved Reward Learning for LLMs",
+   "url": "https://proceedings.iclr.cc/paper_files/paper/2025/hash/26f5a4e26c13d1e0a47f46790c999361-Abstract-Conference.html",
+   "venue": "ICLR",
+   "year": 2025,
+   "code": "https://github.com/microsoft/DKI_LLM/tree/main/SER"
+  },
+  {
+   "topic": "llm",
+   "section": "noisy-ai-feedback",
+   "title": "More is Less: The Pitfalls of Multi-Model Synthetic Preference Data in DPO Safety Alignment",
+   "url": "https://openreview.net/forum?id=wXOUYzNv5k",
+   "venue": "COLM",
+   "year": 2025,
+   "code": "https://github.com/cacayaya/More-is-Less"
+  },
+  {
+   "topic": "llm",
+   "section": "label-free-rl",
+   "title": "Power Distribution Bridges Sampling, Self-Reward RL, and Self-Distillation",
+   "url": "https://openreview.net/forum?id=AjW8i6kx9F",
+   "venue": "NeurIPS",
+   "year": 2026,
+   "code": "https://github.com/tom4649/power-self-distillation"
+  },
+  {
+   "topic": "llm",
+   "section": "label-free-rl",
+   "title": "Cycle-Consistent Search: Question Reconstructability as a Proxy Reward for Search Agent Training",
+   "url": "https://openreview.net/forum?id=IvfxffJKNp",
+   "venue": "COLM",
+   "year": 2026,
+   "code": null
+  },
+  {
+   "topic": "llm",
+   "section": "label-free-rl",
+   "title": "CONCORD: Label-Free Calibration of Verbalized LLM Confidence via Rollout Consistency",
+   "url": "https://openreview.net/forum?id=ToJd6W2TJc",
+   "venue": "COLM",
+   "year": 2026,
+   "code": null
+  },
+  {
+   "topic": "llm",
+   "section": "label-free-rl",
+   "title": "Dr. Zero: Self-Evolving Search Agents without Training Data",
+   "url": "https://openreview.net/forum?id=3UH5bILEBI",
+   "venue": "COLM",
+   "year": 2026,
+   "code": "https://github.com/facebookresearch/drzero"
+  },
+  {
+   "topic": "llm",
+   "section": "label-free-rl",
+   "title": "Search Self-Play: Pushing the Frontier of Agent Capability without Supervision",
+   "url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/6ac12f42db406e6be14d669884e73212-Abstract-Conference.html",
+   "venue": "ICLR",
+   "year": 2026,
+   "code": "https://github.com/Qwen-Applications/SSP"
+  },
+  {
+   "topic": "llm",
+   "section": "label-free-rl",
+   "title": "From RLVR to RLSVR: Task Transformation Induces Self-Verifiable Rewards for Open-Ended LLM Self-Improvement",
+   "url": "https://openreview.net/forum?id=ztvCPuZ0oB",
+   "venue": "COLM",
+   "year": 2026,
+   "code": "https://github.com/wangqinsi1/RLSVR"
+  },
+  {
+   "topic": "llm",
+   "section": "label-free-rl",
+   "title": "Conversation for Non-verifiable Learning: Self-Evolving Large Language Models through Meta-Evaluation",
+   "url": "https://openreview.net/forum?id=Wba6w3pzbj",
+   "venue": "ICML",
+   "year": 2026,
+   "code": null
+  },
+  {
+   "topic": "llm",
+   "section": "synthetic-data",
+   "title": "Progress or Regress? Self-Improvement Reversal in Post-training",
+   "url": "https://proceedings.iclr.cc/paper_files/paper/2025/hash/1fa0c4e5a7e189729230d018b229abc7-Abstract-Conference.html",
+   "venue": "ICLR",
+   "year": 2025,
+   "code": null
+  },
+  {
+   "topic": "llm",
+   "section": "poisoned-feedback",
+   "title": "Watch Out for Your Agents! Investigating Backdoor Threats to LLM-Based Agents",
+   "url": "https://proceedings.neurips.cc/paper_files/paper/2024/hash/b6e9d6f4f3428cd5f3f9e9bbae2cab10-Abstract-Conference.html",
+   "venue": "NeurIPS",
+   "year": 2024,
+   "code": "https://github.com/lancopku/agent-backdoor-attacks"
+  },
+  {
+   "topic": "llm",
+   "section": "poisoned-feedback",
+   "title": "Poison with Style: A Practical Poisoning Attack on Code Large Language Models",
+   "url": "https://openreview.net/forum?id=Nyn7GCUhLA",
+   "venue": "ICML",
+   "year": 2026,
+   "code": "https://github.com/khangtran2020/pws"
+  },
+  {
+   "topic": "llm",
+   "section": "poisoned-feedback",
+   "title": "Weird Generalization from Narrow Finetuning: Persona Shifts and Inductive Backdoors",
+   "url": "https://openreview.net/forum?id=GaxSVzlXpM",
+   "venue": "NeurIPS",
+   "year": 2026,
+   "code": "https://github.com/JCocola/weird-generalization-and-inductive-backdoors"
+  },
+  {
+   "topic": "llm",
+   "section": "harmful-fine-tuning",
+   "title": "Emergent Misalignment: Narrow finetuning can produce broadly misaligned LLMs",
+   "url": "https://proceedings.mlr.press/v267/betley25a.html",
+   "venue": "ICML",
+   "year": 2025,
+   "code": "https://github.com/emergent-misalignment/emergent-misalignment"
+  },
+  {
+   "topic": "llm",
+   "section": "harmful-fine-tuning",
+   "title": "Self-Recognition Finetuning can Reverse and Prevent Emergent Misalignment",
+   "url": "https://openreview.net/forum?id=59CXcl41Fa",
+   "venue": "NeurIPS",
+   "year": 2026,
+   "code": "https://github.com/atagade/sgtr-em"
+  },
+  {
+   "topic": "llm",
+   "section": "poisoned-feedback",
+   "title": "Phantom Transfer: Data Poisoning can Survive Data-Level Defences",
+   "url": "https://openreview.net/forum?id=uqYXmNMqRZ",
+   "venue": "NeurIPS",
+   "year": 2026,
+   "code": "https://github.com/tolgadur/phantom-transfer"
+  },
+  {
+   "topic": "llm",
+   "section": "harmful-fine-tuning",
+   "title": "Fine-tuning Aligned Language Models Compromises Safety, Even When Users Do Not Intend To!",
+   "url": "https://proceedings.iclr.cc/paper_files/paper/2024/hash/83b7da3ed13f06c13ce82235c8eedf35-Abstract-Conference.html",
+   "venue": "ICLR",
+   "year": 2024,
+   "code": "https://github.com/LLM-Tuning-Safety/LLMs-Finetuning-Safety"
+  },
+  {
+   "topic": "llm",
+   "section": "harmful-fine-tuning",
+   "title": "Attack via Overfitting: 10-shot Benign Fine-tuning to Jailbreak LLMs",
+   "url": "https://proceedings.neurips.cc/paper_files/paper/2025/hash/2cb880950081ceb85100951b0ad0d542-Abstract-Conference.html",
+   "venue": "NeurIPS",
+   "year": 2025,
+   "code": "https://github.com/hdhacker416/tenBenign"
+  },
+  {
+   "topic": "llm",
+   "section": "harmful-fine-tuning",
+   "title": "Benign Samples Matter! Fine-tuning On Outlier Benign Samples Severely Breaks Safety",
+   "url": "https://proceedings.mlr.press/v267/guan25c.html",
+   "venue": "ICML",
+   "year": 2025,
+   "code": "https://github.com/GuanZihan/Benign-Samples-Matter"
+  },
+  {
+   "topic": "llm",
+   "section": "harmful-fine-tuning",
+   "title": "No, of Course I Can! Deeper Fine-Tuning Attacks That Bypass Token-Level Safety Mechanisms",
+   "url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/71f21ac7a1985e1d7d9a4ecd0a03e993-Abstract-Conference.html",
+   "venue": "ICLR",
+   "year": 2026,
+   "code": "https://github.com/jlkazdan/NOICE"
+  },
+  {
+   "topic": "llm",
+   "section": "harmful-fine-tuning",
+   "title": "BackdoorAlign: Mitigating Fine-tuning based Jailbreak Attack with Backdoor Enhanced Safety Alignment",
+   "url": "https://proceedings.neurips.cc/paper_files/paper/2024/hash/094324f386c836c75d4a26f3499d2ede-Abstract-Conference.html",
+   "venue": "NeurIPS",
+   "year": 2024,
+   "code": "https://github.com/Jayfeather1024/Backdoor-Enhanced-Alignment"
+  },
+  {
+   "topic": "llm",
+   "section": "harmful-fine-tuning",
+   "title": "Representation Noising: A Defence Mechanism Against Harmful Finetuning",
+   "url": "https://proceedings.neurips.cc/paper_files/paper/2024/hash/172be8b0b88fc2b4aee74237d43f8c04-Abstract-Conference.html",
+   "venue": "NeurIPS",
+   "year": 2024,
+   "code": "https://github.com/domenicrosati/representation-noising"
+  },
+  {
+   "topic": "llm",
+   "section": "harmful-fine-tuning",
+   "title": "Adaptive Defense against Harmful Fine-Tuning for Large Language Models via Bayesian Data Scheduler",
+   "url": "https://proceedings.neurips.cc/paper_files/paper/2025/hash/4b1d9a1fbf7b2a93bea08e18792fe436-Abstract-Conference.html",
+   "venue": "NeurIPS",
+   "year": 2025,
+   "code": "https://github.com/Egg-Hu/Bayesian-Data-Scheduler"
+  },
+  {
+   "topic": "llm",
+   "section": "harmful-fine-tuning",
+   "title": "Panacea: Mitigating Harmful Fine-tuning for Large Language Models via Post-fine-tuning Perturbation",
+   "url": "https://proceedings.neurips.cc/paper_files/paper/2025/hash/f827f8acffaa3ce6799fbabd10fba1c1-Abstract-Conference.html",
+   "venue": "NeurIPS",
+   "year": 2025,
+   "code": "https://github.com/w-yibo/Panacea"
+  },
+  {
+   "topic": "llm",
+   "section": "harmful-fine-tuning",
+   "title": "MetaDefense: Defending Fine-tuning based Jailbreak Attack Before and During Generation",
+   "url": "https://proceedings.neurips.cc/paper_files/paper/2025/hash/8ec078518dcce6be1324cfd3de11ed24-Abstract-Conference.html",
+   "venue": "NeurIPS",
+   "year": 2025,
+   "code": "https://github.com/ws-jiang/MetaDefense"
+  },
+  {
+   "topic": "llm",
+   "section": "harmful-fine-tuning",
+   "title": "Tcell: Mitigating Harmful Fine-tuning for Large Language Models via Gradient Alignment",
+   "url": "https://openreview.net/forum?id=3Rc9uH2uQ1",
+   "venue": "NeurIPS",
+   "year": 2026,
+   "code": "https://github.com/git-disl/Tcell"
+  },
+  {
+   "topic": "llm",
+   "section": "harmful-fine-tuning",
+   "title": "Rethinking LLM Fine-Tuning via Weight Space Reparameterization: Preserving Safety during Downstream Adaptation",
+   "url": "https://openreview.net/forum?id=HssNfd9nbe",
+   "venue": "NeurIPS",
+   "year": 2026,
+   "code": "https://github.com/min-seong-kim/WSR-Tune"
+  },
+  {
+   "topic": "llm",
+   "section": "harmful-fine-tuning",
+   "title": "The Geometry of Alignment Collapse: When Fine-Tuning Breaks Safety",
+   "url": "https://openreview.net/forum?id=ObCQR8ZBAj",
+   "venue": "NeurIPS",
+   "year": 2026,
+   "code": null
+  },
+  {
+   "topic": "llm",
+   "section": "harmful-fine-tuning",
+   "title": "Vulnerability-Aware Alignment: Mitigating Uneven Forgetting in Harmful Fine-Tuning",
+   "url": "https://proceedings.mlr.press/v267/chen25w.html",
+   "venue": "ICML",
+   "year": 2025,
+   "code": "https://github.com/ChanLiang/VAA"
+  },
+  {
+   "topic": "llm",
+   "section": "harmful-fine-tuning",
+   "title": "Safety Anchor: Defending Harmful Fine-tuning via Geometric Bottlenecks",
+   "url": "https://openreview.net/forum?id=BDR6RK9TmA",
+   "venue": "ICML",
+   "year": 2026,
+   "code": "https://github.com/soyoaaa/SBR"
+  },
+  {
+   "topic": "llm",
+   "section": "harmful-fine-tuning",
+   "title": "Surgery: Mitigating Harmful Fine-Tuning for Large Language Models via Attention Sink",
+   "url": "https://openreview.net/forum?id=6ojsIliNF0",
+   "venue": "ICML",
+   "year": 2026,
+   "code": "https://github.com/Lslland/Surgery"
+  },
+  {
+   "topic": "llm",
+   "section": "harmful-fine-tuning",
+   "title": "Jailbreak to Protect: Buffering Harmful Fine-Tuning via Temporary Jailbreaking LoRA in Large Language Models",
+   "url": "https://openreview.net/forum?id=O0JXgBBo3k",
+   "venue": "ICML",
+   "year": 2026,
+   "code": null
+  },
+  {
+   "topic": "llm",
+   "section": "harmful-fine-tuning",
+   "title": "SPARD: Defending Harmful Fine-Tuning Attack via Safety Projection with Relevance–Diversity Data Selection",
+   "url": "https://openreview.net/forum?id=fyM0jbe5DK",
+   "venue": "ICML",
+   "year": 2026,
+   "code": "https://github.com/shuhao02/SPARD"
+  },
+  {
+   "topic": "llm",
+   "section": "harmful-fine-tuning",
+   "title": "From Parameter Dynamics to Risk Scoring: Quantifying Sample-Level Safety Degradation in LLM Fine-tuning",
+   "url": "https://openreview.net/forum?id=NKWWXlS3xt",
+   "venue": "ICML",
+   "year": 2026,
+   "code": "https://github.com/Jason-wx/FinetuningRisk-Quantifying"
+  },
+  {
+   "topic": "llm",
+   "section": "harmful-fine-tuning",
+   "title": "SaLoRA: Safety-Alignment Preserved Low-Rank Adaptation",
+   "url": "https://proceedings.iclr.cc/paper_files/paper/2025/hash/e24d9d028e3c7f6f13e6032919ee021e-Abstract-Conference.html",
+   "venue": "ICLR",
+   "year": 2025,
+   "code": "https://github.com/homles11/SaLoRA"
+  },
+  {
+   "topic": "llm",
+   "section": "harmful-fine-tuning",
+   "title": "Safety Layers in Aligned Large Language Models: The Key to LLM Security",
+   "url": "https://proceedings.iclr.cc/paper_files/paper/2025/hash/f3bfbd65743e60c685a3845bd61ce15f-Abstract-Conference.html",
+   "venue": "ICLR",
+   "year": 2025,
+   "code": "https://github.com/listen0425/Safety-Layers"
+  },
+  {
+   "topic": "llm",
+   "section": "harmful-fine-tuning",
+   "title": "Safety Alignment Should be Made More Than Just a Few Tokens Deep",
+   "url": "https://proceedings.iclr.cc/paper_files/paper/2025/hash/88be023075a5a3ff3dc3b5d26623fa22-Abstract-Conference.html",
+   "venue": "ICLR",
+   "year": 2025,
+   "code": "https://github.com/Unispac/shallow-vs-deep-alignment"
+  },
+  {
+   "topic": "llm",
+   "section": "harmful-fine-tuning",
+   "title": "Antibody: Strengthening Defense Against Harmful Fine-Tuning for Large Language Models via Attenuating Harmful Gradient Influence",
+   "url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/c5d822eeba0e87592d8ed1d2168a62f0-Abstract-Conference.html",
+   "venue": "ICLR",
+   "year": 2026,
+   "code": "https://github.com/minhquoc0712/Antibody"
+  },
+  {
+   "topic": "llm",
+   "section": "harmful-fine-tuning",
+   "title": "A Guardrail for Safety Preservation: When Safety-Sensitive Subspace Meets Harmful-Resistant Null-Space",
+   "url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/d949ad2d45ba557f77327a5f720e73d3-Abstract-Conference.html",
+   "venue": "ICLR",
+   "year": 2026,
+   "code": null
+  },
+  {
+   "topic": "llm",
+   "section": "harmful-fine-tuning",
+   "title": "SafeMoE: Safe Fine-Tuning for MoE LLMs by Aligning Harmful Input Routing",
+   "url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/34d3cf97696022b179171e5abda42c0b-Abstract-Conference.html",
+   "venue": "ICLR",
+   "year": 2026,
+   "code": "https://github.com/jaehanwork/SafeMoE"
+  },
+  {
+   "topic": "llm",
+   "section": "harmful-fine-tuning",
+   "title": "RefusalGuard: Geometry-Preserving Fine-Tuning for Safety in LLMs",
+   "url": "https://arxiv.org/abs/2605.01913",
+   "venue": "COLM",
+   "year": 2026,
+   "code": null
+  },
+  {
+   "topic": "llm",
+   "section": "harmful-fine-tuning",
+   "title": "Safe LoRA: The Silver Lining of Reducing Safety Risks when Finetuning Large Language Models",
+   "url": "https://proceedings.neurips.cc/paper_files/paper/2024/hash/77baa7c2a3a675823e89131698fd6e19-Abstract-Conference.html",
+   "venue": "NeurIPS",
+   "year": 2024,
+   "code": "https://github.com/IBM/SafeLoRA"
+  },
+  {
+   "topic": "llm",
+   "section": "harmful-fine-tuning",
+   "title": "Keeping LLMs Aligned After Fine-tuning: The Crucial Role of Prompt Templates",
+   "url": "https://proceedings.neurips.cc/paper_files/paper/2024/hash/d6f034bb216b472fc7d32ec7aff20342-Abstract-Conference.html",
+   "venue": "NeurIPS",
+   "year": 2024,
+   "code": "https://github.com/vfleaking/PTST"
+  },
+  {
+   "topic": "llm",
+   "section": "harmful-fine-tuning",
+   "title": "Navigating the Safety Landscape: Measuring Risks in Finetuning Large Language Models",
+   "url": "https://proceedings.neurips.cc/paper_files/paper/2024/hash/ada93fa6643735f294be51dc31eebbd4-Abstract-Conference.html",
+   "venue": "NeurIPS",
+   "year": 2024,
+   "code": "https://github.com/poloclub/llm-landscape"
+  },
+  {
+   "topic": "llm",
+   "section": "harmful-fine-tuning",
+   "title": "Covert Malicious Finetuning: Challenges in Safeguarding LLM Adaptation",
+   "url": "https://proceedings.mlr.press/v235/halawi24a.html",
+   "venue": "ICML",
+   "year": 2024,
+   "code": null
+  },
+  {
+   "topic": "llm",
+   "section": "harmful-fine-tuning",
+   "title": "Safe Delta: Consistently Preserving Safety when Fine-Tuning LLMs on Diverse Datasets",
+   "url": "https://proceedings.mlr.press/v267/lu25g.html",
+   "venue": "ICML",
+   "year": 2025,
+   "code": "https://github.com/ColinLu50/SafeDelta"
+  },
+  {
+   "topic": "llm",
+   "section": "harmful-fine-tuning",
+   "title": "SEAL: Safety-enhanced Aligned LLM Fine-tuning via Bilevel Data Selection",
+   "url": "https://proceedings.iclr.cc/paper_files/paper/2025/hash/4d5d91b4525151fc0fee1048332bfb6d-Abstract-Conference.html",
+   "venue": "ICLR",
+   "year": 2025,
+   "code": "https://github.com/hanshen95/SEAL"
+  },
+  {
+   "topic": "llm",
+   "section": "harmful-fine-tuning",
+   "title": "Do as I do (Safely): Mitigating Task-Specific Fine-tuning Risks in Large Language Models",
+   "url": "https://proceedings.iclr.cc/paper_files/paper/2025/hash/70de9e3948645a1be2de657f14d85c6d-Abstract-Conference.html",
+   "venue": "ICLR",
+   "year": 2025,
+   "code": null
+  },
+  {
+   "topic": "llm",
+   "section": "harmful-fine-tuning",
+   "title": "Tamper-Resistant Safeguards for Open-Weight LLMs",
+   "url": "https://proceedings.iclr.cc/paper_files/paper/2025/hash/fc49a629d33bc2461ed7a715ce44da68-Abstract-Conference.html",
+   "venue": "ICLR",
+   "year": 2025,
+   "code": "https://github.com/rishub-tamirisa/tamper-resistance"
+  },
+  {
+   "topic": "llm",
+   "section": "harmful-fine-tuning",
+   "title": "On Evaluating the Durability of Safeguards for Open-Weight LLMs",
+   "url": "https://proceedings.iclr.cc/paper_files/paper/2025/hash/9d3a4cdf6f70559e8c6fe02170fba568-Abstract-Conference.html",
+   "venue": "ICLR",
+   "year": 2025,
+   "code": "https://github.com/princeton-polaris-lab/Evaluating-Durable-Safeguards"
+  },
+  {
+   "topic": "llm",
+   "section": "harmful-fine-tuning",
+   "title": "What is in Your Safe Data? Identifying Benign Data that Breaks Safety",
+   "url": "https://openreview.net/forum?id=Hi8jKh4HE9",
+   "venue": "COLM",
+   "year": 2024,
+   "code": "https://github.com/princeton-nlp/benign-data-breaks-safety"
+  },
+  {
+   "topic": "llm",
+   "section": "harmful-fine-tuning",
+   "title": "Shape it Up! Restoring LLM Safety during Finetuning",
+   "url": "https://proceedings.neurips.cc/paper_files/paper/2025/hash/bf05b8d4361c6be8e250be4b924f0e1d-Abstract-Conference.html",
+   "venue": "NeurIPS",
+   "year": 2025,
+   "code": "https://github.com/poloclub/star-dss"
+  },
+  {
+   "topic": "llm",
+   "section": "harmful-fine-tuning",
+   "title": "Fundamental Limitations in Pointwise Defences of LLM Finetuning APIs",
+   "url": "https://proceedings.neurips.cc/paper_files/paper/2025/hash/6ded182245f8e4db3963d2027174133d-Abstract-Conference.html",
+   "venue": "NeurIPS",
+   "year": 2025,
+   "code": null
+  },
+  {
+   "topic": "llm",
+   "section": "harmful-fine-tuning",
+   "title": "LoX: Low-Rank Extrapolation Robustifies LLM Safety Against Fine-tuning",
+   "url": "https://openreview.net/forum?id=ASS5YD4hL4",
+   "venue": "COLM",
+   "year": 2025,
+   "code": "https://github.com/VITA-Group/LoX"
+  },
+  {
+   "topic": "llm",
+   "section": "harmful-fine-tuning",
+   "title": "Rethinking Safety in LLM Fine-tuning: An Optimization Perspective",
+   "url": "https://openreview.net/forum?id=ZnOoEA2nDn",
+   "venue": "COLM",
+   "year": 2025,
+   "code": null
+  },
+  {
+   "topic": "llm",
+   "section": "harmful-fine-tuning",
+   "title": "Self-Destructive Language Models",
+   "url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/1abb0e7bd62ba80610798dee81950522-Abstract-Conference.html",
+   "venue": "ICLR",
+   "year": 2026,
+   "code": "https://github.com/ZJUWYH/seam"
+  },
+  {
+   "topic": "llm",
+   "section": "harmful-fine-tuning",
+   "title": "Invisible Safety Threat: Malicious Finetuning for LLM via Steganography",
+   "url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/30b2a2b096515f6ed3f50bc1d3abfcde-Abstract-Conference.html",
+   "venue": "ICLR",
+   "year": 2026,
+   "code": "https://github.com/bigglesworthnotacat/LLM-Steg"
+  },
+  {
+   "topic": "llm",
+   "section": "harmful-fine-tuning",
+   "title": "Safety at One Shot: Patching Fine-Tuned LLMs with A Single Instance",
+   "url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/3d7cb780442f0d17c844dbe34997fab7-Abstract-Conference.html",
+   "venue": "ICLR",
+   "year": 2026,
+   "code": "https://github.com/Kevin-Zh-CS/safety-at-one-shot"
+  },
+  {
+   "topic": "llm",
+   "section": "harmful-fine-tuning",
+   "title": "Token-level Data Selection for Safe LLM Fine-tuning",
+   "url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/5e01f4ef7ffeedf3317a44461d18df9d-Abstract-Conference.html",
+   "venue": "ICLR",
+   "year": 2026,
+   "code": "https://github.com/Polly-LYP/TOSS"
+  },
+  {
+   "topic": "llm",
+   "section": "harmful-fine-tuning",
+   "title": "Safety Subspaces are Not Linearly Distinct: A Fine-Tuning Case Study",
+   "url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/9a9f4e15ad0d680429a3e0570a96f763-Abstract-Conference.html",
+   "venue": "ICLR",
+   "year": 2026,
+   "code": "https://github.com/CERT-Lab/safety-subspaces"
+  },
+  {
+   "topic": "llm",
+   "section": "harmful-fine-tuning",
+   "title": "SLDR: Defending Against Malicious Fine-tuning via Selective Layers Recovery and Dynamic Routing",
+   "url": "https://openreview.net/forum?id=jjuXPhJpD0",
+   "venue": "NeurIPS",
+   "year": 2026,
+   "code": "https://github.com/Stardust457/SLDR"
+  },
+  {
+   "topic": "llm",
+   "section": "harmful-fine-tuning",
+   "title": "Trojan-Speak: Bypassing Constitutional Classifiers with No Jailbreak Tax via Adversarial Finetuning",
+   "url": "https://openreview.net/forum?id=5Aydbj0wYI",
+   "venue": "ICML",
+   "year": 2026,
+   "code": null
+  },
+  {
+   "topic": "llm",
+   "section": "harmful-fine-tuning",
+   "title": "Toward Safe Quantization-Aware Fine-tuning: Understanding and Mitigating Safety Alignment Degradation",
+   "url": "https://openreview.net/forum?id=vF2Xhg2s31",
+   "venue": "ICML",
+   "year": 2026,
+   "code": null
+  },
+  {
+   "topic": "llm",
+   "section": "harmful-fine-tuning",
+   "title": "The Heterogeneous Safety Impacts of Benign Multilingual Fine-Tuning",
+   "url": "https://openreview.net/forum?id=5M6NoV6Hs6",
+   "venue": "ICML",
+   "year": 2026,
+   "code": "https://github.com/kairawal/mlsft"
+  },
+  {
+   "topic": "llm",
+   "section": "harmful-fine-tuning",
+   "title": "Emerging Safety Attack and Defense in Federated Instruction Tuning of Large Language Models",
+   "url": "https://proceedings.iclr.cc/paper_files/paper/2025/hash/8a3cb72448f9b914bf888db4f5f268d3-Abstract-Conference.html",
+   "venue": "ICLR",
+   "year": 2025,
+   "code": "https://github.com/19dx/FedLLM-Attack"
   }
  ]
 }
