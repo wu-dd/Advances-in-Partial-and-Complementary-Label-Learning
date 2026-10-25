@@ -172,7 +172,14 @@ h1 {
 .chip[aria-pressed="true"] { background: var(--tc); border-color: var(--tc); color: var(--surface); }
 .chip[aria-pressed="true"] .n { color: var(--surface); opacity: .85; }
 .chip.zero { opacity: .45; }
-.yearbox { display: grid; gap: 6px; min-width: 0; }
+.yearbox { display: grid; gap: 10px; min-width: 0; }
+.ytools { display: flex; flex-wrap: wrap; gap: 8px 20px; align-items: center; justify-content: space-between; }
+.yrange { display: inline-flex; flex-wrap: wrap; gap: 6px; align-items: center; color: var(--muted); font-size: 15.5px; }
+.yrange select {
+  border: 1px solid var(--line); background: var(--bg); color: var(--ink); border-radius: 6px;
+  padding: 3px 6px; font: inherit; font-variant-numeric: tabular-nums; cursor: pointer;
+}
+.yrange select:hover, .yrange select:focus-visible { border-color: var(--tc); }
 .legend { display: flex; flex-wrap: wrap; gap: 4px 16px; font-size: 14.5px; color: var(--muted); }
 .legend span { display: inline-flex; align-items: center; gap: 6px; }
 .legend i { width: 11px; height: 11px; background: var(--tc); display: inline-block; }
@@ -304,7 +311,17 @@ mark { background: var(--mark); color: var(--mark-ink); border-radius: 2px; padd
     <div class="filters panel">
       <div class="frow"><span class="flabel caps">Venue</span><div class="chips" id="venues"></div></div>
       <div class="frow"><span class="flabel caps">Year</span>
-        <div class="yearbox"><div class="legend" id="legend"></div><div class="years" id="years"></div></div>
+        <div class="yearbox">
+          <div class="ytools">
+            <div class="chips" id="year-chips"></div>
+            <div class="yrange">
+              <label for="y-from">From</label><select id="y-from"></select>
+              <label for="y-to">to</label><select id="y-to"></select>
+            </div>
+          </div>
+          <div class="legend" id="legend"></div>
+          <div class="years" id="years"></div>
+        </div>
       </div>
       <button class="reset" id="reset" type="button" hidden>Clear all filters</button>
     </div>
@@ -512,6 +529,41 @@ mark { background: var(--mark); color: var(--mark-ink); border-radius: 2px; padd
     }
     el("years").innerHTML = html;
     el("years").classList.toggle("picked", state.years.size > 0);
+
+    // Year buttons: "All years", the four most recent years one by one, then one bucket for older years.
+    var present = [];
+    for (var yy = hi; yy >= lo; yy--) if (total[yy]) present.push(yy);
+    var groups = present.slice(0, 4).map(function (y) { return { key: String(y), label: String(y), ys: [y] }; });
+    var older = present.slice(4);
+    if (older.length) groups.push({ key: older.join(","), label: older[0] + " and earlier", ys: older });
+    var chips = "<button class=\"chip\" type=\"button\" data-yset=\"all\" aria-pressed=\"" + (state.years.size === 0) + "\">All years</button>";
+    chips += groups.map(function (g) {
+      var n = 0, on = g.ys.every(function (y) { return state.years.has(y); });
+      g.ys.forEach(function (y) { n += sub[y] || 0; });
+      return "<button class=\"chip" + (n || on ? "" : " zero") + "\" type=\"button\" data-yset=\"" + g.key + "\" aria-pressed=\"" + on + "\">" +
+        esc(g.label) + "<span class=\"n\">" + n + "</span></button>";
+    }).join("");
+    el("year-chips").innerHTML = chips;
+
+    // Range selects mirror the current selection (or the full span when nothing is picked).
+    var picked = Array.from(state.years);
+    var from = picked.length ? Math.min.apply(null, picked) : lo, to = picked.length ? Math.max.apply(null, picked) : hi;
+    var opts = function (sel) {
+      var h = "";
+      for (var y = lo; y <= hi; y++) h += "<option value=\"" + y + "\"" + (y === sel ? " selected" : "") + ">" + y + "</option>";
+      return h;
+    };
+    el("y-from").innerHTML = opts(Math.max(lo, from));
+    el("y-to").innerHTML = opts(Math.min(hi, to));
+    YEAR_SPAN = [lo, hi];
+  }
+  var YEAR_SPAN = [0, 0];
+
+  function setYearRange(a, b) {
+    if (a > b) { var t = a; a = b; b = t; }
+    state.years.clear();
+    if (!(a <= YEAR_SPAN[0] && b >= YEAR_SPAN[1])) for (var y = a; y <= b; y++) state.years.add(y);
+    render();
   }
 
   function sectionsInOrder() {
@@ -607,6 +659,15 @@ mark { background: var(--mark); color: var(--mark-ink); border-radius: 2px; padd
       if (state.venues.has(v)) state.venues.delete(v); else state.venues.add(v);
       render(); return;
     }
+    b = e.target.closest("[data-yset]");
+    if (b) {
+      var k = b.getAttribute("data-yset");
+      if (k === "all") { state.years.clear(); render(); return; }
+      var ys = k.split(",").map(Number);
+      var allOn = ys.every(function (y) { return state.years.has(y); });
+      ys.forEach(function (y) { if (allOn) state.years.delete(y); else state.years.add(y); });
+      render(); return;
+    }
     b = e.target.closest("[data-year]");
     if (b) {
       var y = +b.getAttribute("data-year");
@@ -619,6 +680,8 @@ mark { background: var(--mark); color: var(--mark-ink); border-radius: 2px; padd
   });
   el("q").addEventListener("input", function (e) { state.q = e.target.value.trim(); schedule(); });
   el("code-only").addEventListener("change", function (e) { state.code = e.target.checked; render(); });
+  el("y-from").addEventListener("change", function () { setYearRange(+el("y-from").value, +el("y-to").value); });
+  el("y-to").addEventListener("change", function () { setYearRange(+el("y-from").value, +el("y-to").value); });
   el("jump").addEventListener("change", function (e) { if (e.target.value) goTo(e.target.value); });
   window.addEventListener("hashchange", function () {
     var h = location.hash.replace("#", "");
