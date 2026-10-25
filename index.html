@@ -1,0 +1,575 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<!-- page:start -->
+<title>Learning with Imperfect Information</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Searchable reading list of papers and code on machine learning with imperfect supervision: partial and complementary labels, generative modeling from corrupted data, and LLM post-training with noisy feedback.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap">
+<style>
+/* Layout: a library index. Masthead with topic tabs, a sticky search bar, a section index on the left,
+   and a dense ruled list whose left column carries venue and year in monospace. */
+:root {
+  --bg: #f4f6f9;
+  --surface: #ffffff;
+  --ink: #14202d;
+  --muted: #586678;
+  --line: #d9e0e8;
+  --accent: #1f4fa3;
+  --accent-soft: #e4ecf8;
+  --mark: #ffe48a;
+  --mark-ink: #14202d;
+  --code: #1b7553;
+  --code-soft: #e2f2ea;
+  --display: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --body: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0e141b; --surface: #151d27; --ink: #e3e9f1; --muted: #97a4b4; --line: #263241;
+    --accent: #88aff5; --accent-soft: #1a2944; --mark: #5e4f12; --mark-ink: #fff3c4;
+    --code: #63cf9f; --code-soft: #12321f; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0e141b; --surface: #151d27; --ink: #e3e9f1; --muted: #97a4b4; --line: #263241;
+  --accent: #88aff5; --accent-soft: #1a2944; --mark: #5e4f12; --mark-ink: #fff3c4;
+  --code: #63cf9f; --code-soft: #12321f; color-scheme: dark;
+}
+*, *::before, *::after { box-sizing: border-box; }
+[hidden] { display: none !important; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--bg); color: var(--ink);
+  font: 15px/1.55 var(--body);
+}
+body::before {
+  content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px);
+  z-index: 10; background: var(--bg);
+}
+a { color: inherit; }
+button, input, select { font: inherit; color: inherit; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 3px; }
+
+.wrap {
+  max-width: 1200px; margin: 0 auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+
+/* Masthead */
+.mast { padding-block: 40px 0; }
+.eyebrow {
+  margin: 0 0 10px; font: 500 12px/1.4 var(--mono); letter-spacing: .08em; text-transform: uppercase;
+  color: var(--muted);
+}
+.eyebrow a { color: var(--accent); text-decoration: none; }
+.eyebrow a:hover { text-decoration: underline; }
+h1 {
+  margin: 0; font: 600 clamp(1.9rem, 4.2vw, 2.9rem)/1.12 var(--display); letter-spacing: -.01em;
+  text-wrap: balance; max-width: 22ch;
+}
+.lede { margin: 14px 0 0; max-width: 64ch; color: var(--muted); font-size: 16px; }
+
+.tabs { display: flex; flex-wrap: wrap; gap: 4px 22px; margin-top: 28px; border-bottom: 1px solid var(--line); }
+.tab {
+  appearance: none; background: none; border: 0; padding: 10px 0 12px; cursor: pointer;
+  color: var(--muted); font-weight: 500; border-bottom: 2px solid transparent; margin-bottom: -1px;
+  display: inline-flex; gap: 8px; align-items: baseline;
+}
+.tab:hover { color: var(--ink); }
+.tab[aria-selected="true"] { color: var(--ink); border-bottom-color: var(--accent); }
+.tab .n { font: 12px var(--mono); color: var(--muted); font-variant-numeric: tabular-nums; }
+
+/* Topic intro */
+.intro { padding-block: 20px 4px; }
+.intro p { margin: 0; max-width: 70ch; }
+.imperfect {
+  display: flex; flex-wrap: wrap; gap: 6px 12px; align-items: baseline; margin-top: 10px !important;
+}
+.imperfect .k { font: 500 11px var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+.imperfect code { font: 14px var(--mono); color: var(--accent); }
+.intro .more { margin-top: 8px !important; font-size: 14px; }
+.intro .more a { color: var(--accent); }
+.topic-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px; }
+.topic-card {
+  appearance: none; text-align: left; cursor: pointer; background: var(--surface);
+  border: 1px solid var(--line); border-radius: 6px; padding: 14px 16px; display: grid; gap: 6px; min-width: 0;
+}
+.topic-card:hover { border-color: var(--accent); }
+.topic-card .h { font: 600 17px/1.3 var(--display); }
+.topic-card .s { color: var(--muted); font-size: 13.5px; }
+.topic-card code { font: 12.5px var(--mono); color: var(--accent); }
+.topic-card .n { font: 12px var(--mono); color: var(--muted); font-variant-numeric: tabular-nums; }
+
+/* Sticky search bar */
+.bar {
+  position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--bg);
+  border-bottom: 1px solid var(--line); margin-top: 16px;
+}
+.bar-in { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 18px; padding-block: 10px; }
+.search {
+  flex: 1 1 320px; display: flex; align-items: center; gap: 8px; min-width: 0;
+  background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: 0 10px;
+}
+.search:focus-within { border-color: var(--accent); }
+.search svg { flex: none; width: 16px; height: 16px; stroke: var(--muted); fill: none; stroke-width: 2; }
+.search input { flex: 1; min-width: 0; border: 0; background: none; padding: 9px 0; outline: none; }
+.toggle { display: inline-flex; align-items: center; gap: 7px; cursor: pointer; user-select: none; font-size: 14px; }
+.toggle input { accent-color: var(--code); width: 16px; height: 16px; margin: 0; }
+.count { margin: 0; font: 13px var(--mono); color: var(--muted); font-variant-numeric: tabular-nums; }
+.count b { color: var(--ink); font-weight: 500; }
+
+/* Body layout */
+.layout { display: grid; grid-template-columns: 250px minmax(0, 1fr); gap: 36px; padding-block: 22px 56px; }
+.index {
+  position: sticky; top: calc(env(safe-area-inset-top, 0px) + 72px); align-self: start;
+  max-height: calc(100vh - 92px); overflow-y: auto; padding-right: 6px; font-size: 13.5px;
+}
+.index .g {
+  margin: 16px 0 6px; font: 500 11px var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--muted);
+}
+.index .g:first-child { margin-top: 0; }
+.index button {
+  appearance: none; background: none; border: 0; width: 100%; text-align: left; cursor: pointer;
+  display: flex; justify-content: space-between; gap: 10px; padding: 3px 6px; border-radius: 4px; color: var(--ink);
+}
+.index button:hover { background: var(--accent-soft); }
+.index button .n { font: 12px var(--mono); color: var(--muted); font-variant-numeric: tabular-nums; }
+.index button.zero { color: var(--muted); opacity: .55; }
+.main { min-width: 0; }
+
+/* Filters */
+.filters { display: grid; gap: 12px; padding-bottom: 18px; border-bottom: 1px solid var(--line); }
+.frow { display: grid; grid-template-columns: 56px minmax(0, 1fr); gap: 12px; align-items: start; }
+.flabel { font: 500 11px/30px var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip {
+  appearance: none; cursor: pointer; border: 1px solid var(--line); background: var(--surface);
+  border-radius: 999px; padding: 4px 11px; font-size: 13px; display: inline-flex; gap: 6px; align-items: baseline;
+}
+.chip .n { font: 11.5px var(--mono); color: var(--muted); font-variant-numeric: tabular-nums; }
+.chip:hover { border-color: var(--accent); }
+.chip[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: var(--surface); }
+.chip[aria-pressed="true"] .n { color: var(--surface); opacity: .85; }
+.chip.zero { opacity: .45; }
+.years { display: flex; align-items: flex-end; gap: 3px; height: 74px; overflow-x: auto; padding-bottom: 2px; }
+.yr {
+  appearance: none; border: 0; background: none; cursor: pointer; padding: 0; flex: 1 0 26px; max-width: 46px;
+  height: 100%; display: grid; grid-template-rows: 1fr auto; gap: 3px;
+}
+.yr .track { position: relative; background: var(--accent-soft); border-radius: 2px 2px 0 0; align-self: end; }
+.yr .fill { position: absolute; inset: auto 0 0; background: var(--accent); opacity: .55; border-radius: 2px 2px 0 0; }
+.yr:hover .fill { opacity: .8; }
+.yr[aria-pressed="true"] .fill { opacity: 1; }
+.yr .l { font: 10.5px var(--mono); color: var(--muted); text-align: center; font-variant-numeric: tabular-nums; }
+.yr[aria-pressed="true"] .l { color: var(--accent); font-weight: 500; }
+.reset {
+  justify-self: start; appearance: none; border: 0; background: none; padding: 0; cursor: pointer;
+  color: var(--accent); font-size: 13.5px; text-decoration: underline; text-underline-offset: 3px;
+}
+.jump { display: none; }
+
+/* Paper list */
+.list { display: grid; gap: 30px; padding-top: 22px; }
+.topic-h { margin: 6px 0 -12px; font: 600 1.55rem/1.2 var(--display); text-wrap: balance; }
+.group-h { margin: 6px 0 -14px; font: 600 1.3rem/1.25 var(--display); color: var(--ink); text-wrap: balance; }
+.sec { scroll-margin-top: 80px; }
+.sec-h {
+  margin: 0 0 4px; display: flex; gap: 10px; align-items: baseline; font: 600 15px/1.35 var(--body);
+}
+.sec-h .n { font: 12px var(--mono); color: var(--muted); font-weight: 400; }
+.papers { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }
+.paper {
+  display: grid; grid-template-columns: 8.6rem minmax(0, 1fr) auto; gap: 4px 16px; align-items: baseline;
+  padding: 8px 2px; border-bottom: 1px solid var(--line);
+}
+.paper .v { font: 12.5px/1.5 var(--mono); color: var(--muted); font-variant-numeric: tabular-nums; }
+.paper .v b { color: var(--ink); font-weight: 500; }
+.paper .v.new b { color: var(--accent); }
+.paper .t { text-decoration: none; overflow-wrap: anywhere; }
+.paper .t:hover { color: var(--accent); text-decoration: underline; text-underline-offset: 3px; }
+.paper .c {
+  justify-self: end; font: 500 12px/1 var(--mono); text-decoration: none; color: var(--code);
+  background: var(--code-soft); border-radius: 4px; padding: 5px 8px; white-space: nowrap;
+}
+.paper .c:hover { text-decoration: underline; }
+mark { background: var(--mark); color: var(--mark-ink); border-radius: 2px; padding: 0 1px; }
+.state { padding: 28px 0; color: var(--muted); }
+.state a, .state button { color: var(--accent); }
+.state button { appearance: none; border: 0; background: none; padding: 0; cursor: pointer; text-decoration: underline; }
+
+/* Footer */
+.foot { border-top: 1px solid var(--line); }
+.foot .wrap { padding-block: 26px 40px; display: grid; gap: 14px; font-size: 13.5px; color: var(--muted); }
+.foot a { color: var(--accent); }
+.foot details summary { cursor: pointer; color: var(--ink); }
+.foot pre {
+  margin: 10px 0 0; padding: 12px 14px; background: var(--surface); border: 1px solid var(--line);
+  border-radius: 6px; font: 12.5px/1.5 var(--mono); color: var(--ink); overflow-x: auto;
+}
+.copy {
+  margin-top: 8px; appearance: none; cursor: pointer; border: 1px solid var(--line); background: var(--surface);
+  border-radius: 4px; padding: 4px 10px; font-size: 13px;
+}
+
+@media (max-width: 900px) {
+  .layout { grid-template-columns: minmax(0, 1fr); gap: 0; }
+  .index { display: none; }
+  .jump { display: flex; flex-direction: column; gap: 4px; margin-top: 16px; font-size: 13px; color: var(--muted); }
+  .jump select {
+    padding: 8px 10px; border: 1px solid var(--line); border-radius: 6px; background: var(--surface);
+    max-width: 100%;
+  }
+}
+@media (max-width: 560px) {
+  .mast { padding-block: 26px 0; }
+  .paper { grid-template-columns: minmax(0, 1fr) auto; }
+  .paper .v { grid-column: 1 / -1; }
+  .frow { grid-template-columns: minmax(0, 1fr); gap: 6px; }
+  .flabel { line-height: 1.4; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  html { scroll-behavior: smooth; }
+}
+</style>
+
+<header class="mast">
+  <div class="wrap">
+    <p class="eyebrow">Curated reading list · <a id="repo-link" href="https://github.com/wu-dd/Advances-in-Learning-with-Imperfect-Information">GitHub</a></p>
+    <h1>Advances in Learning with Imperfect Information</h1>
+    <p class="lede">Papers and code on machine learning when the supervision is incomplete, noisy or weak: candidate label sets, corrupted training data, and unreliable feedback for aligning models.</p>
+    <div class="tabs" id="tabs" role="tablist" aria-label="Topics"></div>
+  </div>
+</header>
+
+<section class="intro wrap" id="intro" aria-live="polite"></section>
+
+<div class="bar">
+  <div class="wrap bar-in">
+    <label class="search" for="q">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-4-4"></path></svg>
+      <input id="q" type="search" placeholder="Search titles, e.g. DPO, diffusion, noisy labels" autocomplete="off" spellcheck="false">
+    </label>
+    <label class="toggle" for="code-only"><input id="code-only" type="checkbox"> With code only</label>
+    <p class="count" id="count" aria-live="polite"></p>
+  </div>
+</div>
+
+<div class="wrap layout">
+  <aside class="index" id="index" aria-label="Sections"></aside>
+  <main class="main">
+    <div class="filters">
+      <div class="frow"><span class="flabel">Venue</span><div class="chips" id="venues"></div></div>
+      <div class="frow"><span class="flabel">Year</span><div class="years" id="years"></div></div>
+      <button class="reset" id="reset" type="button" hidden>Clear all filters</button>
+    </div>
+    <label class="jump" for="jump"><span>Jump to section</span><select id="jump"></select></label>
+    <div class="list" id="list"><p class="state">Loading papers…</p></div>
+  </main>
+</div>
+
+<footer class="foot">
+  <div class="wrap">
+    <p id="foot-meta" style="margin:0">Curated and maintained by <a href="https://wu-dd.github.io/">Dong-Dong Wu</a>.</p>
+    <details>
+      <summary>Cite this list</summary>
+      <pre id="bibtex">@misc{Wu2022advances,
+  author={Dong-Dong Wu},
+  title={Advances in Learning with Imperfect Information},
+  howpublished={\url{https://github.com/wu-dd/Advances-in-Learning-with-Imperfect-Information}},
+  year={2022}
+}</pre>
+      <button class="copy" id="copy" type="button">Copy BibTeX</button>
+    </details>
+  </div>
+</footer>
+
+<script>
+(function () {
+  "use strict";
+  var REPO = "https://github.com/wu-dd/Advances-in-Learning-with-Imperfect-Information";
+  var JOURNALS = new Set(["TPAMI", "TNNLS", "TKDE", "JMLR", "TMLR", "PR", "NN", "ML", "IJCV", "TIP", "SCIS", "AIJ",
+    "TCYB", "TMM", "TCSVT", "TAI", "TIST", "KBS", "MIR", "TKDD", "CSUR", "Neural Computation", "PRL", "JSTARS",
+    "TAFFC", "TMI", "MRM", "MedIA", "Nature Methods", "Geophysics", "TCI", "TACL"]);
+  var FAMILIES = [
+    ["NeurIPS", function (v) { return /^NeurIPS/.test(v); }],
+    ["ICML", function (v) { return /^ICML/.test(v); }],
+    ["ICLR", function (v) { return /^ICLR/.test(v); }],
+    ["CVPR · ICCV · ECCV", function (v) { return /^(CVPR|ICCV|ECCV|WACV)/.test(v); }],
+    ["ACL · EMNLP · NAACL · COLM", function (v) { return /^(ACL|EMNLP|NAACL|EACL|COLM)/.test(v); }],
+    ["AAAI", function (v) { return /^AAAI/.test(v); }],
+    ["IJCAI", function (v) { return /^IJCAI/.test(v); }],
+    ["KDD", function (v) { return /^KDD/.test(v); }],
+    ["Journals", function (v) { return JOURNALS.has(v); }],
+    ["arXiv", function (v) { return v === "arXiv"; }],
+    ["Other venues", function () { return true; }]
+  ];
+  var TOPIC_IDS = ["all", "pll", "gen", "llm"];
+  var state = { topic: "all", q: "", venues: new Set(), years: new Set(), code: false };
+  var DATA = null, TOPIC = {}, SECTION = {};
+
+  var el = function (id) { return document.getElementById(id); };
+  function esc(s) {
+    return String(s).replace(/[&<>"']/g, function (c) {
+      return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
+    });
+  }
+  function family(v) {
+    for (var i = 0; i < FAMILIES.length; i++) if (FAMILIES[i][1](v)) return FAMILIES[i][0];
+    return "Other venues";
+  }
+  function highlight(text, terms) {
+    if (!terms.length) return esc(text);
+    var re = new RegExp("(" + terms.map(function (t) { return t.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"); }).join("|") + ")", "gi");
+    return text.split(re).map(function (part, i) { return i % 2 ? "<mark>" + esc(part) + "</mark>" : esc(part); }).join("");
+  }
+  function plural(n, w) { return n + " " + w + (n === 1 ? "" : "s"); }
+
+  function init(data) {
+    DATA = data;
+    data.topics.forEach(function (t) {
+      TOPIC[t.id] = t;
+      t.groups.forEach(function (g) { g.sections.forEach(function (s) { SECTION[t.id + "/" + s.id] = s.title; }); });
+    });
+    data.papers.forEach(function (p, i) {
+      p._i = i;
+      p._fam = family(p.venue);
+      p._sec = SECTION[p.topic + "/" + p.section] || p.section;
+      p._h = (p.title + " " + p.venue + " " + p._sec).toLowerCase();
+    });
+    var maxYear = Math.max.apply(null, data.papers.map(function (p) { return p.year; }));
+    data._maxYear = maxYear;
+    el("foot-meta").innerHTML = "Curated and maintained by <a href=\"https://wu-dd.github.io/\">Dong-Dong Wu</a>. " +
+      "Last updated " + esc(data.updated) + ". All entries come from <a href=\"" + REPO + "/blob/main/data/papers.json\">data/papers.json</a>; " +
+      "the same lists are on GitHub as " + data.topics.map(function (t) {
+        return "<a href=\"" + REPO + "/blob/main/" + esc(t.file) + "\">" + esc(t.short) + "</a>";
+      }).join(", ") + ".";
+    var h = (location.hash || "").replace("#", "");
+    if (TOPIC_IDS.indexOf(h) >= 0) state.topic = h;
+    render();
+  }
+
+  function setTopic(id) {
+    state.topic = id;
+    try { history.replaceState(null, "", "#" + id); } catch (e) { /* ignore */ }
+    render();
+    window.scrollTo({ top: 0 });
+  }
+
+  function render() {
+    var terms = state.q.toLowerCase().split(/\s+/).filter(Boolean);
+    var inTopic = DATA.papers.filter(function (p) { return state.topic === "all" || p.topic === state.topic; });
+    var base = function (p) {
+      if (state.code && !p.code) return false;
+      for (var i = 0; i < terms.length; i++) if (p._h.indexOf(terms[i]) < 0) return false;
+      return true;
+    };
+    var venueOk = function (p) { return !state.venues.size || state.venues.has(p._fam); };
+    var yearOk = function (p) { return !state.years.size || state.years.has(p.year); };
+    var shown = inTopic.filter(function (p) { return base(p) && venueOk(p) && yearOk(p); });
+
+    renderTabs();
+    renderIntro();
+    renderVenues(inTopic.filter(function (p) { return base(p) && yearOk(p); }));
+    renderYears(inTopic, inTopic.filter(function (p) { return base(p) && venueOk(p); }));
+    renderList(shown, terms);
+    renderIndex(shown);
+    var nc = shown.filter(function (p) { return p.code; }).length;
+    el("count").innerHTML = "<b>" + shown.length + "</b> of " + inTopic.length + " papers · " + nc + " with code";
+    el("reset").hidden = !(state.q || state.code || state.venues.size || state.years.size);
+  }
+
+  function renderTabs() {
+    var tabs = [["all", "All topics", DATA.papers.length]].concat(DATA.topics.map(function (t) {
+      return [t.id, t.short, DATA.papers.filter(function (p) { return p.topic === t.id; }).length];
+    }));
+    el("tabs").innerHTML = tabs.map(function (t) {
+      var sel = state.topic === t[0];
+      return "<button class=\"tab\" role=\"tab\" type=\"button\" id=\"tab-" + t[0] + "\" data-topic=\"" + t[0] + "\" aria-selected=\"" + sel + "\">" +
+        esc(t[1]) + "<span class=\"n\">" + t[2] + "</span></button>";
+    }).join("");
+  }
+
+  function renderIntro() {
+    if (state.topic === "all") {
+      el("intro").innerHTML = "<div class=\"topic-grid\">" + DATA.topics.map(function (t) {
+        var n = DATA.papers.filter(function (p) { return p.topic === t.id; }).length;
+        return "<button class=\"topic-card\" type=\"button\" data-topic=\"" + t.id + "\">" +
+          "<span class=\"h\">" + esc(t.title) + "</span>" +
+          "<span class=\"s\">" + esc(t.summary) + "</span>" +
+          "<code>" + esc(t.imperfect) + "</code>" +
+          "<span class=\"n\">" + n + " papers</span></button>";
+      }).join("") + "</div>";
+      return;
+    }
+    var t = TOPIC[state.topic];
+    el("intro").innerHTML = "<p>" + esc(t.summary) + "</p>" +
+      "<p class=\"imperfect\"><span class=\"k\">What is imperfect</span><code>" + esc(t.imperfect) + "</code></p>" +
+      "<p class=\"more\"><a href=\"" + REPO + "/blob/main/" + esc(t.file) + "\">Read this list as Markdown on GitHub</a></p>";
+  }
+
+  function renderVenues(pool) {
+    var counts = {};
+    pool.forEach(function (p) { counts[p._fam] = (counts[p._fam] || 0) + 1; });
+    var all = {};
+    DATA.papers.forEach(function (p) { if (state.topic === "all" || p.topic === state.topic) all[p._fam] = 1; });
+    el("venues").innerHTML = FAMILIES.map(function (f) { return f[0]; }).filter(function (f) { return all[f]; }).map(function (f) {
+      var n = counts[f] || 0, on = state.venues.has(f);
+      return "<button class=\"chip" + (n || on ? "" : " zero") + "\" type=\"button\" data-venue=\"" + esc(f) + "\" aria-pressed=\"" + on + "\">" +
+        esc(f) + "<span class=\"n\">" + n + "</span></button>";
+    }).join("");
+  }
+
+  function renderYears(topicPool, pool) {
+    var years = topicPool.map(function (p) { return p.year; });
+    if (!years.length) { el("years").innerHTML = ""; return; }
+    var lo = Math.min.apply(null, years), hi = Math.max.apply(null, years);
+    var total = {}, sub = {};
+    topicPool.forEach(function (p) { total[p.year] = (total[p.year] || 0) + 1; });
+    pool.forEach(function (p) { sub[p.year] = (sub[p.year] || 0) + 1; });
+    var max = Math.max.apply(null, Object.keys(total).map(function (k) { return total[k]; }));
+    var html = "";
+    for (var y = lo; y <= hi; y++) {
+      var tot = total[y] || 0, n = sub[y] || 0, on = state.years.has(y);
+      var th = tot ? Math.max(4, Math.round(tot / max * 100)) : 0;
+      var fh = tot ? Math.round(n / tot * 100) : 0;
+      html += "<button class=\"yr\" type=\"button\" data-year=\"" + y + "\" aria-pressed=\"" + on + "\" title=\"" + y + ": " +
+        plural(n, "paper") + "\" aria-label=\"" + y + ", " + plural(n, "paper") + "\">" +
+        "<span class=\"track\" style=\"height:" + th + "%\"><span class=\"fill\" style=\"height:" + fh + "%\"></span></span>" +
+        "<span class=\"l\">" + (hi - lo > 6 ? "'" + String(y).slice(2) : y) + "</span></button>";
+    }
+    el("years").innerHTML = html;
+  }
+
+  function sectionsInOrder() {
+    var out = [];
+    DATA.topics.forEach(function (t) {
+      if (state.topic !== "all" && t.id !== state.topic) return;
+      t.groups.forEach(function (g) {
+        g.sections.forEach(function (s) { out.push({ topic: t, group: g, sec: s }); });
+      });
+    });
+    return out;
+  }
+
+  function renderList(shown, terms) {
+    if (!shown.length) {
+      el("list").innerHTML = "<p class=\"state\">No papers match these filters. <button type=\"button\" data-reset>Clear all filters</button></p>";
+      el("jump").innerHTML = "";
+      return;
+    }
+    var bySec = {};
+    shown.forEach(function (p) { (bySec[p.topic + "/" + p.section] = bySec[p.topic + "/" + p.section] || []).push(p); });
+    var html = "", jump = "", lastTopic = null, lastGroup = null;
+    sectionsInOrder().forEach(function (x) {
+      var key = x.topic.id + "/" + x.sec.id, list = bySec[key];
+      if (!list) return;
+      if (state.topic === "all" && x.topic !== lastTopic) {
+        html += "<h2 class=\"topic-h\">" + esc(x.topic.title) + "</h2>";
+        jump += (lastTopic ? "</optgroup>" : "") + "<optgroup label=\"" + esc(x.topic.short) + "\">";
+        lastTopic = x.topic;
+      }
+      if (state.topic !== "all" && x.group !== lastGroup) {
+        html += "<h2 class=\"group-h\">" + esc(x.group.title) + "</h2>";
+        jump += (lastGroup ? "</optgroup>" : "") + "<optgroup label=\"" + esc(x.group.title) + "\">";
+        lastGroup = x.group;
+      }
+      list.sort(function (a, b) { return b.year - a.year || a._i - b._i; });
+      var id = "s-" + x.topic.id + "-" + x.sec.id;
+      jump += "<option value=\"" + id + "\">" + esc(x.sec.title) + " (" + list.length + ")</option>";
+      html += "<section class=\"sec\" id=\"" + id + "\"><h3 class=\"sec-h\">" + esc(x.sec.title) +
+        "<span class=\"n\">" + list.length + "</span></h3><ul class=\"papers\">" +
+        list.map(function (p) {
+          return "<li class=\"paper\"><span class=\"v" + (p.year === DATA._maxYear ? " new" : "") + "\">" + esc(p.venue) + " <b>" + p.year + "</b></span>" +
+            "<a class=\"t\" href=\"" + esc(p.url) + "\" target=\"_blank\" rel=\"noopener\">" + highlight(p.title, terms) + "</a>" +
+            (p.code ? "<a class=\"c\" href=\"" + esc(p.code) + "\" target=\"_blank\" rel=\"noopener\" aria-label=\"Code for " + esc(p.title) + "\">Code ↗</a>" : "<span></span>") +
+            "</li>";
+        }).join("") + "</ul></section>";
+    });
+    el("list").innerHTML = html;
+    el("jump").innerHTML = "<option value=\"\">Choose a section…</option>" + jump + "</optgroup>";
+  }
+
+  function renderIndex(shown) {
+    var counts = {};
+    shown.forEach(function (p) { var k = p.topic + "/" + p.section; counts[k] = (counts[k] || 0) + 1; });
+    var html = "", last = null;
+    sectionsInOrder().forEach(function (x) {
+      var label = state.topic === "all" ? x.topic.short : x.group.title;
+      if (label !== last) { html += "<p class=\"g\">" + esc(label) + "</p>"; last = label; }
+      var n = counts[x.topic.id + "/" + x.sec.id] || 0;
+      html += "<button type=\"button\" class=\"" + (n ? "" : "zero") + "\" data-target=\"s-" + x.topic.id + "-" + x.sec.id + "\"" + (n ? "" : " disabled") + ">" +
+        "<span>" + esc(x.sec.title) + "</span><span class=\"n\">" + n + "</span></button>";
+    });
+    el("index").innerHTML = html;
+  }
+
+  function goTo(id) {
+    var t = document.getElementById(id);
+    if (t) t.scrollIntoView({ block: "start" });
+  }
+  function resetFilters() {
+    state.q = ""; state.code = false; state.venues.clear(); state.years.clear();
+    el("q").value = ""; el("code-only").checked = false;
+    render();
+  }
+
+  var pending = 0;
+  function schedule() {
+    cancelAnimationFrame(pending);
+    pending = requestAnimationFrame(render);
+  }
+
+  document.addEventListener("click", function (e) {
+    var b = e.target.closest("[data-topic]");
+    if (b) { setTopic(b.getAttribute("data-topic")); return; }
+    b = e.target.closest("[data-venue]");
+    if (b) {
+      var v = b.getAttribute("data-venue");
+      if (state.venues.has(v)) state.venues.delete(v); else state.venues.add(v);
+      render(); return;
+    }
+    b = e.target.closest("[data-year]");
+    if (b) {
+      var y = +b.getAttribute("data-year");
+      if (state.years.has(y)) state.years.delete(y); else state.years.add(y);
+      render(); return;
+    }
+    b = e.target.closest("[data-target]");
+    if (b) { goTo(b.getAttribute("data-target")); return; }
+    if (e.target.closest("[data-reset]") || e.target.id === "reset") resetFilters();
+  });
+  el("q").addEventListener("input", function (e) { state.q = e.target.value.trim(); schedule(); });
+  el("code-only").addEventListener("change", function (e) { state.code = e.target.checked; render(); });
+  el("jump").addEventListener("change", function (e) { if (e.target.value) goTo(e.target.value); });
+  window.addEventListener("hashchange", function () {
+    var h = location.hash.replace("#", "");
+    if (DATA && TOPIC_IDS.indexOf(h) >= 0 && h !== state.topic) { state.topic = h; render(); }
+  });
+  el("copy").addEventListener("click", function () {
+    var text = el("bibtex").textContent, btn = el("copy");
+    function done(msg) { btn.textContent = msg; setTimeout(function () { btn.textContent = "Copy BibTeX"; }, 1600); }
+    function fallback() {
+      var r = document.createRange(); r.selectNodeContents(el("bibtex"));
+      var s = window.getSelection(); s.removeAllRanges(); s.addRange(r); done("Selected, press Ctrl/⌘+C");
+    }
+    try {
+      navigator.clipboard.writeText(text).then(function () { done("Copied"); }, fallback);
+    } catch (err) { fallback(); }
+  });
+
+  fetch("data/papers.json")
+    .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+    .then(init)
+    .catch(function () {
+      el("list").innerHTML = "<p class=\"state\">The paper list could not be loaded. You can read the same lists on " +
+        "<a href=\"" + REPO + "\">GitHub</a>.</p>";
+    });
+})();
+</script>
+</html>
