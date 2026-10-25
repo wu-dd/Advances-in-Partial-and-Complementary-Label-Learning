@@ -8,44 +8,58 @@
 <meta name="description" content="Searchable reading list of papers and code on machine learning with imperfect supervision: partial and complementary labels, generative modeling from corrupted data, and LLM post-training with noisy feedback.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap">
 <style>
-/* Layout: a library index. Masthead with topic tabs, a sticky search bar, a section index on the left,
-   and a dense ruled list whose left column carries venue and year in monospace. */
+/* Layout: a research-poster page. Paper-coloured ground, white rounded panels, one colour per topic
+   (green / rose / terracotta), numbered headings, and a deep-green footer panel. */
 :root {
-  --bg: #f4f6f9;
-  --surface: #ffffff;
-  --ink: #14202d;
-  --muted: #586678;
-  --line: #d9e0e8;
-  --accent: #1f4fa3;
-  --accent-soft: #e4ecf8;
-  --mark: #ffe48a;
-  --mark-ink: #14202d;
-  --code: #1b7553;
-  --code-soft: #e2f2ea;
-  --display: "Source Serif 4", Georgia, "Times New Roman", serif;
-  --body: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-  --mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  --bg: #f2efe7;
+  --surface: #fdfcf8;
+  --ink: #1e2420;
+  --muted: #6c6a60;
+  --line: #e1dccf;
+  --green: #2f5a43;
+  --green-deep: #29473a;
+  --rose: #b4546c;
+  --terra: #c26c3c;
+  --taupe: #a69d8b;
+  --green-soft: #e2ebe2;
+  --rose-soft: #f6e3e7;
+  --terra-soft: #f7e6d9;
+  --track: #e7e2d6;
+  --mark: #f2dc9b;
+  --mark-ink: #1e2420;
+  --on-deep: #f2f0e6;
+  --on-deep-muted: #c4cfc6;
+  --serif: "Crimson Pro", "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  --tc: var(--green);
+  --tc-soft: var(--green-soft);
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --bg: #0e141b; --surface: #151d27; --ink: #e3e9f1; --muted: #97a4b4; --line: #263241;
-    --accent: #88aff5; --accent-soft: #1a2944; --mark: #5e4f12; --mark-ink: #fff3c4;
-    --code: #63cf9f; --code-soft: #12321f; color-scheme: dark;
+    --bg: #131915; --surface: #1a221d; --ink: #ebe7dc; --muted: #a39f93; --line: #2c372f;
+    --green: #86ba98; --green-deep: #1d3529; --rose: #e2909f; --terra: #e69c6f; --taupe: #8e877a;
+    --green-soft: #1f3327; --rose-soft: #3a2228; --terra-soft: #3b2a1f; --track: #26302a;
+    --mark: #5c4b19; --mark-ink: #fff2cc; --on-deep: #eef0e8; --on-deep-muted: #a9b8ad; color-scheme: dark;
   }
 }
 :root[data-theme="dark"] {
-  --bg: #0e141b; --surface: #151d27; --ink: #e3e9f1; --muted: #97a4b4; --line: #263241;
-  --accent: #88aff5; --accent-soft: #1a2944; --mark: #5e4f12; --mark-ink: #fff3c4;
-  --code: #63cf9f; --code-soft: #12321f; color-scheme: dark;
+  --bg: #131915; --surface: #1a221d; --ink: #ebe7dc; --muted: #a39f93; --line: #2c372f;
+  --green: #86ba98; --green-deep: #1d3529; --rose: #e2909f; --terra: #e69c6f; --taupe: #8e877a;
+  --green-soft: #1f3327; --rose-soft: #3a2228; --terra-soft: #3b2a1f; --track: #26302a;
+  --mark: #5c4b19; --mark-ink: #fff2cc; --on-deep: #eef0e8; --on-deep-muted: #a9b8ad; color-scheme: dark;
 }
+/* One colour per topic. The body carries the active topic; blocks in the "All" view carry their own. */
+body[data-active="gen"], .t-gen { --tc: var(--rose); --tc-soft: var(--rose-soft); }
+body[data-active="llm"], .t-llm { --tc: var(--terra); --tc-soft: var(--terra-soft); }
+body[data-active="all"], body[data-active="pll"], .t-pll { --tc: var(--green); --tc-soft: var(--green-soft); }
+
 *, *::before, *::after { box-sizing: border-box; }
 [hidden] { display: none !important; }
 html { -webkit-text-size-adjust: 100%; }
 body {
   margin: 0; background: var(--bg); color: var(--ink);
-  font: 15px/1.55 var(--body);
+  font: 17px/1.5 var(--serif); font-variant-numeric: lining-nums;
 }
 body::before {
   content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px);
@@ -53,179 +67,210 @@ body::before {
 }
 a { color: inherit; }
 button, input, select { font: inherit; color: inherit; }
-:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 3px; }
+:focus-visible { outline: 2px solid var(--tc); outline-offset: 2px; border-radius: 3px; }
+.num { color: var(--tc); font-weight: 600; font-variant-numeric: lining-nums tabular-nums; }
+.caps { font-size: 12.5px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; }
 
 .wrap {
-  max-width: 1200px; margin: 0 auto;
+  max-width: 1240px; margin: 0 auto;
   padding-left: max(16px, env(safe-area-inset-left, 0px));
   padding-right: max(16px, env(safe-area-inset-right, 0px));
 }
+.panel { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; }
 
 /* Masthead */
-.mast { padding-block: 40px 0; }
-.eyebrow {
-  margin: 0 0 10px; font: 500 12px/1.4 var(--mono); letter-spacing: .08em; text-transform: uppercase;
-  color: var(--muted);
-}
-.eyebrow a { color: var(--accent); text-decoration: none; }
-.eyebrow a:hover { text-decoration: underline; }
+.mast { padding-block: 44px 0; }
 h1 {
-  margin: 0; font: 600 clamp(1.9rem, 4.2vw, 2.9rem)/1.12 var(--display); letter-spacing: -.01em;
+  margin: 0; font: 700 clamp(2.1rem, 4.6vw, 3.4rem)/1.08 var(--serif); letter-spacing: -.005em;
   text-wrap: balance;
 }
+.byline { margin: 10px 0 0; color: var(--muted); font-size: 17px; overflow-wrap: anywhere; }
+.byline a { color: var(--green); font-weight: 600; text-decoration: none; }
+.byline a:hover { text-decoration: underline; text-underline-offset: 3px; }
+.byline .sep { margin: 0 .5em; }
 
-.tabs { display: flex; flex-wrap: wrap; gap: 4px 22px; margin-top: 28px; border-bottom: 1px solid var(--line); }
+.tabs { display: flex; flex-wrap: wrap; gap: 2px 26px; margin-top: 26px; border-bottom: 1px solid var(--line); }
 .tab {
-  appearance: none; background: none; border: 0; padding: 10px 0 12px; cursor: pointer;
-  color: var(--muted); font-weight: 500; border-bottom: 2px solid transparent; margin-bottom: -1px;
+  appearance: none; background: none; border: 0; padding: 8px 0 10px; cursor: pointer;
+  color: var(--muted); font-size: 18px; font-weight: 600; border-bottom: 3px solid transparent; margin-bottom: -1px;
   display: inline-flex; gap: 8px; align-items: baseline;
 }
 .tab:hover { color: var(--ink); }
-.tab[aria-selected="true"] { color: var(--ink); border-bottom-color: var(--accent); }
-.tab .n { font: 12px var(--mono); color: var(--muted); font-variant-numeric: tabular-nums; }
+.tab[aria-selected="true"] { color: var(--ink); border-bottom-color: var(--tc); }
+.tab .n { font-size: 15px; font-weight: 500; color: var(--muted); font-variant-numeric: tabular-nums; }
 
 /* Topic intro */
-.intro { padding-block: 20px 4px; }
-.intro p { margin: 0; max-width: 70ch; }
-.intro .more { margin-top: 8px !important; font-size: 14px; }
-.intro .more a { color: var(--accent); }
-.topic-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px; }
+.intro { padding-block: 22px 4px; }
+.topic-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; }
 .topic-card {
-  appearance: none; text-align: left; cursor: pointer; background: var(--surface);
-  border: 1px solid var(--line); border-radius: 6px; padding: 14px 16px; display: grid; gap: 6px; min-width: 0;
-  grid-template-rows: auto 1fr auto;
+  appearance: none; text-align: left; cursor: pointer; padding: 18px 20px 16px; min-width: 0;
+  display: grid; grid-template-rows: auto 1fr auto; gap: 8px;
+  transition: border-color .15s, transform .15s;
 }
-.topic-card:hover { border-color: var(--accent); }
-.topic-card .h { font: 600 17px/1.3 var(--display); }
-.topic-card .s { color: var(--muted); font-size: 13.5px; }
-.topic-card .n { font: 12px var(--mono); color: var(--muted); font-variant-numeric: tabular-nums; }
+.topic-card:hover { border-color: var(--tc); }
+.topic-card .h { font-size: 22px; font-weight: 700; line-height: 1.2; text-wrap: balance; }
+.topic-card .s { color: var(--muted); font-size: 16px; line-height: 1.45; }
+.stats { display: flex; flex-wrap: wrap; gap: 6px 26px; margin-top: 6px; }
+.stat { display: grid; }
+.stat b { font-size: 34px; line-height: 1; font-weight: 600; color: var(--tc); font-variant-numeric: tabular-nums; }
+.stat span { font-size: 14.5px; color: var(--muted); }
+.topic-intro { padding: 18px 20px; display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 14px 32px; align-items: end; }
+.topic-intro h2 { margin: 0 0 4px; font-size: 24px; font-weight: 700; line-height: 1.2; text-wrap: balance; }
+.topic-intro p { margin: 0; max-width: 68ch; color: var(--muted); }
+.topic-intro .more { margin-top: 8px; font-size: 16px; }
+.topic-intro .more a { color: var(--tc); font-weight: 600; }
 
 /* Sticky search bar */
 .bar {
   position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--bg);
-  border-bottom: 1px solid var(--line); margin-top: 16px;
+  border-bottom: 1px solid var(--line); margin-top: 18px;
 }
-.bar-in { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 18px; padding-block: 10px; }
+.bar-in { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 20px; padding-block: 10px; }
 .search {
   flex: 1 1 320px; display: flex; align-items: center; gap: 8px; min-width: 0;
-  background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: 0 10px;
+  background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 0 12px;
 }
-.search:focus-within { border-color: var(--accent); }
-.search svg { flex: none; width: 16px; height: 16px; stroke: var(--muted); fill: none; stroke-width: 2; }
-.search input { flex: 1; min-width: 0; border: 0; background: none; padding: 9px 0; outline: none; }
-.toggle { display: inline-flex; align-items: center; gap: 7px; cursor: pointer; user-select: none; font-size: 14px; }
-.toggle input { accent-color: var(--code); width: 16px; height: 16px; margin: 0; }
-.count { margin: 0; font: 13px var(--mono); color: var(--muted); font-variant-numeric: tabular-nums; }
-.count b { color: var(--ink); font-weight: 500; }
+.search:focus-within { border-color: var(--tc); }
+.search svg { flex: none; width: 17px; height: 17px; stroke: var(--muted); fill: none; stroke-width: 2; }
+.search input { flex: 1; min-width: 0; border: 0; background: none; padding: 9px 0; outline: none; font-size: 17px; }
+.search input::placeholder { color: var(--muted); font-style: italic; }
+.toggle { display: inline-flex; align-items: center; gap: 8px; cursor: pointer; user-select: none; }
+.toggle input { accent-color: var(--tc); width: 16px; height: 16px; margin: 0; }
+.count { margin: 0; color: var(--muted); font-variant-numeric: tabular-nums; }
+.count b { color: var(--ink); font-weight: 600; }
 
 /* Body layout */
-.layout { display: grid; grid-template-columns: 250px minmax(0, 1fr); gap: 36px; padding-block: 22px 56px; }
+.layout { display: grid; grid-template-columns: 250px minmax(0, 1fr); gap: 34px; padding-block: 24px 56px; }
 .index {
-  position: sticky; top: calc(env(safe-area-inset-top, 0px) + 72px); align-self: start;
-  max-height: calc(100vh - 92px); overflow-y: auto; padding-right: 6px; font-size: 13.5px;
+  position: sticky; top: calc(env(safe-area-inset-top, 0px) + 76px); align-self: start;
+  max-height: calc(100vh - 96px); overflow-y: auto; padding-right: 6px; font-size: 15.5px;
 }
-.index .g {
-  margin: 16px 0 6px; font: 500 11px var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--muted);
-}
+.index .g { margin: 18px 0 6px; color: var(--tc); }
 .index .g:first-child { margin-top: 0; }
+.index .t-pll .g, .index .t-gen .g, .index .t-llm .g { color: var(--tc); }
 .index button {
   appearance: none; background: none; border: 0; width: 100%; text-align: left; cursor: pointer;
-  display: flex; justify-content: space-between; gap: 10px; padding: 3px 6px; border-radius: 4px; color: var(--ink);
+  display: flex; justify-content: space-between; gap: 10px; padding: 3px 8px; border-radius: 5px; color: var(--ink);
+  line-height: 1.3;
 }
-.index button:hover { background: var(--accent-soft); }
-.index button .n { font: 12px var(--mono); color: var(--muted); font-variant-numeric: tabular-nums; }
-.index button.zero { color: var(--muted); opacity: .55; }
+.index button:hover { background: var(--tc-soft); }
+.index button .n { color: var(--muted); font-variant-numeric: tabular-nums; }
+.index button.zero { color: var(--muted); opacity: .5; cursor: default; }
 .main { min-width: 0; }
 
 /* Filters */
-.filters { display: grid; gap: 12px; padding-bottom: 18px; border-bottom: 1px solid var(--line); }
-.frow { display: grid; grid-template-columns: 56px minmax(0, 1fr); gap: 12px; align-items: start; }
-.flabel { font: 500 11px/30px var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
-.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.filters { padding: 16px 20px; display: grid; gap: 14px; }
+.frow { display: grid; grid-template-columns: 64px minmax(0, 1fr); gap: 14px; align-items: start; }
+.flabel { line-height: 32px; color: var(--muted); }
+.chips { display: flex; flex-wrap: wrap; gap: 7px; }
 .chip {
-  appearance: none; cursor: pointer; border: 1px solid var(--line); background: var(--surface);
-  border-radius: 999px; padding: 4px 11px; font-size: 13px; display: inline-flex; gap: 6px; align-items: baseline;
+  appearance: none; cursor: pointer; border: 1px solid var(--line); background: var(--bg);
+  border-radius: 6px; padding: 3px 11px; font-size: 15.5px; display: inline-flex; gap: 7px; align-items: baseline;
 }
-.chip .n { font: 11.5px var(--mono); color: var(--muted); font-variant-numeric: tabular-nums; }
-.chip:hover { border-color: var(--accent); }
-.chip[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: var(--surface); }
+.chip .n { font-size: 14px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.chip:hover { border-color: var(--tc); }
+.chip[aria-pressed="true"] { background: var(--tc); border-color: var(--tc); color: var(--surface); }
 .chip[aria-pressed="true"] .n { color: var(--surface); opacity: .85; }
 .chip.zero { opacity: .45; }
-.years { display: flex; align-items: flex-end; gap: 3px; height: 74px; overflow-x: auto; padding-bottom: 2px; }
+.yearbox { display: grid; gap: 6px; min-width: 0; }
+.legend { display: flex; flex-wrap: wrap; gap: 4px 16px; font-size: 14.5px; color: var(--muted); }
+.legend span { display: inline-flex; align-items: center; gap: 6px; }
+.legend i { width: 11px; height: 11px; background: var(--tc); display: inline-block; }
+.years { display: flex; align-items: stretch; gap: 4px; height: 118px; overflow-x: auto; padding-top: 4px; }
 .yr {
-  appearance: none; border: 0; background: none; cursor: pointer; padding: 0; flex: 1 0 26px; max-width: 46px;
-  height: 100%; display: grid; grid-template-rows: 1fr auto; gap: 3px;
+  appearance: none; border: 0; background: none; cursor: pointer; padding: 0; flex: 1 0 30px; max-width: 56px;
+  display: grid; grid-template-rows: 1fr auto; gap: 4px;
 }
-.yr .track { position: relative; background: var(--accent-soft); border-radius: 2px 2px 0 0; align-self: end; }
-.yr .fill { position: absolute; inset: auto 0 0; background: var(--accent); opacity: .55; border-radius: 2px 2px 0 0; }
-.yr:hover .fill { opacity: .8; }
-.yr[aria-pressed="true"] .fill { opacity: 1; }
-.yr .l { font: 10.5px var(--mono); color: var(--muted); text-align: center; font-variant-numeric: tabular-nums; }
-.yr[aria-pressed="true"] .l { color: var(--accent); font-weight: 500; }
+.yr .area { position: relative; }
+.yr .trk { position: absolute; inset: auto 0 0; background: var(--track); border-radius: 2px 2px 0 0; }
+.yr .stk { position: absolute; inset: auto 0 0; display: flex; flex-direction: column-reverse; border-radius: 2px 2px 0 0; overflow: hidden; }
+.yr .seg { background: var(--tc); min-height: 0; }
+.yr .val {
+  position: absolute; left: 0; right: 0; text-align: center; font-size: 13px; line-height: 1;
+  color: var(--muted); font-variant-numeric: tabular-nums;
+}
+.yr .l { font-size: 13px; color: var(--muted); text-align: center; font-variant-numeric: tabular-nums; }
+.yr:hover .stk { filter: brightness(1.08); }
+.yr[aria-pressed="true"] .l { color: var(--ink); font-weight: 700; }
+.yr[aria-pressed="true"] .val { color: var(--ink); font-weight: 600; }
+.years.picked .yr[aria-pressed="false"] .stk { opacity: .35; }
 .reset {
   justify-self: start; appearance: none; border: 0; background: none; padding: 0; cursor: pointer;
-  color: var(--accent); font-size: 13.5px; text-decoration: underline; text-underline-offset: 3px;
+  color: var(--tc); font-weight: 600; text-decoration: underline; text-underline-offset: 3px;
 }
 .jump { display: none; }
 
 /* Paper list */
-.list { display: grid; gap: 30px; padding-top: 22px; }
-.topic-h { margin: 6px 0 -12px; font: 600 1.55rem/1.2 var(--display); text-wrap: balance; }
-.group-h { margin: 6px 0 -14px; font: 600 1.3rem/1.25 var(--display); color: var(--ink); text-wrap: balance; }
-.sec { scroll-margin-top: 80px; }
-.sec-h {
-  margin: 0 0 4px; display: flex; gap: 10px; align-items: baseline; font: 600 15px/1.35 var(--body);
-}
-.sec-h .n { font: 12px var(--mono); color: var(--muted); font-weight: 400; }
-.papers { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }
+.list { display: grid; gap: 18px; padding-top: 22px; }
+.block { display: grid; gap: 18px; }
+.topic-h, .group-h { margin: 14px 0 0; font-weight: 700; line-height: 1.2; text-wrap: balance; }
+.topic-h { font-size: 30px; }
+.group-h { font-size: 26px; }
+.topic-h .num, .group-h .num { margin-right: .35em; }
+.block:first-child > .topic-h:first-child, .block:first-child > .group-h:first-child { margin-top: 0; }
+.sec { scroll-margin-top: 84px; padding: 14px 20px 6px; }
+.sec-h { margin: 0 0 6px; display: flex; gap: 10px; align-items: baseline; font-size: 20px; font-weight: 700; line-height: 1.3; }
+.sec-h .n { font-size: 15px; font-weight: 500; color: var(--muted); }
+.papers { list-style: none; margin: 0; padding: 0; }
 .paper {
-  display: grid; grid-template-columns: 8.6rem minmax(0, 1fr) auto; gap: 4px 16px; align-items: baseline;
-  padding: 8px 2px; border-bottom: 1px solid var(--line);
+  display: grid; grid-template-columns: 9.2rem minmax(0, 1fr) auto; gap: 2px 18px; align-items: baseline;
+  padding: 8px 0; border-top: 1px solid var(--line);
 }
-.paper .v { font: 12.5px/1.5 var(--mono); color: var(--muted); font-variant-numeric: tabular-nums; }
-.paper .v b { color: var(--ink); font-weight: 500; }
-.paper .v.new b { color: var(--accent); }
-.paper .t { text-decoration: none; overflow-wrap: anywhere; }
-.paper .t:hover { color: var(--accent); text-decoration: underline; text-underline-offset: 3px; }
+.paper .v { font-size: 15px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.paper .v b { color: var(--ink); font-weight: 600; }
+.paper .v.new b { color: var(--tc); }
+.paper .t { text-decoration: none; overflow-wrap: anywhere; line-height: 1.4; }
+.paper .t:hover { color: var(--tc); text-decoration: underline; text-underline-offset: 3px; }
 .paper .c {
-  justify-self: end; font: 500 12px/1 var(--mono); text-decoration: none; color: var(--code);
-  background: var(--code-soft); border-radius: 4px; padding: 5px 8px; white-space: nowrap;
+  justify-self: end; text-decoration: none; color: var(--tc); background: var(--tc-soft);
+  border-radius: 4px; padding: 3px 8px 2px; white-space: nowrap; font-size: 12px; font-weight: 700;
+  letter-spacing: .14em; text-transform: uppercase;
 }
 .paper .c:hover { text-decoration: underline; }
 mark { background: var(--mark); color: var(--mark-ink); border-radius: 2px; padding: 0 1px; }
 .state { padding: 28px 0; color: var(--muted); }
-.state a, .state button { color: var(--accent); }
+.state a, .state button { color: var(--tc); font-weight: 600; }
 .state button { appearance: none; border: 0; background: none; padding: 0; cursor: pointer; text-decoration: underline; }
 
-/* Footer */
-.foot { border-top: 1px solid var(--line); }
-.foot .wrap { padding-block: 26px 40px; display: grid; gap: 14px; font-size: 13.5px; color: var(--muted); }
-.foot a { color: var(--accent); }
-.foot details summary { cursor: pointer; color: var(--ink); }
+/* Footer: the deep-green panel */
+.foot { padding-block: 0 40px; }
+.foot .deep {
+  background: var(--green-deep); color: var(--on-deep); border-radius: 10px; padding: 22px 24px;
+  display: grid; gap: 14px;
+}
+.foot h2 { margin: 0; font-size: 24px; font-weight: 700; }
+.foot p { margin: 0; color: var(--on-deep-muted); }
+.foot a { color: var(--on-deep); font-weight: 600; }
+.foot ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 6px; }
+.foot li { display: grid; grid-template-columns: 14px minmax(0, 1fr); gap: 10px; align-items: baseline; color: var(--on-deep-muted); }
+.foot li::before { content: ""; width: 10px; height: 10px; background: var(--on-deep); transform: translateY(-1px); }
+.foot li b { color: var(--on-deep); }
+.foot details summary { cursor: pointer; color: var(--on-deep); font-weight: 600; }
 .foot pre {
-  margin: 10px 0 0; padding: 12px 14px; background: var(--surface); border: 1px solid var(--line);
-  border-radius: 6px; font: 12.5px/1.5 var(--mono); color: var(--ink); overflow-x: auto;
+  margin: 10px 0 0; padding: 12px 14px; background: rgba(0, 0, 0, .18); border-radius: 6px;
+  font: 13.5px/1.5 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; color: var(--on-deep); overflow-x: auto;
 }
 .copy {
-  margin-top: 8px; appearance: none; cursor: pointer; border: 1px solid var(--line); background: var(--surface);
-  border-radius: 4px; padding: 4px 10px; font-size: 13px;
+  margin-top: 8px; appearance: none; cursor: pointer; border: 1px solid var(--on-deep-muted); background: none;
+  color: var(--on-deep); border-radius: 5px; padding: 3px 12px; font-size: 15px;
 }
 
 @media (max-width: 900px) {
   .layout { grid-template-columns: minmax(0, 1fr); gap: 0; }
   .index { display: none; }
-  .jump { display: flex; flex-direction: column; gap: 4px; margin-top: 16px; font-size: 13px; color: var(--muted); }
+  .jump { display: flex; flex-direction: column; gap: 4px; margin-top: 16px; color: var(--muted); font-size: 15px; }
   .jump select {
-    padding: 8px 10px; border: 1px solid var(--line); border-radius: 6px; background: var(--surface);
-    max-width: 100%;
+    padding: 8px 10px; border: 1px solid var(--line); border-radius: 8px; background: var(--surface); max-width: 100%;
   }
+  .topic-intro { grid-template-columns: minmax(0, 1fr); }
 }
 @media (max-width: 560px) {
-  .mast { padding-block: 26px 0; }
+  .mast { padding-block: 28px 0; }
   .paper { grid-template-columns: minmax(0, 1fr) auto; }
   .paper .v { grid-column: 1 / -1; }
   .frow { grid-template-columns: minmax(0, 1fr); gap: 6px; }
   .flabel { line-height: 1.4; }
+  .sec, .filters { padding-left: 14px; padding-right: 14px; }
 }
 @media (prefers-reduced-motion: no-preference) {
   html { scroll-behavior: smooth; }
@@ -234,8 +279,8 @@ mark { background: var(--mark); color: var(--mark-ink); border-radius: 2px; padd
 
 <header class="mast">
   <div class="wrap">
-    <p class="eyebrow">Curated reading list · <a id="repo-link" href="https://github.com/wu-dd/Advances-in-Learning-with-Imperfect-Information">GitHub</a></p>
     <h1>Advances in Learning with Imperfect Information</h1>
+    <p class="byline">Curated by <a href="https://wu-dd.github.io/">Dong-Dong Wu</a><span class="sep">·</span><a href="https://github.com/wu-dd/Advances-in-Learning-with-Imperfect-Information">github.com/wu-dd/Advances-in-Learning-with-Imperfect-Information</a><span class="sep">·</span><span id="updated"></span></p>
     <div class="tabs" id="tabs" role="tablist" aria-label="Topics"></div>
   </div>
 </header>
@@ -256,9 +301,11 @@ mark { background: var(--mark); color: var(--mark-ink); border-radius: 2px; padd
 <div class="wrap layout">
   <aside class="index" id="index" aria-label="Sections"></aside>
   <main class="main">
-    <div class="filters">
-      <div class="frow"><span class="flabel">Venue</span><div class="chips" id="venues"></div></div>
-      <div class="frow"><span class="flabel">Year</span><div class="years" id="years"></div></div>
+    <div class="filters panel">
+      <div class="frow"><span class="flabel caps">Venue</span><div class="chips" id="venues"></div></div>
+      <div class="frow"><span class="flabel caps">Year</span>
+        <div class="yearbox"><div class="legend" id="legend"></div><div class="years" id="years"></div></div>
+      </div>
       <button class="reset" id="reset" type="button" hidden>Clear all filters</button>
     </div>
     <label class="jump" for="jump"><span>Jump to section</span><select id="jump"></select></label>
@@ -268,17 +315,25 @@ mark { background: var(--mark); color: var(--mark-ink); border-radius: 2px; padd
 
 <footer class="foot">
   <div class="wrap">
-    <p id="foot-meta" style="margin:0">Curated and maintained by <a href="https://wu-dd.github.io/">Dong-Dong Wu</a>.</p>
-    <details>
-      <summary>Cite this list</summary>
-      <pre id="bibtex">@misc{Wu2022advances,
+    <div class="deep">
+      <h2>About this list</h2>
+      <ul>
+        <li><span><b>Top venues.</b> Papers from leading conferences and journals, plus a few notable recent arXiv preprints.</span></li>
+        <li><span><b>Official links.</b> Each entry links the paper page and, when there is one, the official code.</span></li>
+        <li><span><b>Newest first.</b> Within each section the most recent papers come first.</span></li>
+      </ul>
+      <p id="foot-meta">Curated and maintained by <a href="https://wu-dd.github.io/">Dong-Dong Wu</a>.</p>
+      <details>
+        <summary>Cite this list</summary>
+        <pre id="bibtex">@misc{Wu2022advances,
   author={Dong-Dong Wu},
   title={Advances in Learning with Imperfect Information},
   howpublished={\url{https://github.com/wu-dd/Advances-in-Learning-with-Imperfect-Information}},
   year={2022}
 }</pre>
-      <button class="copy" id="copy" type="button">Copy BibTeX</button>
-    </details>
+        <button class="copy" id="copy" type="button">Copy BibTeX</button>
+      </details>
+    </div>
   </div>
 </footer>
 
@@ -304,7 +359,7 @@ mark { background: var(--mark); color: var(--mark-ink); border-radius: 2px; padd
   ];
   var TOPIC_IDS = ["all", "pll", "gen", "llm"];
   var state = { topic: "all", q: "", venues: new Set(), years: new Set(), code: false };
-  var DATA = null, TOPIC = {}, SECTION = {};
+  var DATA = null, TOPIC = {}, SECTION = {}, ORDER = {};
 
   var el = function (id) { return document.getElementById(id); };
   function esc(s) {
@@ -312,6 +367,7 @@ mark { background: var(--mark); color: var(--mark-ink); border-radius: 2px; padd
       return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
     });
   }
+  function two(n) { return (n < 10 ? "0" : "") + n; }
   function family(v) {
     for (var i = 0; i < FAMILIES.length; i++) if (FAMILIES[i][1](v)) return FAMILIES[i][0];
     return "Other venues";
@@ -322,11 +378,12 @@ mark { background: var(--mark); color: var(--mark-ink); border-radius: 2px; padd
     return text.split(re).map(function (part, i) { return i % 2 ? "<mark>" + esc(part) + "</mark>" : esc(part); }).join("");
   }
   function plural(n, w) { return n + " " + w + (n === 1 ? "" : "s"); }
+  function papersOf(id) { return DATA.papers.filter(function (p) { return p.topic === id; }); }
 
   function init(data) {
     DATA = data;
-    data.topics.forEach(function (t) {
-      TOPIC[t.id] = t;
+    data.topics.forEach(function (t, i) {
+      TOPIC[t.id] = t; ORDER[t.id] = i + 1;
       t.groups.forEach(function (g) { g.sections.forEach(function (s) { SECTION[t.id + "/" + s.id] = s.title; }); });
     });
     data.papers.forEach(function (p, i) {
@@ -335,13 +392,9 @@ mark { background: var(--mark); color: var(--mark-ink); border-radius: 2px; padd
       p._sec = SECTION[p.topic + "/" + p.section] || p.section;
       p._h = (p.title + " " + p.venue + " " + p._sec).toLowerCase();
     });
-    var maxYear = Math.max.apply(null, data.papers.map(function (p) { return p.year; }));
-    data._maxYear = maxYear;
-    el("foot-meta").innerHTML = "Curated and maintained by <a href=\"https://wu-dd.github.io/\">Dong-Dong Wu</a>. " +
-      "Last updated " + esc(data.updated) + ". All entries come from <a href=\"" + REPO + "/blob/main/data/papers.json\">data/papers.json</a>; " +
-      "the same lists are on GitHub as " + data.topics.map(function (t) {
-        return "<a href=\"" + REPO + "/blob/main/" + esc(t.file) + "\">" + esc(t.short) + "</a>";
-      }).join(", ") + ".";
+    data._maxYear = Math.max.apply(null, data.papers.map(function (p) { return p.year; }));
+    el("updated").textContent = data.papers.length + " papers · updated " + data.updated;
+    el("foot-meta").innerHTML = "Curated and maintained by <a href=\"https://wu-dd.github.io/\">Dong-Dong Wu</a>. Last updated " + esc(data.updated) + ".";
     var h = (location.hash || "").replace("#", "");
     if (TOPIC_IDS.indexOf(h) >= 0) state.topic = h;
     render();
@@ -355,6 +408,7 @@ mark { background: var(--mark); color: var(--mark-ink); border-radius: 2px; padd
   }
 
   function render() {
+    document.body.setAttribute("data-active", state.topic);
     var terms = state.q.toLowerCase().split(/\s+/).filter(Boolean);
     var inTopic = DATA.papers.filter(function (p) { return state.topic === "all" || p.topic === state.topic; });
     var base = function (p) {
@@ -379,37 +433,46 @@ mark { background: var(--mark); color: var(--mark-ink); border-radius: 2px; padd
 
   function renderTabs() {
     var tabs = [["all", "All topics", DATA.papers.length]].concat(DATA.topics.map(function (t) {
-      return [t.id, t.short, DATA.papers.filter(function (p) { return p.topic === t.id; }).length];
+      return [t.id, t.short, papersOf(t.id).length];
     }));
     el("tabs").innerHTML = tabs.map(function (t) {
-      var sel = state.topic === t[0];
-      return "<button class=\"tab\" role=\"tab\" type=\"button\" id=\"tab-" + t[0] + "\" data-topic=\"" + t[0] + "\" aria-selected=\"" + sel + "\">" +
+      return "<button class=\"tab\" role=\"tab\" type=\"button\" data-topic=\"" + t[0] + "\" aria-selected=\"" + (state.topic === t[0]) + "\">" +
         esc(t[1]) + "<span class=\"n\">" + t[2] + "</span></button>";
     }).join("");
+  }
+
+  function stats(t) {
+    var ps = papersOf(t.id);
+    var code = ps.filter(function (p) { return p.code; }).length;
+    var newest = ps.filter(function (p) { return p.year === DATA._maxYear; }).length;
+    return "<span class=\"stats\">" +
+      "<span class=\"stat\"><b>" + ps.length + "</b><span>papers</span></span>" +
+      "<span class=\"stat\"><b>" + code + "</b><span>with code</span></span>" +
+      "<span class=\"stat\"><b>" + newest + "</b><span>from " + DATA._maxYear + "</span></span></span>";
   }
 
   function renderIntro() {
     if (state.topic === "all") {
       el("intro").innerHTML = "<div class=\"topic-grid\">" + DATA.topics.map(function (t) {
-        var n = DATA.papers.filter(function (p) { return p.topic === t.id; }).length;
-        return "<button class=\"topic-card\" type=\"button\" data-topic=\"" + t.id + "\">" +
-          "<span class=\"h\">" + esc(t.title) + "</span>" +
-          "<span class=\"s\">" + esc(t.summary) + "</span>" +
-          "<span class=\"n\">" + n + " papers</span></button>";
+        return "<button class=\"topic-card panel t-" + t.id + "\" type=\"button\" data-topic=\"" + t.id + "\">" +
+          "<span class=\"h\"><span class=\"num\">" + two(ORDER[t.id]) + "</span> " + esc(t.title) + "</span>" +
+          "<span class=\"s\">" + esc(t.summary) + "</span>" + stats(t) + "</button>";
       }).join("") + "</div>";
       return;
     }
     var t = TOPIC[state.topic];
-    el("intro").innerHTML = "<p>" + esc(t.summary) + "</p>" +
-      "<p class=\"more\"><a href=\"" + REPO + "/blob/main/" + esc(t.file) + "\">Read this list as Markdown on GitHub</a></p>";
+    el("intro").innerHTML = "<div class=\"topic-intro panel\"><div>" +
+      "<h2><span class=\"num\">" + two(ORDER[t.id]) + "</span> " + esc(t.title) + "</h2>" +
+      "<p>" + esc(t.summary) + "</p>" +
+      "<p class=\"more\"><a href=\"" + REPO + "/blob/main/" + esc(t.file) + "\">Read this list as Markdown on GitHub</a></p></div>" +
+      stats(t) + "</div>";
   }
 
   function renderVenues(pool) {
-    var counts = {};
+    var counts = {}, present = {};
     pool.forEach(function (p) { counts[p._fam] = (counts[p._fam] || 0) + 1; });
-    var all = {};
-    DATA.papers.forEach(function (p) { if (state.topic === "all" || p.topic === state.topic) all[p._fam] = 1; });
-    el("venues").innerHTML = FAMILIES.map(function (f) { return f[0]; }).filter(function (f) { return all[f]; }).map(function (f) {
+    DATA.papers.forEach(function (p) { if (state.topic === "all" || p.topic === state.topic) present[p._fam] = 1; });
+    el("venues").innerHTML = FAMILIES.map(function (f) { return f[0]; }).filter(function (f) { return present[f]; }).map(function (f) {
       var n = counts[f] || 0, on = state.venues.has(f);
       return "<button class=\"chip" + (n || on ? "" : " zero") + "\" type=\"button\" data-venue=\"" + esc(f) + "\" aria-pressed=\"" + on + "\">" +
         esc(f) + "<span class=\"n\">" + n + "</span></button>";
@@ -417,32 +480,46 @@ mark { background: var(--mark); color: var(--mark-ink); border-radius: 2px; padd
   }
 
   function renderYears(topicPool, pool) {
+    var topics = state.topic === "all" ? DATA.topics : [TOPIC[state.topic]];
+    el("legend").innerHTML = state.topic === "all" ? topics.map(function (t) {
+      return "<span class=\"t-" + t.id + "\"><i></i>" + esc(t.short) + "</span>";
+    }).join("") : "";
+    el("legend").hidden = state.topic !== "all";
+    if (!topicPool.length) { el("years").innerHTML = ""; return; }
     var years = topicPool.map(function (p) { return p.year; });
-    if (!years.length) { el("years").innerHTML = ""; return; }
     var lo = Math.min.apply(null, years), hi = Math.max.apply(null, years);
     var total = {}, sub = {};
     topicPool.forEach(function (p) { total[p.year] = (total[p.year] || 0) + 1; });
-    pool.forEach(function (p) { sub[p.year] = (sub[p.year] || 0) + 1; });
+    pool.forEach(function (p) {
+      var k = p.year + "/" + p.topic;
+      sub[k] = (sub[k] || 0) + 1; sub[p.year] = (sub[p.year] || 0) + 1;
+    });
     var max = Math.max.apply(null, Object.keys(total).map(function (k) { return total[k]; }));
     var html = "";
     for (var y = lo; y <= hi; y++) {
       var tot = total[y] || 0, n = sub[y] || 0, on = state.years.has(y);
-      var th = tot ? Math.max(4, Math.round(tot / max * 100)) : 0;
-      var fh = tot ? Math.round(n / tot * 100) : 0;
+      var th = tot / max * 86, sh = n / max * 86;
+      var segs = topics.map(function (t) {
+        var c = sub[y + "/" + t.id] || 0;
+        return c ? "<span class=\"seg t-" + t.id + "\" style=\"flex:" + c + "\"></span>" : "";
+      }).join("");
       html += "<button class=\"yr\" type=\"button\" data-year=\"" + y + "\" aria-pressed=\"" + on + "\" title=\"" + y + ": " +
-        plural(n, "paper") + "\" aria-label=\"" + y + ", " + plural(n, "paper") + "\">" +
-        "<span class=\"track\" style=\"height:" + th + "%\"><span class=\"fill\" style=\"height:" + fh + "%\"></span></span>" +
-        "<span class=\"l\">" + (hi - lo > 6 ? "'" + String(y).slice(2) : y) + "</span></button>";
+        plural(n, "paper") + "\" aria-label=\"" + y + ", " + plural(n, "paper") + "\"><span class=\"area\">" +
+        "<span class=\"trk\" style=\"height:" + th.toFixed(1) + "%\"></span>" +
+        "<span class=\"stk\" style=\"height:" + sh.toFixed(1) + "%\">" + segs + "</span>" +
+        (n ? "<span class=\"val\" style=\"bottom:calc(" + Math.max(th, sh).toFixed(1) + "% + 3px)\">" + n + "</span>" : "") +
+        "</span><span class=\"l\">" + (hi - lo > 6 ? "'" + String(y).slice(2) : y) + "</span></button>";
     }
     el("years").innerHTML = html;
+    el("years").classList.toggle("picked", state.years.size > 0);
   }
 
   function sectionsInOrder() {
     var out = [];
     DATA.topics.forEach(function (t) {
       if (state.topic !== "all" && t.id !== state.topic) return;
-      t.groups.forEach(function (g) {
-        g.sections.forEach(function (s) { out.push({ topic: t, group: g, sec: s }); });
+      t.groups.forEach(function (g, gi) {
+        g.sections.forEach(function (s) { out.push({ topic: t, group: g, gi: gi + 1, sec: s }); });
       });
     });
     return out;
@@ -455,34 +532,36 @@ mark { background: var(--mark); color: var(--mark-ink); border-radius: 2px; padd
       return;
     }
     var bySec = {};
-    shown.forEach(function (p) { (bySec[p.topic + "/" + p.section] = bySec[p.topic + "/" + p.section] || []).push(p); });
-    var html = "", jump = "", lastTopic = null, lastGroup = null;
+    shown.forEach(function (p) { var k = p.topic + "/" + p.section; (bySec[k] = bySec[k] || []).push(p); });
+    var html = "", jump = "", open = false, lastTopic = null, lastGroup = null;
     sectionsInOrder().forEach(function (x) {
-      var key = x.topic.id + "/" + x.sec.id, list = bySec[key];
+      var list = bySec[x.topic.id + "/" + x.sec.id];
       if (!list) return;
       if (state.topic === "all" && x.topic !== lastTopic) {
-        html += "<h2 class=\"topic-h\">" + esc(x.topic.title) + "</h2>";
+        html += (open ? "</div>" : "") + "<div class=\"block t-" + x.topic.id + "\"><h2 class=\"topic-h\"><span class=\"num\">" +
+          two(ORDER[x.topic.id]) + "</span>" + esc(x.topic.title) + "</h2>";
         jump += (lastTopic ? "</optgroup>" : "") + "<optgroup label=\"" + esc(x.topic.short) + "\">";
-        lastTopic = x.topic;
+        lastTopic = x.topic; open = true;
       }
       if (state.topic !== "all" && x.group !== lastGroup) {
-        html += "<h2 class=\"group-h\">" + esc(x.group.title) + "</h2>";
+        html += (open ? "</div>" : "") + "<div class=\"block t-" + x.topic.id + "\"><h2 class=\"group-h\"><span class=\"num\">" +
+          two(x.gi) + "</span>" + esc(x.group.title) + "</h2>";
         jump += (lastGroup ? "</optgroup>" : "") + "<optgroup label=\"" + esc(x.group.title) + "\">";
-        lastGroup = x.group;
+        lastGroup = x.group; open = true;
       }
       list.sort(function (a, b) { return b.year - a.year || a._i - b._i; });
       var id = "s-" + x.topic.id + "-" + x.sec.id;
       jump += "<option value=\"" + id + "\">" + esc(x.sec.title) + " (" + list.length + ")</option>";
-      html += "<section class=\"sec\" id=\"" + id + "\"><h3 class=\"sec-h\">" + esc(x.sec.title) +
+      html += "<section class=\"sec panel\" id=\"" + id + "\"><h3 class=\"sec-h\">" + esc(x.sec.title) +
         "<span class=\"n\">" + list.length + "</span></h3><ul class=\"papers\">" +
         list.map(function (p) {
           return "<li class=\"paper\"><span class=\"v" + (p.year === DATA._maxYear ? " new" : "") + "\">" + esc(p.venue) + " <b>" + p.year + "</b></span>" +
             "<a class=\"t\" href=\"" + esc(p.url) + "\" target=\"_blank\" rel=\"noopener\">" + highlight(p.title, terms) + "</a>" +
-            (p.code ? "<a class=\"c\" href=\"" + esc(p.code) + "\" target=\"_blank\" rel=\"noopener\" aria-label=\"Code for " + esc(p.title) + "\">Code ↗</a>" : "<span></span>") +
+            (p.code ? "<a class=\"c\" href=\"" + esc(p.code) + "\" target=\"_blank\" rel=\"noopener\" aria-label=\"Code for " + esc(p.title) + "\">Code</a>" : "<span></span>") +
             "</li>";
         }).join("") + "</ul></section>";
     });
-    el("list").innerHTML = html;
+    el("list").innerHTML = html + (open ? "</div>" : "");
     el("jump").innerHTML = "<option value=\"\">Choose a section…</option>" + jump + "</optgroup>";
   }
 
@@ -492,12 +571,15 @@ mark { background: var(--mark); color: var(--mark-ink); border-radius: 2px; padd
     var html = "", last = null;
     sectionsInOrder().forEach(function (x) {
       var label = state.topic === "all" ? x.topic.short : x.group.title;
-      if (label !== last) { html += "<p class=\"g\">" + esc(label) + "</p>"; last = label; }
+      if (label !== last) {
+        html += (last ? "</div>" : "") + "<div class=\"t-" + x.topic.id + "\"><p class=\"g caps\">" + esc(label) + "</p>";
+        last = label;
+      }
       var n = counts[x.topic.id + "/" + x.sec.id] || 0;
       html += "<button type=\"button\" class=\"" + (n ? "" : "zero") + "\" data-target=\"s-" + x.topic.id + "-" + x.sec.id + "\"" + (n ? "" : " disabled") + ">" +
         "<span>" + esc(x.sec.title) + "</span><span class=\"n\">" + n + "</span></button>";
     });
-    el("index").innerHTML = html;
+    el("index").innerHTML = html + (last ? "</div>" : "");
   }
 
   function goTo(id) {
